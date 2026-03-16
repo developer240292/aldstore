@@ -1,0 +1,76 @@
+.mfp-preloader {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(0, 0, 0);;
+  opacity: 0.65;
+  margin: 0 auto;
+  animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+@keyframes rotateplane {
+  0% { transform: perspective(120px) rotateX(0deg) rotateY(0deg) }
+  50% { transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) }
+  100% { transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg) }
+}
+.vtquicksuccess{
+    margin-bottom: 12px;
+}
+.vtquicksuccess,.spr-form-message-success,.vtquicksuccess svg{
+    color: #058c05;
+    fill: #058c05;
+}
+.hide-modalquick{
+    display: none !important;
+}
+
+#vtquickview .social-sharing {
+    padding: 0;
+    writing-mode: unset;
+    float: none;
+    margin-top: 0;
+}
+#vtquickview .social-sharing li a {
+    background: rgba(0, 0, 0,0.8);
+}
+#vtquickview .social-sharing li a:hover {
+    background: rgba(0, 0, 0,1);
+}
+
+#vtquickview .product__info-container .product__title {
+    font-size: calc(var(--font-body-scale) * 32px);
+}
+
+@media (max-width: 991px) {
+    #vtquickview .product__info-wrapper .vtswatchclr input[type="radio"] + label {
+        min-width: 26px;
+        min-height: 26px;
+    }
+    #vtquickview .product__info-container .product__title {
+        font-size: calc(var(--font-body-scale) * 20px);
+    }
+    #vtquickview .product__info-wrapper .product-form__input input[type="radio"] + label{
+        padding: 6px 6px;
+        min-width: 46px;
+        min-height: 30px;
+        font-size: calc(var(--font-body-scale) * 14px);
+    }
+}
+.js-vtquickview {
+    width: 90%;
+    max-width: 900px;
+    background: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: var(--popup-corner-radius);
+    border-color: rgba(0, 0, 0,var(--popup-border-opacity));
+    border-style: solid;
+    border-width: var(--popup-border-width);
+    box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow),var(--popup-shadow-opacity));
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+@media (min-width: 768px){
+    #vtquickview .product__info-wrapper {
+        padding-left: 30px;
+    }
+}

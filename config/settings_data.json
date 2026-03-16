@@ -1,0 +1,393 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "colors_text": "#848484",
+    "colors_heading": "#000000",
+    "colors_accent_1": "#2bbef9",
+    "colors_accent_2": "#edfaff",
+    "type_body_font": "poppins_n4",
+    "body_scale": 100,
+    "page_width": 1560,
+    "inputs_radius": 0,
+    "buttons_radius": 0,
+    "variant_pills_radius": 4,
+    "card_style": "standard",
+    "popup_corner_radius": 14,
+    "popup_shadow_opacity": 15,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 6,
+    "popup_shadow_blur": 15,
+    "drawer_overlay_opacity": 80,
+    "badge_corner_radius": 0,
+    "social_facebook_link": "https://admin.shopify.com/",
+    "social_twitter_link": "#",
+    "social_instagram_link": "#",
+    "social_youtube_link": "#",
+    "predictive_search_show_price": true,
+    "favicon": "shopify://shop_images/Favicon.png",
+    "currency_code_enabled": true,
+    "show_vendor": false,
+    "show_cart_note": true,
+    "vt_cartnumber": "vt_shopqtytotal",
+    "show_shopicon": true,
+    "vtenable_ship": true,
+    "vtmin_order": 1500,
+    "vtprogscolor": "#2bbef9",
+    "upsellp": true,
+    "vtuphead": "Customers also like",
+    "upsellcollection": "baby-boy",
+    "upsellpempty": true,
+    "upsell_to_show": 3,
+    "cart_drawer_collection": "baby-boy",
+    "show_cartpayment": false,
+    "show_timer": true,
+    "timer_text": "",
+    "type_header_font": "poppins_n5",
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 10,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_blur": 0,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 0,
+    "buttons_shadow_blur": 0,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 20,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 0,
+    "variant_pills_shadow_blur": 0,
+    "popup_border_thickness": 0,
+    "popup_border_opacity": 10,
+    "drawer_border_thickness": 7,
+    "sale_badge_color_scheme": "accent-1",
+    "sold_out_badge_color_scheme": "accent-1",
+    "accent_icons": "text",
+    "checkout_logo_image": "shopify://shop_images/1Logo.png",
+    "checkout_accent_color": "#2bbef9",
+    "checkout_button_color": "#2bbef9",
+    "vtoverlayhcolor": "#121212",
+    "vtoverlayhbg": "#FFFFFF",
+    "vtoverlayhoutline": "#FFFFFF",
+    "type_header_base_size": 40,
+    "type_base_size": 14,
+    "badge_toggle": true,
+    "new_products_period": "2000",
+    "badge_position": "top left",
+    "colorSwatch": "",
+    "colorImg": "<p> heather-black.jpg, black.png, heather-gray.gif, white.png, red.png</p>",
+    "type_base_font": "Google+Poppins",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "megamenu_gallery_RqY7im": {
+            "type": "megamenu-gallery",
+            "settings": {
+              "menuname": "Shop",
+              "showsubmenu": true,
+              "vt1_link": "shopify://blogs/news",
+              "vt1_text": "test",
+              "vt2_link": "",
+              "vt2_text": "",
+              "vt3_link": "",
+              "vt3_text": "",
+              "vt4_link": "",
+              "vt4_text": ""
+            }
+          },
+          "megamenu_blog_fcVfQh": {
+            "type": "megamenu-blog",
+            "settings": {
+              "menuname": "Blog",
+              "showsubmenu": true,
+              "blog": "news",
+              "blog_to_show": 4
+            }
+          },
+          "megamenu_product_RpzcwW": {
+            "type": "megamenu-product",
+            "settings": {
+              "menuname": "Home",
+              "showsubmenu": true,
+              "collection": "frontpage",
+              "products_to_show": 6
+            }
+          }
+        },
+        "block_order": [
+          "megamenu_gallery_RqY7im",
+          "megamenu_blog_fcVfQh",
+          "megamenu_product_RpzcwW"
+        ],
+        "settings": {
+          "logo_width": 192,
+          "mobile_logo_width": 110,
+          "show_acicon": true,
+          "show_topheader": true,
+          "topbg_clr": "#ffffff",
+          "topc_clr": "#000000",
+          "topoffer": "Get 30% Off On Selected Items",
+          "show_contact": true,
+          "bnts1": "Support 24/7",
+          "mobile": "+1 (555) 123-4567",
+          "primary_menu": "main-menu",
+          "vertical_menu": "vertical-menu",
+          "vertical_menu_always_open_on_home": false,
+          "enable_sticky_header": false,
+          "enable_sticky_header_mobile": false,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "margin_bottom": 0,
+          "padding_top": 16,
+          "padding_bottom": 16
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "image_iPd4PW": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/silver-threader-necklace_925x_0a5faff7-7dd0-477d-a03f-c046e6455ea3.jpg",
+              "image_width": 100,
+              "alignment": ""
+            }
+          },
+          "text_tbaGwD": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share store details, promotions, or brand content with your customers.</p>"
+            }
+          },
+          "958c9aca-bc3d-44ff-aa05-5f18c868f7ee": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Extras",
+              "menu": ""
+            }
+          },
+          "66cf8672-198d-43dc-8e2d-78702a5640bb": {
+            "type": "textarea",
+            "settings": {
+              "heading": "Contact us",
+              "contsubtext": "",
+              "footer_address": "demo store United States.",
+              "footer_phone": "+1 (555) 123-4567",
+              "footer_email": "support@aldstore.com"
+            }
+          }
+        },
+        "block_order": [
+          "image_iPd4PW",
+          "text_tbaGwD",
+          "958c9aca-bc3d-44ff-aa05-5f18c868f7ee",
+          "66cf8672-198d-43dc-8e2d-78702a5640bb"
+        ],
+        "settings": {
+          "logo": "shopify://shop_images/logo-2.svg",
+          "logo_width": 130,
+          "contsubtext": "<p>Nam pretium et orci eget vestibulum. Aenean pellentesque, quis vulputate eros elit eu ligula. Ut nec lacus congue, fermentum nulla sed, congue risus.</p>",
+          "show_social": true,
+          "enable_newsletter": true,
+          "newsheading": "Subscribe to our newsletter",
+          "payment_enable": true,
+          "show_copyright": true,
+          "margin_top": 60,
+          "padding_top": 60,
+          "padding_bottom": 60
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {}
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {}
+      },
+      "hero-slider": {
+        "type": "hero-slider",
+        "blocks": {
+          "2b986134-85fe-4ab3-b36a-42f81dc94671": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify://shop_images/Slider_1.jpg",
+              "heading": "New collection 2022",
+              "subheading": "New fashion",
+              "subheadingtext": "<p>Suspendisse venenatis massa sed rhoncus ornare. Donec molestie bibendum felis sed commodo. Donec risus magna, sollicitudin lobortis tellus sit amet vivamus dapibus odio lectus ornare quis. Morbi congue massa eu magna.</p>",
+              "button_label": "Shop now",
+              "link": "shopify://collections"
+            }
+          },
+          "f1d7d385-be74-41e3-87d4-32a5cfeb3698": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify://shop_images/Slider_1.jpg",
+              "heading": "New collection 2022",
+              "subheading": "New fashion",
+              "subheadingtext": "<p>Suspendisse venenatis massa sed rhoncus ornare. Donec molestie bibendum felis sed commodo. Donec risus magna, sollicitudin lobortis tellus sit amet vivamus dapibus odio lectus ornare quis. Morbi congue massa eu magna.</p>",
+              "button_label": "Shop now",
+              "link": "shopify://collections"
+            }
+          }
+        },
+        "block_order": [
+          "2b986134-85fe-4ab3-b36a-42f81dc94671",
+          "f1d7d385-be74-41e3-87d4-32a5cfeb3698"
+        ],
+        "settings": {
+          "slide_height": "adapt_image",
+          "padding_top": 20,
+          "padding_bottom": 0
+        }
+      },
+      "text-with-icons": {
+        "type": "text-with-icons",
+        "blocks": {
+          "f26cbff1-1a5b-440e-b8a7-9234261a500c": {
+            "type": "image",
+            "settings": {
+              "icon1": "support",
+              "title": "24 x 7 free Support",
+              "text": "<p>online support 24/7</p>"
+            }
+          },
+          "a0db24f3-f196-47fc-8727-90a2285c5aa1": {
+            "type": "image",
+            "settings": {
+              "icon1": "moneyback",
+              "title": "Money Back Guarantee",
+              "text": "<p>100% secure payment</p>"
+            }
+          },
+          "f3ba6fce-4fcf-4e30-8087-c2939b16737c": {
+            "type": "image",
+            "settings": {
+              "icon1": "delivery",
+              "title": "Free Worldwide Shipping",
+              "text": "<p>on order over $49</p>"
+            }
+          },
+          "294ca570-15f3-41d2-a88e-3c0a5e6a506b": {
+            "type": "image",
+            "settings": {
+              "icon1": "gift",
+              "title": "Win $100 To Shop",
+              "text": "<p>Give the perfect gift</p>"
+            }
+          }
+        },
+        "block_order": [
+          "f26cbff1-1a5b-440e-b8a7-9234261a500c",
+          "a0db24f3-f196-47fc-8727-90a2285c5aa1",
+          "f3ba6fce-4fcf-4e30-8087-c2939b16737c",
+          "294ca570-15f3-41d2-a88e-3c0a5e6a506b"
+        ],
+        "settings": {
+          "title": "",
+          "heading_size": "h2",
+          "iconwidth": 40,
+          "column_alignment": "center",
+          "padding_top": 60,
+          "padding_bottom": 0
+        }
+      },
+      "blog-slider": {
+        "type": "blog-slider",
+        "settings": {
+          "m_title": "latest blog",
+          "blog": "news",
+          "show_image": true,
+          "image_height": "adapt",
+          "show_date": false,
+          "show_author": false,
+          "show_desc": true,
+          "show_cmment": false,
+          "show_view_all": false,
+          "padding_top": 60,
+          "padding_bottom": 4
+        }
+      },
+      "product-slide": {
+        "type": "product-slide",
+        "settings": {
+          "title": "Bestseller",
+          "collection": "electronic",
+          "products_to_show": 6,
+          "rows": 3,
+          "image_ratio": "adapt",
+          "display_product_type": false,
+          "show_rating": true,
+          "show_secondary_image": false,
+          "show_vendor": false,
+          "padding_top": 32,
+          "padding_bottom": 0
+        }
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {
+    "Default": {
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_width": 90,
+            "topbg_clr": "#f5f5f5",
+            "topc_clr": "#000000"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "footer-1": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Info"
+              }
+            },
+            "footer-2": {
+              "type": "text",
+              "settings": {
+                "heading": "Our mission"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "margin_top": 48
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {}
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {}
+        }
+      }
+    }
+  }
+}

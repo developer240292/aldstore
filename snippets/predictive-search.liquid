@@ -1,0 +1,45 @@
+{% comment %}
+  Renders predictive search
+
+  Usage:
+  {% render 'predictive-search' %}
+{% endcomment %}
+{%- if settings.predictive_search_enabled -%}
+  <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+{%- endif -%}
+<form action="{{ routes.search_url }}" method="get" role="search" class="search">
+  <div class="field">
+    <input
+      class="search__input field__input"
+      type="search"
+      name="q"
+      value=""
+      placeholder="{{ 'general.search.search' | t }}"
+      {%- if settings.predictive_search_enabled -%}
+        role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list"
+        aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list"
+        autocomplete="off" autocapitalize="off" spellcheck="false"
+      {%- endif -%}
+    >
+    <label class="field__label">{{ 'general.search.search' | t }}</label>
+    <input type="hidden" name="options[prefix]" value="last">
+    <button
+      class="search__button button"
+      tabindex="0"
+      aria-label="{{ 'general.search.search' | t }}"
+    >
+      {% render 'icon-header-search' %}
+    </button>
+  </div>
+  {%- if settings.predictive_search_enabled -%}
+    <div class="predictive-search" data-predictive-search>
+      <div class="predictive-search__loading-state">
+        {%- render 'icon-spinner' -%}
+      </div>
+    </div>
+    <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+  {%- endif -%}
+</form>
+{%- if settings.predictive_search_enabled -%}
+  </predictive-search>
+{%- endif -%}

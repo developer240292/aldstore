@@ -1,0 +1,576 @@
+<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if settings.predictive_search_enabled -%}
+  <link
+    rel="stylesheet"
+    href="{{ 'component-loading-overlay.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+{%- endif -%}
+{{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+<noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+{%- style -%}
+  .section-header {
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+  .header-middle {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  .header__heading-logo {
+    max-width: {{ section.settings.logo_width }}px;
+  }
+  .header__heading-mobile-logo {
+    max-width: {{ section.settings.mobile_logo_width }}px;
+  }
+{%- endstyle -%}
+<script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'megamenu.js' | asset_url }}" defer="defer"></script>
+<div class="header-wrapper{% if section.settings.enable_sticky_header %} header-sticky{% endif %}{% if section.settings.enable_sticky_header_mobile %} header-mobile-sticky{% endif %}">
+  {% if section.settings.show_topheader %}
+    <div class="header-top">
+      <div class="container">
+        {{ section.settings.topoffer }}
+      </div>
+    </div>
+  {% endif %}
+  <div class="header-desktop">
+    <div class="header-middle">
+      <div class="container">
+        <div class="header-middle-inner">
+          {% render 'header-logo' %}
+          <div class="header-search">
+            {% render 'predictive-search' %}
+          </div>
+          <div class="header-control">
+            <div class="header-meta">
+              {% render 'header-localization-form' %}
+              {% render 'header-user' %}
+              {% render 'header-minicart' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-desktop-wrap">
+      <div class="header-position">
+        <div class="header-nav">
+          <div class="container">
+            <div class="header-nav-inner container-megamenu">
+              {%- if section.settings.vertical_menu != blank -%}
+                <nav class="vertical-wrapper block-nav-category has-vertical-menu {% if section.settings.vertical_menu_always_open_on_home %}always-open{% endif %}">
+                  <div class="block-title">
+                    {% render 'icon-header-menubar' %}
+                    <span class="text-title">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>
+                    {%- render 'icon-caret' -%}
+                  </div>
+                  <div class="block-content verticalmenu-content">
+                    <div class="villa-menu-wrapper vertical">
+                      <ul class="aldstore-nav vertical-menu villa-menu">
+                        {% render 'header-menu', menu_links: section.settings.vertical_menu.links %}
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              {%- endif -%}
+              {%- if section.settings.primary_menu != blank -%}
+                <div class="box-header-nav">
+                  <div class="villa-menu-wrapper horizontal">
+                    <ul class="aldstore-nav main-menu horizontal-menu villa-menu">
+                      {% render 'header-menu', menu_links: section.settings.primary_menu.links %}
+                    </ul>
+                  </div>
+                </div>
+              {%- endif -%}
+              {% render 'header-wishlist' %}
+              {% render 'header-contact' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-mobile-wrap">
+    <div class="header-position">
+      <div class="container">
+        <div class="header-mobile">
+          <div class="header-mobile-left">
+            {% render 'header-logo', is_mobile: true %}
+          </div>
+          <div class="header-mobile-right">
+            <div class="header-search aldstore-dropdown">
+              <div data-aldstore="aldstore-dropdown">
+                <a class="block-link link-dropdown" href="#"> </a>
+              </div>
+            </div>
+            <div class="header-meta">
+              {% render 'header-user' %}
+              {% render 'header-minicart' %}
+            </div>
+            {%- if section.settings.primary_menu != blank -%}
+              <div class="block-menu-bar">
+                <div class="menu-bar mobile-menu-toggle">{% render 'icon-header-menubar' %}</div>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header-mobile-menu">
+  <div class="mobile-menu-overlay mobile-menu-toggle"></div>
+  <div class="mobile-sidebar-content">
+    <div class="sidebar-content">
+      <ul class="tab-mobile-menu">
+        {%- if section.settings.primary_menu != blank -%}
+          <li class="main-menu-tab active">
+            {% render 'icon-header-menubar' %}
+          </li>
+        {%- endif -%}
+        {%- if section.settings.vertical_menu != blank -%}
+          <li class="vertical-menu-tab">
+            <span class="text-title">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>
+          </li>
+        {%- endif -%}
+        <li class="mobile-menu-close mobile-menu-toggle">
+          {% render 'icon-close' %}
+        </li>
+      </ul>
+      <div class="mobile-menu-wrapper active" id="main-menu-tab">
+        <h6 class="mobile-menu-title">
+          {% render 'icon-arrow-left' %}
+          <span></span>
+        </h6>
+        <div class="mobile-menu-inner" id="main-mobile-menu">
+          {%- if section.settings.primary_menu != blank -%}
+            <ul class="aldstore-nav main-menu horizontal-menu villa-menu">
+              {% render 'header-menu', menu_links: section.settings.primary_menu.links %}
+            </ul>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="mobile-menu-wrapper" id="vertical-menu-tab">
+        <h6 class="mobile-menu-title">
+          {% render 'icon-arrow-left' %}
+          <span></span>
+        </h6>
+        <div class="mobile-menu-inner" id="vertical-mobile-menu">
+          {%- if section.settings.vertical_menu != blank -%}
+            <ul class="aldstore-nav vertical-menu villa-menu">
+              {% render 'header-menu', menu_links: section.settings.vertical_menu.links %}
+            </ul>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="header-group-button">
+        <div class="meta-bottom">
+          <div class="meta-bottom-left">
+            {% render 'header-localization-form' %}
+          </div>
+          <div class="meta-bottom-right">
+            {% render 'header-wishlist' %}
+          </div>
+        </div>
+        {% render 'header-contact' %}
+      </div>
+    </div>
+  </div>
+</div>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if section.settings.logo %}
+      "logo": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_youtube_link | json }},
+    ],
+    "url": {{ request.origin | append: page.url | json }}
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = request.origin | append: routes.search_url | append: '?q={search_term_string}' %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ request.origin | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "tag": "header",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:sections.header.settings.logo.label"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 2,
+      "default": 100,
+      "unit": "t:sections.header.settings.logo_width.unit",
+      "label": "t:sections.header.settings.logo_width.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_logo",
+      "label": "t:sections.header.settings.mobilelogo.label",
+      "info": "Optional. The logo will use the main logo on mobile by default."
+    },
+    {
+      "type": "range",
+      "id": "mobile_logo_width",
+      "min": 50,
+      "max": 170,
+      "step": 2,
+      "default": 100,
+      "unit": "t:sections.header.settings.mobile_logo_width.unit",
+      "label": "t:sections.header.settings.mobile_logo_width.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_acicon",
+      "default": true,
+      "label": "Show account icon"
+    },
+    {
+      "type": "header",
+      "content": "Top bar"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_topheader",
+      "default": true,
+      "label": "Show top bar"
+    },
+    {
+      "type": "color",
+      "id": "topbg_clr",
+      "default": "#f5f5f5",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "topc_clr",
+      "default": "#000000",
+      "label": "Text color"
+    },
+    {
+      "type": "text",
+      "id": "topoffer",
+      "label": "Text",
+      "default": "Get 30% Off On Selected Items"
+    },
+    {
+      "type": "header",
+      "content": "Contact"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact",
+      "default": true,
+      "label": "Show contact details"
+    },
+    {
+      "type": "text",
+      "id": "bnts1",
+      "default": "Support 24/7",
+      "label": "Contact label"
+    },
+    {
+      "type": "text",
+      "id": "mobile",
+      "label": "Add contact no",
+      "default": "+1 (555) 123-4567"
+    },
+    {
+      "type": "header",
+      "content": "Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "primary_menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.primary_menu.label"
+    },
+    {
+      "type": "link_list",
+      "id": "vertical_menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.vertical_menu.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "vertical_menu_always_open_on_home",
+      "default": false,
+      "label": "t:sections.header.settings.vertical_menu_always_open_on_home.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header",
+      "default": true,
+      "label": "t:sections.header.settings.enable_sticky_header.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header_mobile",
+      "default": true,
+      "label": "t:sections.header.settings.enable_sticky_header_mobile.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__3.content",
+      "info": "t:sections.footer.settings.header__4.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_country_selector",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_country_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__5.content",
+      "info": "t:sections.footer.settings.header__6.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_language_selector",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_language_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.header.settings.margin_bottom.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 18
+    }
+  ],
+  "blocks": [
+    {
+      "type": "megamenu-product",
+      "name": "Mega menu products",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menuname",
+          "label": "Menu label",
+          "info": "Enter menu item to apply a mega menu."
+        },
+        {
+          "type": "checkbox",
+          "id": "showsubmenu",
+          "label": "Show submenu",
+          "info": "To add submenu [Click here](\/admin\/menus)"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.featured-collection.settings.collection.label"
+        },
+        {
+          "type": "range",
+          "id": "products_to_show",
+          "min": 2,
+          "max": 6,
+          "step": 1,
+          "default": 6,
+          "label": "t:sections.featured-collection.settings.products_to_show.label",
+          "info": "This option work only on desktop view"
+        }
+      ]
+    },
+    {
+      "type": "megamenu-gallery",
+      "name": "Mega menu submenu/gallery",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menuname",
+          "label": "Menu label",
+          "info": "Enter menu item to apply a mega menu."
+        },
+        {
+          "type": "checkbox",
+          "id": "showsubmenu",
+          "label": "Show submenu",
+          "default": true,
+          "info": "To add submenu [Click here](\/admin\/menus)"
+        },
+        {
+          "type": "header",
+          "content": "Image section"
+        },
+        {
+          "type": "image_picker",
+          "id": "vt1_img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "vt1_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "vt1_text",
+          "label": "Label"
+        },
+        {
+          "type": "header",
+          "content": "Image section"
+        },
+        {
+          "type": "image_picker",
+          "id": "vt2_img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "vt2_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "vt2_text",
+          "label": "Label"
+        },
+        {
+          "type": "header",
+          "content": "Image section"
+        },
+        {
+          "type": "image_picker",
+          "id": "vt3_img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "vt3_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "vt3_text",
+          "label": "Label"
+        },
+        {
+          "type": "header",
+          "content": "Image section"
+        },
+        {
+          "type": "image_picker",
+          "id": "vt4_img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "vt4_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "vt4_text",
+          "label": "Label"
+        }
+      ]
+    },
+
+    {
+      "type": "megamenu-blog",
+      "name": "Mega menu blog",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menuname",
+          "label": "Menu label",
+          "info": "Enter menu item to apply a mega menu."
+        },
+        {
+          "type": "checkbox",
+          "id": "showsubmenu",
+          "label": "Show submenu",
+          "default": false,
+          "info": "To add submenu [Click here](\/admin\/menus)"
+        },
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Choose blog",
+          "info": "To add blog [Click here](\/admin\/articles)"
+        },
+        {
+          "type": "range",
+          "id": "blog_to_show",
+          "min": 2,
+          "max": 4,
+          "step": 1,
+          "default": 4,
+          "label": "Maximum blog to show",
+          "info": "This option work only on desktop view"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
