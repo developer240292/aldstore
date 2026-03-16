@@ -548,10 +548,24 @@ input.field__input::placeholder {
     padding: 5px 0;
 }
 
+.header-block.block-minicart .block-link {
+    padding: 5px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000;
+}
+
+.header-block.block-minicart .block-link .block-icon {
+    background-color: var(--color-base-accent-1);
+    padding: 7px;
+    border-radius: 50%;
+}
+
 .header-desktop .header-contact {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    line-height: 20px;
 }
 
 .header-desktop .header-contact .header-contact-image {
@@ -561,12 +575,10 @@ input.field__input::placeholder {
 .header-desktop .header-contact .header-contact-info .header-contact-title {
     display: block;
     font-size: calc(var(--font-body-scale) * 12px);
-    line-height: 20px;
     color: #fff;
 }
 
 .header-desktop .header-contact .header-contact-info .header-contact-phone {
-    line-height: 20px;
     font-size: calc(var(--font-body-scale) * 16px);
     color: #fff;
 }
@@ -700,7 +712,7 @@ input.field__input::placeholder {
 }
 
 .box-header-nav .main-menu>.menu-item {
-    padding: 0 42px 0 0;
+    padding: 0 47px 0 0;
     display: inline-block;
     cursor: pointer;
 }
@@ -816,11 +828,13 @@ input.field__input::placeholder {
 .header-nav-inner .header-nav-left {
     display: flex;
     align-items: center;
+    gap: 50px;
 }
 
 .header-nav-inner .header-nav-right {
     display: flex;
     align-items: center;
+    gap: 50px;
 }
 
 /* VERTICAL MENU */
