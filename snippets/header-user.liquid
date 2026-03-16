@@ -11,14 +11,9 @@
         <span class="block-icon">{% render 'icon-header-user' %}</span>
         <span class="block-text">
           {% if customer %}
-            <span>{{ 'vtcustomlabel.vtalltext.account' | t }}</span>
-            <strong>
-              {{- customer.first_name }}
-              {{ customer.last_name -}}
-            </strong>
+            {{ 'vtcustomlabel.vtalltext.account' | t }}
           {% else %}
-            <span>{{ 'vtcustomlabel.vtalltext.account' | t }}</span>
-            <strong>{{ 'vtcustomlabel.vtalltext.log_in' | t }}</strong>
+            {{ 'vtcustomlabel.vtalltext.log_in' | t }}
           {% endif %}
         </span>
       </a>
