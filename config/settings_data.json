@@ -13,7 +13,7 @@
     "colors_heading": "#000000",
     "colors_accent_1": "#060e30",
     "colors_accent_2": "#F7931E",
-    "type_body_font": "poppins_n4",
+    "type_body_font": "roboto_n4",
     "body_scale": 100,
     "page_width": 1560,
     "inputs_radius": 0,
@@ -54,7 +54,7 @@
     "checkout_logo_image": "shopify://shop_images/1Logo.png",
     "checkout_accent_color": "#2bbef9",
     "checkout_button_color": "#2bbef9",
-    "type_header_font": "poppins_n5",
+    "type_header_font": "roboto_n5",
     "inputs_border_thickness": 1,
     "inputs_border_opacity": 10,
     "inputs_shadow_horizontal_offset": 0,
@@ -87,7 +87,7 @@
     "badge_position": "top left",
     "colorSwatch": "",
     "colorImg": "<p> heather-black.jpg, black.png, heather-gray.gif, white.png, red.png</p>",
-    "type_base_font": "Google+Poppins",
+    "type_base_font": "Google+Roboto",
     "sections": {
       "header": {
         "type": "header",

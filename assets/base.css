@@ -1468,6 +1468,7 @@ form.search .search__button {
 .footer {
     background-color: #fff;
 }
+
 /* Newsletter */
 .footer-top {
     background-color: #f3f3f3;
@@ -1546,16 +1547,23 @@ form.search .search__button {
     width: 100%;
 }
 
+.footer-block .vtfootcont {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 20px;
+}
+
 .footer-block .vtfootcont svg {
     width: 20px;
     height: 20px;
 }
 
 .footer-block .vtfootcont ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    line-height: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 20px;
 }
 
 /* footer-bottom */
@@ -1572,14 +1580,19 @@ form.search .search__button {
     width: auto;
     height: 20px;
 }
+
 .footer-bottom {
     border-top: 1px solid #D9D9D9;
 }
+
 .footer-bottom .vtftpaym {
     display: flex;
     justify-content: space-between;
     padding: 25px 0;
+    align-items: center;
     gap: 10px;
+    line-height: 20px;
+    color: #000;
 }
 
 .footer__copyright a {
@@ -1587,7 +1600,7 @@ form.search .search__button {
 }
 
 .footer__copyright a:hover {
-    color: var(--color-base-accent-1);
+    color: var(--color-base-accent-2);
 }
 
 @media(max-width: 767px) {
