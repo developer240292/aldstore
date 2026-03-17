@@ -84,7 +84,7 @@
   </div>
   <div class="footer-midle container section-{{ section.id }}-padding">
     <div class="row">
-      <div class="footer-midle-left col-md-3">
+      <div class="footer-midle-left col-lg-3">
         <a href="{{ routes.root_url }}" class="footer-logo">
           <span class="visually-hidden">{{ shop.name }}</span>
           {%- if section.settings.logo != blank -%}
@@ -111,7 +111,7 @@
           {% render 'social-link' %}
         {%- endif -%}
       </div>
-      <div class="foot-middle-right col-md-9">
+      <div class="foot-middle-right col-lg-9">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size > 3
@@ -121,7 +121,7 @@
           <div class="footer-blocks-wrapper {{ footer_grid_class }}">
             {%- for block in section.blocks -%}
               <div
-                class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}"
+                class="footer-block{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}"
                 {{ block.shopify_attributes }}
               >
                 {%- if block.settings.heading != blank -%}
