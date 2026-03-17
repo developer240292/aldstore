@@ -197,8 +197,13 @@
           "payment_enable": true,
           "show_copyright": true,
           "margin_top": 80,
+<<<<<<< HEAD
           "padding_top": 30,
           "padding_bottom": 30
+=======
+          "padding_top": 28,
+          "padding_bottom": 32
+>>>>>>> 1291af3fcc3ccab3d8d55290549ee2fd7d10e2bf
         }
       },
       "main-password-header": {
