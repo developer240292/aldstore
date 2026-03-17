@@ -1,10 +1,12 @@
+<link rel="stylesheet" href="{{ 'section-blog-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-blog-slider.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
   .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
-<div class="blog-lider section-{{ section.id }}-padding">
+<div class="blog-slider section-{{ section.id }}-padding">
   <div class="container">
     <div class="blog-header">
       <h2 class="heading">
@@ -20,8 +22,8 @@
       class="swiper-slider"
       data-section-id="{{ section.id }}"
       data-slider-speed="300"
-      data-slider-navigation="true"
-      data-slider-pagination="true"
+      data-slider-navigation="false"
+      data-slider-pagination="false"
       data-slider-autoplay="0"
       data-breakpoint-mobile-portrait="1"
       data-breakpoint-mobile-landscape="2"
@@ -65,11 +67,6 @@
               </div>
             {% endfor %}
           {%- endunless -%}
-        </div>
-        <div class="swiper-controls">
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
       </div>
     </swiper-slider>
