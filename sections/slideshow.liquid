@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ 'section-slideshow.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-slideshow.css' | asset_url | stylesheet_tag }}</noscript>
 <div class="hero-slider section-{{ section.id }}-padding">
   <swiper-slider
     class="swiper-slider"
@@ -69,6 +71,16 @@
                         class="button"
                       >
                         <span>{{ block.settings.button_label | escape }}</span>
+                      </a>
+                      <a
+                        {% if block.settings.link_2 %}
+                          href="{{ block.settings.link_2 }}"
+                        {% else %}
+                          role="link"aria-disabled="true"
+                        {% endif %}
+                        class="button"
+                      >
+                        <span>{{ block.settings.button_label_2 | escape }}</span>
                       </a>
                     </div>
                   {%- endif -%}
@@ -185,7 +197,19 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.hero_slider.blocks.slide.settings.link.label"
-        }
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "Button label",
+          "label": "t:sections.hero_slider.blocks.slide.settings.button_label.label",
+          "info": "t:sections.hero_slider.blocks.slide.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "link_2",
+          "label": "t:sections.hero_slider.blocks.slide.settings.link.label"
+        },
       ]
     }
   ],
