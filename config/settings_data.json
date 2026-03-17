@@ -15,12 +15,12 @@
     "colors_accent_2": "#F7931E",
     "type_body_font": "poppins_n4",
     "body_scale": 100,
-    "page_width": 1780,
+    "page_width": 1560,
     "inputs_radius": 0,
     "buttons_radius": 0,
     "variant_pills_radius": 4,
     "card_style": "standard",
-    "popup_corner_radius": 0,
+    "popup_corner_radius": 14,
     "popup_shadow_opacity": 15,
     "popup_shadow_horizontal_offset": 0,
     "popup_shadow_vertical_offset": 6,
@@ -51,6 +51,9 @@
     "show_cartpayment": false,
     "show_timer": true,
     "timer_text": "",
+    "checkout_logo_image": "shopify://shop_images/1Logo.png",
+    "checkout_accent_color": "#2bbef9",
+    "checkout_button_color": "#2bbef9",
     "type_header_font": "poppins_n5",
     "inputs_border_thickness": 1,
     "inputs_border_opacity": 10,
@@ -74,9 +77,6 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "accent-1",
     "accent_icons": "text",
-    "checkout_logo_image": "shopify://shop_images/1Logo.png",
-    "checkout_accent_color": "#2bbef9",
-    "checkout_button_color": "#2bbef9",
     "vtoverlayhcolor": "#121212",
     "vtoverlayhbg": "#FFFFFF",
     "vtoverlayhoutline": "#FFFFFF",
@@ -135,15 +135,11 @@
           "logo_width": 192,
           "mobile_logo_width": 110,
           "show_acicon": true,
-          "show_topheader": true,
-          "topbg_clr": "#ffffff",
-          "topc_clr": "#000000",
-          "topoffer": "Get 30% Off On Selected Items",
           "show_contact": true,
           "bnts1": "Support 24/7",
           "mobile": "+1 (555) 123-4567",
           "primary_menu": "main-menu",
-          "vertical_menu": "vertical-menu",
+          "vertical_menu": "",
           "vertical_menu_always_open_on_home": false,
           "enable_sticky_header": false,
           "enable_sticky_header_mobile": false,
@@ -160,7 +156,6 @@
           "image_iPd4PW": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/silver-threader-necklace_925x_0a5faff7-7dd0-477d-a03f-c046e6455ea3.jpg",
               "image_width": 100,
               "alignment": ""
             }
@@ -197,7 +192,6 @@
           "66cf8672-198d-43dc-8e2d-78702a5640bb"
         ],
         "settings": {
-          "logo": "shopify://shop_images/logo-2.svg",
           "logo_width": 204,
           "contsubtext": "<p>Everything You Need, All in One Place</p>",
           "show_social": true,
@@ -205,9 +199,9 @@
           "newsheading": "Subscribe to our newsletter",
           "payment_enable": true,
           "show_copyright": true,
-          "margin_top": 80,
-          "padding_top": 30,
-          "padding_bottom": 30
+          "margin_top": 60,
+          "padding_top": 60,
+          "padding_bottom": 60
         }
       },
       "main-password-header": {
@@ -217,42 +211,6 @@
       "main-password-footer": {
         "type": "main-password-footer",
         "settings": {}
-      },
-      "hero-slider": {
-        "type": "hero-slider",
-        "blocks": {
-          "2b986134-85fe-4ab3-b36a-42f81dc94671": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/Slider_1.jpg",
-              "heading": "New collection 2022",
-              "subheading": "New fashion",
-              "subheadingtext": "<p>Suspendisse venenatis massa sed rhoncus ornare. Donec molestie bibendum felis sed commodo. Donec risus magna, sollicitudin lobortis tellus sit amet vivamus dapibus odio lectus ornare quis. Morbi congue massa eu magna.</p>",
-              "button_label": "Shop now",
-              "link": "shopify://collections"
-            }
-          },
-          "f1d7d385-be74-41e3-87d4-32a5cfeb3698": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/Slider_1.jpg",
-              "heading": "New collection 2022",
-              "subheading": "New fashion",
-              "subheadingtext": "<p>Suspendisse venenatis massa sed rhoncus ornare. Donec molestie bibendum felis sed commodo. Donec risus magna, sollicitudin lobortis tellus sit amet vivamus dapibus odio lectus ornare quis. Morbi congue massa eu magna.</p>",
-              "button_label": "Shop now",
-              "link": "shopify://collections"
-            }
-          }
-        },
-        "block_order": [
-          "2b986134-85fe-4ab3-b36a-42f81dc94671",
-          "f1d7d385-be74-41e3-87d4-32a5cfeb3698"
-        ],
-        "settings": {
-          "slide_height": "adapt_image",
-          "padding_top": 20,
-          "padding_bottom": 0
-        }
       },
       "text-with-icons": {
         "type": "text-with-icons",
@@ -312,10 +270,10 @@
           "blog": "news",
           "show_image": true,
           "image_height": "adapt",
-          "show_date": false,
           "show_author": false,
-          "show_desc": true,
+          "show_date": false,
           "show_cmment": false,
+          "show_desc": true,
           "show_view_all": false,
           "padding_top": 60,
           "padding_bottom": 4
@@ -346,9 +304,7 @@
         "header": {
           "type": "header",
           "settings": {
-            "logo_width": 90,
-            "topbg_clr": "#f5f5f5",
-            "topc_clr": "#000000"
+            "logo_width": 90
           }
         },
         "footer": {
