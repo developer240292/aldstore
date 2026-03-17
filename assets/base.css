@@ -453,6 +453,11 @@ input.field__input::placeholder {
     object-fit: cover;
 }
 
+/*  */
+.swiper-slider {
+    position: relative;
+}
+
 /*HEADER*/
 .header-top {
     padding: 15px 0;

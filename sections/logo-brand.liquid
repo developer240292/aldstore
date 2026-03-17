@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ 'section-logo-brand.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-logo-brand.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
   .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -13,8 +15,8 @@
       class="swiper-slider"
       data-section-id="{{ section.id }}"
       data-slider-speed="300"
-      data-slider-navigation="true"
-      data-slider-pagination="true"
+      data-slider-navigation="false"
+      data-slider-pagination="false"
       data-slider-autoplay="0"
       data-slider-rows="{{section.settings.rows}}"
       data-breakpoint-mobile-portrait="2"
@@ -22,35 +24,32 @@
       data-breakpoint-tablet-portrait="2"
       data-breakpoint-tablet-landscape="3"
       data-breakpoint-laptop="4"
-      data-breakpoint-widescreen="4"
+      data-breakpoint-widescreen="5"
     >
       <div class="swiper">
         <div class="swiper-wrapper">
           {% for block in section.blocks %}
             <div class="swiper-slide">
-              {% if block.settings.link != blank -%}
-                <a href="{{ block.settings.link }}" title="{{ 'vtcustomlabel.vtalltext.banner' | t }}">
-              {%- endif %}
-              {% if block.settings.image != blank %}
-                <img
-                  loading="lazy"
-                  src="{{ block.settings.image | image_url: width: 225, height: 150 }}"
-                  class="logo-bar__image mx-auto lazyload"
-                  alt="{{ block.settings.image.alt }}"
-                  width="{{ block.settings.image.width }}"
-                  height="{{ block.settings.image.height }}"
-                >
-              {% else %}
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-              {% endif %}
-              {% if block.settings.link != blank %}</a>{% endif %}
+              <div class="brand-item">
+                {% if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" title="{{ 'vtcustomlabel.vtalltext.banner' | t }}">
+                {%- endif %}
+                {% if block.settings.image != blank %}
+                  <img
+                    loading="lazy"
+                    src="{{ block.settings.image | image_url: width: 225, height: 150 }}"
+                    class="logo-bar__image mx-auto lazyload"
+                    alt="{{ block.settings.image.alt }}"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                  >
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+                {% if block.settings.link != blank %}</a>{% endif %}
+              </div>
             </div>
           {% endfor %}
-        </div>
-        <div class="swiper-controls">
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
       </div>
     </swiper-slider>
