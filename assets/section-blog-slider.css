@@ -1,4 +1,4 @@
-.product-slide .blog-header {
+.blog-slide .blog-header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -7,12 +7,12 @@
   margin-bottom: 50px;
 }
 
-.product-slide .heading {
+.blog-slide .heading {
   margin: 0;
   font-size: clamp(22.041px, 1.378rem + ((1vw - 3.2px) * 0.872), 36px);
   font-weight: 600;
 }
 
-.product-slide .button {
+.blog-slide .button {
   font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.25), 18px);
 }
