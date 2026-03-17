@@ -1592,14 +1592,6 @@ form.search .search__button {
     color: #000;
 }
 
-.footer__copyright a {
-    color: inherit;
-}
-
-.footer__copyright a:hover {
-    text-decoration: underline;
-}
-
 @media(max-width: 767px) {
     .footer-blocks-wrapper {
         flex-direction: column;
@@ -1800,7 +1792,7 @@ button#scroll svg {
 /*social-link*/
 .social-link {
     display: flex;
-    gap: 20px;
+    gap: 14px;
 }
 
 /* .social-sharing */
