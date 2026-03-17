@@ -3,7 +3,7 @@
   color: #fff;
 }
 
-.hero-slider-item .hero-slider__text-wrapper .hero-slider__media::before {
+.hero-slider-item .hero-slider__media::before {
   content: '';
   position: absolute;
   top: 0;
