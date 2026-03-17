@@ -171,17 +171,21 @@
           "label": "Facebook",
           "info": "https:\/\/facebook.com\/shopify"
         },
-        "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https:\/\/twitter.com\/shopify"
-        },
         "social_instagram_link": {
           "label": "Instagram",
           "info": "http:\/\/instagram.com\/shopify"
         },
+        "social_pinterest_link": {
+          "label": "Pinterest",
+          "info": "https:\/\/pinterest.com\/shopify"
+        },
         "social_youtube_link": {
           "label": "YouTube",
           "info": "https:\/\/www.youtube.com\/shopify"
+        },
+        "social_twitter_link": {
+          "label": "Twitter",
+          "info": "https:\/\/twitter.com\/shopify"
         }
       }
     },

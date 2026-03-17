@@ -11,22 +11,28 @@
       <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
     </a>
   {%- endif -%}
-  {%- if settings.social_twitter_link != blank -%}
-    <a href="{{ settings.social_twitter_link }}">
-      {%- render 'icon-social-twitter' -%}
-      <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-    </a>
-  {%- endif -%}
-  {%- if settings.social_instagram_link != blank -%}
+    {%- if settings.social_instagram_link != blank -%}
     <a href="{{ settings.social_instagram_link }}">
       {%- render 'icon-social-instagram' -%}
       <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+    </a>
+  {%- endif -%}
+  {%- if settings.social_pinterest_link != blank -%}
+    <a href="{{ settings.social_pinterest_link }}">
+      {%- render 'icon-social-pinterest' -%}
+      <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
     </a>
   {%- endif -%}
   {%- if settings.social_youtube_link != blank -%}
     <a href="{{ settings.social_youtube_link }}">
       {%- render 'icon-social-youtube' -%}
       <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+    </a>
+  {%- endif -%}
+  {%- if settings.social_twitter_link != blank -%}
+    <a href="{{ settings.social_twitter_link }}">
+      {%- render 'icon-social-twitter' -%}
+      <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
     </a>
   {%- endif -%}
 </div>

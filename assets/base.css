@@ -158,7 +158,7 @@ a:focus,
 a:active {
     text-decoration: none;
     outline: none;
-    color: var(--color-base-accent-1);
+    color: var(--color-base-accent-2);
 }
 
 h1,
@@ -621,12 +621,16 @@ input.field__input::placeholder {
 }
 
 .box-header-nav .main-menu>.menu-item>a {
-    font-size: calc(var(--font-body-scale) * 16px);
     line-height: 40px;
     vertical-align: middle;
     position: relative;
     display: inline-block;
     color: #fff;
+}
+
+.box-header-nav .main-menu>.menu-item:hover>a {
+    color: #fff;
+    text-decoration: underline;
 }
 
 .box-header-nav .main-menu .toggle-submenu {
@@ -1358,10 +1362,9 @@ form.search .search__button {
 
 .disclosure-form-field__flag {
     display: inline-block;
-    min-width: 20px;
-    height: 20px;
+    min-width: 35px;
+    height: 26px;
     position: relative;
-    border-radius: 50%;
     overflow: hidden;
     vertical-align: top;
     margin-right: 7px;
