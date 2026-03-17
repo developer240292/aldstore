@@ -1525,7 +1525,11 @@ form.search .search__button {
 
 /* .footer-midle */
 .footer-midle .row {
-    column-gap: 30px;
+    gap: 30px 0;
+}
+
+.footer-midle .footer-midle-left {
+    color: #000;
 }
 
 .footer-midle .footer-logo {
