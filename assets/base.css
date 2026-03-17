@@ -22,6 +22,7 @@ html.no-js .no-js-hidden {
 body {
     max-width: 100%;
     overflow-x: hidden;
+    background-color: #f6f5f7;
 }
 
 img {
@@ -1464,6 +1465,9 @@ form.search .search__button {
 }
 
 /* FOOTER */
+.footer {
+    background-color: #fff;
+}
 /* Newsletter */
 .footer-top {
     background-color: #f3f3f3;
