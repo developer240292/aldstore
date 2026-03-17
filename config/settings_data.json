@@ -198,7 +198,7 @@
           "show_copyright": true,
           "margin_top": 80,
           "padding_top": 32,
-          "padding_bottom": 60
+          "padding_bottom": 32
         }
       },
       "main-password-header": {
