@@ -153,43 +153,40 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "image_iPd4PW": {
-            "type": "image",
-            "settings": {
-              "image_width": 100,
-              "alignment": ""
-            }
-          },
-          "text_tbaGwD": {
-            "type": "text",
-            "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share store details, promotions, or brand content with your customers.</p>"
-            }
-          },
           "958c9aca-bc3d-44ff-aa05-5f18c868f7ee": {
             "type": "link_list",
             "settings": {
-              "heading": "Extras",
-              "menu": ""
+              "heading": "Company",
+              "menu": "company"
             }
           },
-          "66cf8672-198d-43dc-8e2d-78702a5640bb": {
-            "type": "textarea",
+          "link_list_7WLgWn": {
+            "type": "link_list",
             "settings": {
-              "heading": "Contact us",
-              "contsubtext": "",
-              "footer_address": "demo store United States.",
-              "footer_phone": "+1 (555) 123-4567",
-              "footer_email": "support@aldstore.com"
+              "heading": "Help",
+              "menu": "help"
+            }
+          },
+          "link_list_MFrmpd": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Store",
+              "menu": "store"
+            }
+          },
+          "link_list_qyRKB9": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Account",
+              "menu": "account"
             }
           }
         },
         "block_order": [
-          "image_iPd4PW",
-          "text_tbaGwD",
           "958c9aca-bc3d-44ff-aa05-5f18c868f7ee",
-          "66cf8672-198d-43dc-8e2d-78702a5640bb"
+          "link_list_7WLgWn",
+          "link_list_MFrmpd",
+          "link_list_qyRKB9"
         ],
         "settings": {
           "logo_width": 204,
@@ -199,9 +196,9 @@
           "newsheading": "Subscribe to our newsletter",
           "payment_enable": true,
           "show_copyright": true,
-          "margin_top": 60,
-          "padding_top": 60,
-          "padding_bottom": 60
+          "margin_top": 80,
+          "padding_top": 32,
+          "padding_bottom": 32
         }
       },
       "main-password-header": {
