@@ -51,7 +51,7 @@
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
                   >
-                    <span>{{ 'newsletter.button_label' | t }}</span>{% render 'icon-footer-send' %}
+                    <span>{{ 'newsletter.button_label' | t }}</span>
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -164,7 +164,7 @@
                         {%- endif -%}
                         {%- if block.settings.footer_phone != blank -%}
                           <li>
-                            {% render 'icon-footer-contact' %}
+                            {% render 'icon-footer-phone' %}
                             <span>
                               <a href="tel:{{ block.settings.footer_phone }}">
                                 {{- block.settings.footer_phone -}}

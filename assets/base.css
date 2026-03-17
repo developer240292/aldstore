@@ -1531,8 +1531,11 @@ form.search .search__button {
 }
 
 .footer-blocks-wrapper .footer-heading {
-    font-size: 20px;
-    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-transform: uppercase;
+    margin: 0 0 25px;
 }
 
 .footer-blocks-wrapper .footer-block {
