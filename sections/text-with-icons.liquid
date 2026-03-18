@@ -20,11 +20,6 @@
   }
 {%- endstyle -%}
 <div class="container section-{{ section.id }}-padding">
-  {% if section.settings.title != blank %}
-    <h2 class="heading text-left {{ section.settings.heading_size }}">
-      <span>{{ section.settings.title }}</span>
-    </h2>
-  {% endif %}
   <div class="row deliveryinfo">
     {% if section.settings.s_title %}
       <div class="col-12 col-sm-4 col-md-4 cless">
@@ -75,37 +70,14 @@
     "max_blocks": 4,
     "settings": [
       {
-        "type": "text",
-        "id": "title",
-        "label": "t:sections.multicolumn.settings.title.label"
-      },
-      {
-        "type": "select",
-        "id": "heading_size",
-        "options": [
-          {
-            "value": "h2",
-            "label": "t:sections.all.heading_size.options__1.label"
-          }, {
-            "value": "h1",
-            "label": "t:sections.all.heading_size.options__2.label"
-          }, {
-            "value": "h0",
-            "label": "t:sections.all.heading_size.options__3.label"
-          }
-        ],
-        "default": "h0",
-        "label": "t:sections.all.heading_size.label"
-      },
-      {
         "type": "range",
         "id": "iconwidth",
         "min": 0,
-        "max": 65,
+        "max": 40,
         "step": 1,
         "unit": "px",
         "label": "Icon width",
-        "default": 65,
+        "default": 20,
         "info": "This option work only on desktop view"
       },
       {
@@ -122,10 +94,12 @@
         ],
         "default": "center",
         "label": "t:sections.multicolumn.settings.column_alignment.label"
-      }, {
+      }, 
+      {
         "type": "header",
         "content": "t:sections.all.padding.section_padding_heading"
-      }, {
+      }, 
+      {
         "type": "range",
         "id": "padding_top",
         "min": 0,
@@ -159,56 +133,35 @@
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
               },
               {
-                "value": "box",
-                "label": "Box"
-              },
-              {
                 "value": "shipping",
-                "label": "Shipping"
+                "label": "Free shipping"
               },
               {
-                "value": "service",
-                "label": "24/7 Service"
-              }, {
-                "value": "offer",
-                "label": "Offer"
-              }, {
                 "value": "support",
-                "label": "Support"
-              }, {
-                "value": "delivery",
-                "label": "Truck"
-              }, {
-                "value": "moneyback",
-                "label": "Dollar sign"
-              }, {
-                "value": "gift",
-                "label": "Gift"
-              }, {
-                "value": "coloruser",
-                "label": "Color user"
-              }, {
-                "value": "colorpayment",
-                "label": "Color payment"
-              }, {
-                "value": "colorgift",
-                "label": "Color gift"
-              }, {
-                "value": "colorship",
-                "label": "Color shipping"
+                "label": "Support 24/7"
+              }, 
+              {
+                "value": "payment",
+                "label": "Payment"
+              },
+              {
+                "value": "offers",
+                "label": "Special offers"
               }
             ],
             "default": "shipping",
             "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
-          }, {
+          }, 
+          {
             "type": "text",
             "id": "title",
             "default": "Title",
             "label": "t:sections.multicolumn.blocks.column.settings.title.label"
-          }, {
-            "type": "richtext",
+          }, 
+          {
+            "type": "text",
             "id": "text",
-            "default": "<p>Content description</p>",
+            "default": "Content description",
             "label": "t:sections.multicolumn.blocks.column.settings.text.label"
           }
         ]

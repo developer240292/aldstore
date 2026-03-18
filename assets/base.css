@@ -1004,6 +1004,7 @@ form.search .field {
     padding: 4px;
     border: 1px solid var(--color-base-accent-1);
     border-radius: 30px;
+    background-color: #fff;
 }
 
 form.search .search__input.field__input {
