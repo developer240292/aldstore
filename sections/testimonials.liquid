@@ -8,7 +8,7 @@
 {%- endstyle -%}
 <div class="testimonials container section-{{ section.id }}-padding">
   {% unless section.settings.title == blank %}
-    <h2 class="heading">
+    <h2 class="heading {{ section.settings.heading_size }}">
       {{ section.settings.title | escape }}
     </h2>
   {% endunless %}
@@ -67,6 +67,22 @@
       "id": "title",
       "default": "What Our Customers Say",
       "label": "t:sections.testimonials.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "medium",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "large", 
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.all.heading_size.label"
     },
     {
       "type": "select",
