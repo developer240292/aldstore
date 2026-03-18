@@ -3,7 +3,7 @@
   width: 100vw;
   max-width: 100%;
   overflow-x: hidden;
-  background-color: var(--color-accent-2);
+  background-color: var(--color-base-accent-2);
   color: #000;
 }
 
