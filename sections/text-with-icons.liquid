@@ -11,8 +11,7 @@
   }
 {%- endstyle -%}
 <div class="aldstore-iconbox section-{{ section.id }}-padding">
-<div class="container">
-  <div class="iconbox-animated">
+  <div class="container iconbox-animated">
     {% for block in section.blocks %}
       <div>
           {% render 'icon-allservice', icon: block.settings.icon1 %}
@@ -21,7 +20,7 @@
       </div>
     {% endfor %}
   </div>
-  <div class="iconbox-animated">
+  <div class="container iconbox-animated">
     {% for block in section.blocks %}
       <div>
           <span>
@@ -32,7 +31,6 @@
       </div>
     {% endfor %}
   </div>
-</div>
 </div>
 
 {% schema %}

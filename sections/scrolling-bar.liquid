@@ -1,23 +1,22 @@
-
 <link rel="stylesheet" href="{{ 'section-scrolling-bar.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'section-scrolling-bar.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
   .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
   .section-{{ section.id }}-padding .marquee_inner{
     gap: {{ section.settings.mark_space }}px;
   }
   .section-{{ section.id }}-padding .marquee_inner.left_right {
-      animation: {{ section.settings.mark_speed }}s linear infinite reverse leftmarquee;
+    animation: {{ section.settings.mark_speed }}s linear infinite reverse leftmarquee;
   }
   .section-{{ section.id }}-padding .marquee_inner.right_left {
-      animation: {{ section.settings.mark_speed }}s linear infinite reverse rightmarquee;
+    animation: {{ section.settings.mark_speed }}s linear infinite reverse rightmarquee;
   }
 {%- endstyle -%}
 <div class="section-{{ section.id }}-padding">
-  <div class="marquee color-{{ section.settings.color_scheme }}">
+  <div class="marquee">
     <div class="marquee_inner {% if section.settings.marq_diection == 'left_right' %} left_right {% else %} right_left {% endif %}">
       <p>{{ section.settings.wb_marktext }}</p>
       <p>{{ section.settings.wb_marktext }}</p>
@@ -37,30 +36,6 @@
 {
   "name": "Scrolling bar",
   "settings": [
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "background-1",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.color_scheme.options__1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.color_scheme.options__2.label"
-        },
-        {
-          "value": "accent-1",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.color_scheme.options__4.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.color_scheme.options__5.label"
-        }
-      ],
-      "default": "accent-2",
-      "label": "t:sections.announcement-bar.blocks.announcement.settings.color_scheme.label"
-    },
     {
       "type": "textarea",
       "id": "wb_marktext",
