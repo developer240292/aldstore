@@ -247,6 +247,65 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
+    },
+    "testimonials_6TmUWX": {
+      "type": "testimonials",
+      "blocks": {
+        "column_cGK8kB": {
+          "type": "column",
+          "settings": {
+            "title": "Emily Johnson",
+            "subtitle": "Customer",
+            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
+          }
+        },
+        "column_DWthA6": {
+          "type": "column",
+          "settings": {
+            "title": "Emily Johnson",
+            "subtitle": "Customer",
+            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
+          }
+        },
+        "column_qpKQAk": {
+          "type": "column",
+          "settings": {
+            "title": "Emily Johnson",
+            "subtitle": "Customer",
+            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
+          }
+        },
+        "column_cQd4ez": {
+          "type": "column",
+          "settings": {
+            "title": "Emily Johnson",
+            "subtitle": "Customer",
+            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
+          }
+        },
+        "column_CDwKqn": {
+          "type": "column",
+          "settings": {
+            "title": "Emily Johnson",
+            "subtitle": "Customer",
+            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_cGK8kB",
+        "column_DWthA6",
+        "column_qpKQAk",
+        "column_cQd4ez",
+        "column_CDwKqn"
+      ],
+      "name": "t:sections.testimonials.presets.name",
+      "settings": {
+        "title": "testimonials",
+        "image_ratio": "adapt",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -256,6 +315,7 @@
     "product_slide_FedGnK",
     "blog_slider_fYgmPp",
     "scrolling_bar_YD7gLi",
-    "newsletter_Wkgx9Q"
+    "newsletter_Wkgx9Q",
+    "testimonials_6TmUWX"
   ]
 }
