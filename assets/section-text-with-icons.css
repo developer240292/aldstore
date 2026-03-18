@@ -1,0 +1,43 @@
+.aldstore-iconbox {
+  overflow: hidden;
+  display: flex;
+  color: #000;
+  background-color: #ededed;
+}
+
+.aldstore-iconbox .iconbox-animated {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.aldstore-iconbox .iconbox-animated+.iconbox-animated {
+  display: none;
+}
+
+.aldstore-iconbox .iconbox-animated div {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+@media (max-width: 1366px) {
+  .aldstore-iconbox .iconbox-animated {
+    flex: 0 0 auto;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-play-state: running;
+    width: max-content;
+    will-change: transform, width;
+    animation-name: scrolling-left;
+    padding: 0 10px;
+  }
+
+  .aldstore-iconbox .iconbox-animated+.iconbox-animated {
+    display: flex;
+  }
+}
