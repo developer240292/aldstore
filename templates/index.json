@@ -254,6 +254,7 @@
         "column_cGK8kB": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/testimonial-01.jpg",
             "title": "Emily Johnson",
             "subtitle": "Customer",
             "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
@@ -262,33 +263,28 @@
         "column_DWthA6": {
           "type": "column",
           "settings": {
-            "title": "Emily Johnson",
+            "image": "shopify://shop_images/testimonial-02.jpg",
+            "title": "Daniel Smith",
             "subtitle": "Customer",
-            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
+            "text": "<p>“Great prices and smooth shopping experience. I’ve bought several items here and all arrived on time<br/></p>"
           }
         },
         "column_qpKQAk": {
           "type": "column",
           "settings": {
-            "title": "Emily Johnson",
+            "image": "shopify://shop_images/testimonial-03.jpg",
+            "title": "Jessica Lee",
             "subtitle": "Customer",
-            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
+            "text": "<p><br/>“The website is super easy to use. I like how they have almost everything, from clothes to home stuff”<br/><br/></p>"
           }
         },
         "column_cQd4ez": {
           "type": "column",
           "settings": {
-            "title": "Emily Johnson",
+            "image": "shopify://shop_images/testimonial-04.jpg",
+            "title": "Michael Brown",
             "subtitle": "Customer",
-            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
-          }
-        },
-        "column_CDwKqn": {
-          "type": "column",
-          "settings": {
-            "title": "Emily Johnson",
-            "subtitle": "Customer",
-            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
+            "text": "<p>“Reliable store with good quality products, fast shipping, and responsive customer service.”</p>"
           }
         }
       },
@@ -296,8 +292,7 @@
         "column_cGK8kB",
         "column_DWthA6",
         "column_qpKQAk",
-        "column_cQd4ez",
-        "column_CDwKqn"
+        "column_cQd4ez"
       ],
       "name": "t:sections.testimonials.presets.name",
       "settings": {
