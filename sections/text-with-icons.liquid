@@ -1,6 +1,6 @@
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
 {%- style -%}
-  .deliveryinfo ul .multis-svg svg {
+  .deliveryinfo svg {
     width: {{ section.settings.iconwidth }}px;
     height: {{ section.settings.iconwidth }}px;
   }
@@ -8,58 +8,18 @@
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
-  @media screen and (max-width: 991px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
-    }
-    .deliveryinfo ul .multis-svg svg {
-      width: 28px;
-      height: 28px;
-    }
-  }
 {%- endstyle -%}
 <div class="container section-{{ section.id }}-padding">
-  <div class="row deliveryinfo">
-    {% if section.settings.s_title %}
-      <div class="col-12 col-sm-4 col-md-4 cless">
-        <ul>
-          <li>
-            <span>{% render 'icon-allservice', icon: section.settings.icon1 %}</span>
-          </li>
-          <li>
-            <h4>{{ section.settings.header_gift }}</h4>
-            <p>{{ section.settings.header_gift1 }}</p>
-          </li>
-        </ul>
+  <div class="deliveryinfo iconbox-animated">
+    {% for block in section.blocks %}
+      <div>
+          <span>
+            {% render 'icon-allservice', icon: block.settings.icon1 %}
+          </span>
+          <strong>{{ block.settings.title }}</strong>
+          <span>{{ block.settings.text }}</span>
       </div>
-    {% endif %}
-    {% if section.settings.sa_title %}
-      <div class="col-12 col-sm-4 col-md-4 cless">
-        <ul>
-          <li>
-            <span>{% render 'icon-allservice', icon: section.settings.icon2 %}</span>
-          </li>
-          <li>
-            <h4>{{ section.settings.header_pay }}</h4>
-            <p>{{ section.settings.header_pay1 }}</p>
-          </li>
-        </ul>
-      </div>
-    {% endif %}
-    {% if section.settings.sb_title %}
-      <div class="col-12 col-sm-4 col-md-4 cless">
-        <ul>
-          <li>
-            <span>{% render 'icon-allservice', icon: section.settings.icon3 %}</span>
-          </li>
-          <li>
-            <h4>{{ section.settings.header_support }}</h4>
-            <p>{{ section.settings.header_support1 }}</p>
-          </li>
-        </ul>
-      </div>
-    {% endif %}
+    {% endfor %}
   </div>
 </div>
 
@@ -173,9 +133,14 @@
         "blocks": [
           {
             "type": "image"
-          }, {
+          }, 
+          {
             "type": "image"
-          }, {
+          }, 
+          {
+            "type": "image"
+          }, 
+          {
             "type": "image"
           }
         ]
