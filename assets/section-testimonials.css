@@ -5,7 +5,7 @@
 }
 
 .testimonials .row {
-    gap: 0 30px;
+    gap: 30px 0;
 }
 
 .testimonials-item {
@@ -47,4 +47,8 @@
 .testimonials-item .testimonial-text {
     margin-top: 15px;
     color: #000;
+}
+
+.testimonials-item .testimonial-text p {
+    margin-bottom: 0;
 }
