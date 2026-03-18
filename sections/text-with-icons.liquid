@@ -1,13 +1,13 @@
 <link rel="stylesheet" href="{{ 'section-text-with-icons.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'section-text-with-icons.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
-  .section-{{ section.id }}-padding svg {
-    width: {{ section.settings.iconwidth }}px;
-    height: {{ section.settings.iconwidth }}px;
-  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  .section-{{ section.id }}-padding svg {
+    width: {{ section.settings.iconwidth }}px;
+    height: {{ section.settings.iconwidth }}px;
   }
 {%- endstyle -%}
 <div class="aldstore-iconbox section-{{ section.id }}-padding">
@@ -15,9 +15,7 @@
   <div class="iconbox-animated">
     {% for block in section.blocks %}
       <div>
-          <span>
-            {% render 'icon-allservice', icon: block.settings.icon1 %}
-          </span>
+          {% render 'icon-allservice', icon: block.settings.icon1 %}
           <strong>{{ block.settings.title }}</strong>
           <span>{{ block.settings.text }}</span>
       </div>
@@ -66,7 +64,7 @@
         "step": 1,
         "unit": "px",
         "label": "t:sections.all.padding.padding_top",
-        "default": 60
+        "default": 15
       }, {
         "type": "range",
         "id": "padding_bottom",
@@ -75,7 +73,7 @@
         "step": 1,
         "unit": "px",
         "label": "t:sections.all.padding.padding_bottom",
-        "default": 0
+        "default": 15
       }
     ],
     "blocks": [
