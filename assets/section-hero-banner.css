@@ -14,7 +14,9 @@
 
 .hero-banner .banner__inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  position: relative;
 }
 
 .hero-banner .banner__box {
@@ -35,6 +37,7 @@
   font-size: clamp(24.034px, 1.502rem + ((1vw - 3.2px) * 0.998), 40px);
   font-weight: 700;
   color: #fff;
+  margin: 0;
 }
 
 .hero-banner .banner__heading.large {
@@ -64,4 +67,12 @@
 
 .hero-banner.accent-2 .banner__text {
   color: #3b3b3b;
+}
+
+@media(max-width: 767px) {
+
+  .hero-banner .banner__box,
+  .hero-banner .banner__image {
+    width: 100%;
+  }
 }
