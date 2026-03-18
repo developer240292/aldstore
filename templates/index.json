@@ -201,13 +201,45 @@
       "type": "scrolling-bar",
       "name": "Scrolling bar",
       "settings": {
-        "color_scheme": "accent-2",
         "wb_marktext": "Free shipping for all orders over $100\nGet 15% off your first purchase!",
         "mark_space": 70,
         "mark_speed": 34,
         "marq_diection": "right_left",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "newsletter_Wkgx9Q": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_kPdACT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails"
+          }
+        },
+        "paragraph_hCzJfR": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_RdJL9j": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_kPdACT",
+        "paragraph_hCzJfR",
+        "email_form_RdJL9j"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -217,6 +249,7 @@
     "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
     "product_slide_FedGnK",
     "blog_slider_fYgmPp",
-    "scrolling_bar_YD7gLi"
+    "scrolling_bar_YD7gLi",
+    "newsletter_Wkgx9Q"
   ]
 }
