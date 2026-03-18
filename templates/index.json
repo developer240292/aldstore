@@ -90,6 +90,90 @@
         "padding_bottom": 16
       }
     },
+    "collection_list_E4GGDD": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_PE3mkH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "featured_collection_QAcDWy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "baby-kids"
+          }
+        },
+        "featured_collection_9xNc3p": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "beauty-personal-care"
+          }
+        },
+        "featured_collection_mW49kt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "books-stationery"
+          }
+        },
+        "featured_collection_AdHBt6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "electronics-gadgets"
+          }
+        },
+        "featured_collection_EeGFjq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fashion-accessories"
+          }
+        },
+        "featured_collection_cYqniW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "home-living"
+          }
+        },
+        "featured_collection_Cdxppq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pets-supplies"
+          }
+        },
+        "featured_collection_MmNtgQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "sports-outdoors"
+          }
+        },
+        "featured_collection_9tj7a3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "toys-hobbies"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_PE3mkH",
+        "featured_collection_QAcDWy",
+        "featured_collection_9xNc3p",
+        "featured_collection_mW49kt",
+        "featured_collection_AdHBt6",
+        "featured_collection_EeGFjq",
+        "featured_collection_cYqniW",
+        "featured_collection_Cdxppq",
+        "featured_collection_MmNtgQ",
+        "featured_collection_9tj7a3"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "medium",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
     "scrolling_bar_YD7gLi": {
       "type": "scrolling-bar",
       "name": "Scrolling bar",
@@ -189,100 +273,15 @@
         "padding_top": 60,
         "padding_bottom": 0
       }
-    },
-    "collection_list_E4GGDD": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_PE3mkH": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        },
-        "featured_collection_QAcDWy": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "baby-kids"
-          }
-        },
-        "featured_collection_9xNc3p": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "beauty-personal-care"
-          }
-        },
-        "featured_collection_mW49kt": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "books-stationery"
-          }
-        },
-        "featured_collection_AdHBt6": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "electronics-gadgets"
-          }
-        },
-        "featured_collection_EeGFjq": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "fashion-accessories"
-          }
-        },
-        "featured_collection_cYqniW": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "home-living"
-          }
-        },
-        "featured_collection_Cdxppq": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pets-supplies"
-          }
-        },
-        "featured_collection_MmNtgQ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "sports-outdoors"
-          }
-        },
-        "featured_collection_9tj7a3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "toys-hobbies"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_PE3mkH",
-        "featured_collection_QAcDWy",
-        "featured_collection_9xNc3p",
-        "featured_collection_mW49kt",
-        "featured_collection_AdHBt6",
-        "featured_collection_EeGFjq",
-        "featured_collection_cYqniW",
-        "featured_collection_Cdxppq",
-        "featured_collection_MmNtgQ",
-        "featured_collection_9tj7a3"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
     "hero_banner_7GUTaJ",
     "text_with_icons_YBGbQa",
+    "collection_list_E4GGDD",
     "scrolling_bar_YD7gLi",
     "product_slide_FedGnK",
     "testimonials_6TmUWX",
-    "blog_slider_fYgmPp",
-    "collection_list_E4GGDD"
+    "blog_slider_fYgmPp"
   ]
 }
