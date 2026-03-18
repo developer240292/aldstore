@@ -60,6 +60,56 @@
         "padding_bottom": 0
       }
     },
+    "text_with_icons_YBGbQa": {
+      "type": "text-with-icons",
+      "blocks": {
+        "image_cb3rcg": {
+          "type": "image",
+          "settings": {
+            "icon1": "shipping",
+            "title": "Free shipping",
+            "text": "For all order over $100"
+          }
+        },
+        "image_XqnDnf": {
+          "type": "image",
+          "settings": {
+            "icon1": "support",
+            "title": "Support 24/7",
+            "text": "Support online 7 days a week"
+          }
+        },
+        "image_PRFUcV": {
+          "type": "image",
+          "settings": {
+            "icon1": "payment",
+            "title": "Payment",
+            "text": "100% payment security"
+          }
+        },
+        "image_krJNNN": {
+          "type": "image",
+          "settings": {
+            "icon1": "offers",
+            "title": "Special offers",
+            "text": "Multiple exclusive deals for you!"
+          }
+        }
+      },
+      "block_order": [
+        "image_cb3rcg",
+        "image_XqnDnf",
+        "image_PRFUcV",
+        "image_krJNNN"
+      ],
+      "name": "Text with icons",
+      "settings": {
+        "iconwidth": 20,
+        "column_alignment": "left",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
     "42f1a624-a92a-4d3b-8bbd-540ccef9e51d": {
       "type": "logo-brand",
       "blocks": {
@@ -114,56 +164,6 @@
         "padding_bottom": 0
       }
     },
-    "text_with_icons_YBGbQa": {
-      "type": "text-with-icons",
-      "blocks": {
-        "image_cb3rcg": {
-          "type": "image",
-          "settings": {
-            "icon1": "shipping",
-            "title": "Free shipping",
-            "text": "For all order over $100"
-          }
-        },
-        "image_XqnDnf": {
-          "type": "image",
-          "settings": {
-            "icon1": "support",
-            "title": "Support 24/7",
-            "text": "Support online 7 days a week"
-          }
-        },
-        "image_PRFUcV": {
-          "type": "image",
-          "settings": {
-            "icon1": "payment",
-            "title": "Payment",
-            "text": "100% payment security"
-          }
-        },
-        "image_krJNNN": {
-          "type": "image",
-          "settings": {
-            "icon1": "offers",
-            "title": "Special offers",
-            "text": "Multiple exclusive deals for you!"
-          }
-        }
-      },
-      "block_order": [
-        "image_cb3rcg",
-        "image_XqnDnf",
-        "image_PRFUcV",
-        "image_krJNNN"
-      ],
-      "name": "Text with icons",
-      "settings": {
-        "iconwidth": 20,
-        "column_alignment": "left",
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
     "product_slide_FedGnK": {
       "type": "product-slide",
       "name": "Product Slide",
@@ -201,8 +201,8 @@
   },
   "order": [
     "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628",
-    "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
     "text_with_icons_YBGbQa",
+    "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
     "product_slide_FedGnK",
     "blog_slider_fYgmPp"
   ]
