@@ -203,7 +203,7 @@
       "settings": {
         "color_scheme": "accent-2",
         "wb_marktext": "Free shipping for all orders over $100\nGet 15% off your first purchase!",
-        "mark_space": 10,
+        "mark_space": 70,
         "mark_speed": 34,
         "marq_diection": "right_left",
         "padding_top": 0,
