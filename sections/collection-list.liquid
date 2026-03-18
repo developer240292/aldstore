@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="{{ 'section-collection-list.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
-
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -13,38 +12,40 @@
       <span>{{ section.settings.title | escape }}</span>
     </h2>
   {%- endif -%}
-  <swiper-slider
-    class="swiper-slider"
-    data-section-id="{{ section.id }}"
-    data-slider-speed="300"
-    data-slider-navigation="false"
-    data-slider-pagination="false"
-    data-slider-autoplay="0"
-    data-breakpoint-mobile-portrait="2"
-    data-breakpoint-mobile-landscape="3"
-    data-breakpoint-tablet-portrait="4"
-    data-breakpoint-tablet-landscape="6"
-    data-breakpoint-laptop="8"
-    data-breakpoint-widescreen="10"
-  >
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        {%- for block in section.blocks -%}
-          <div class="swiper-slide">
-            <div
-              class="colllist-item"
-              {{ block.shopify_attributes }}
-            >
-              {% render 'card-collectionhome',
-                card_collection: block.settings.collection,
-                media_aspect_ratio: section.settings.image_ratio
-              %}
+  <div class="vtcolllist-slider">
+    <swiper-slider
+      class="swiper-slider"
+      data-section-id="{{ section.id }}"
+      data-slider-speed="300"
+      data-slider-navigation="false"
+      data-slider-pagination="false"
+      data-slider-autoplay="0"
+      data-breakpoint-mobile-portrait="2"
+      data-breakpoint-mobile-landscape="3"
+      data-breakpoint-tablet-portrait="4"
+      data-breakpoint-tablet-landscape="6"
+      data-breakpoint-laptop="8"
+      data-breakpoint-widescreen="10"
+    >
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+            <div class="swiper-slide">
+              <div
+                class="colllist-item"
+                {{ block.shopify_attributes }}
+              >
+                {% render 'card-collectionhome',
+                  card_collection: block.settings.collection,
+                  media_aspect_ratio: section.settings.image_ratio
+                %}
+              </div>
             </div>
-          </div>
-        {%- endfor -%}
+          {%- endfor -%}
+        </div>
       </div>
-    </div>
-  </swiper-slider>
+    </swiper-slider>
+  </div>
 </div>
 
 {% schema %}
