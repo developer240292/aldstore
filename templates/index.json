@@ -215,24 +215,31 @@
         "heading_kPdACT": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails"
+            "heading": "Subscribe to Our Newsletter"
           }
         },
         "paragraph_hCzJfR": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+            "text": "<p>Get 10% off your first order and stay updated with exclusive deals</p>"
           }
         },
         "email_form_RdJL9j": {
           "type": "email_form",
           "settings": {}
+        },
+        "paragraph_9pXUDC": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We respect your privacy. Unsubscribe at any time.</p>"
+          }
         }
       },
       "block_order": [
         "heading_kPdACT",
         "paragraph_hCzJfR",
-        "email_form_RdJL9j"
+        "email_form_RdJL9j",
+        "paragraph_9pXUDC"
       ],
       "name": "t:sections.newsletter.presets.name",
       "settings": {
