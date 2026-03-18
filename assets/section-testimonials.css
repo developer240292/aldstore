@@ -1,7 +1,18 @@
+.testimonials .heading {
+    margin-bottom: 50px;
+    font-size: clamp(22.041px, 1.378rem + ((1vw - 3.2px) * 0.872), 36px);
+    font-weight: 600;
+}
+
+.testimonials .row {
+    gap: 0 30px;
+}
+
 .testimonials-item {
     border-radius: 10px;
     padding: 15px;
     background-color: #fff;
+    color: #3b3b3b;
 }
 
 .testimonials-item .testimonials-top {
@@ -12,6 +23,8 @@
 
 .testimonials-item .testimonials-image {
     width: 116px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .testimonials-item .testimonials-info {
@@ -33,4 +46,5 @@
 
 .testimonials-item .testimonial-text {
     margin-top: 15px;
+    color: #000;
 }
