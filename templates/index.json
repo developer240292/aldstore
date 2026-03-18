@@ -196,6 +196,19 @@
         "padding_top": 60,
         "padding_bottom": 0
       }
+    },
+    "scrolling_bar_YD7gLi": {
+      "type": "scrolling-bar",
+      "name": "Scrolling bar",
+      "settings": {
+        "color_scheme": "accent-2",
+        "wb_marktext": "Free shipping for all orders over $100\nGet 15% off your first purchase!",
+        "mark_space": 10,
+        "mark_speed": 34,
+        "marq_diection": "right_left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -203,6 +216,7 @@
     "text_with_icons_YBGbQa",
     "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
     "product_slide_FedGnK",
-    "blog_slider_fYgmPp"
+    "blog_slider_fYgmPp",
+    "scrolling_bar_YD7gLi"
   ]
 }
