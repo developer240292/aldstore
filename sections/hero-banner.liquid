@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ 'section-hero-banner.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-hero-banner.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top }}px;
@@ -95,19 +97,19 @@
 
 {% schema %}
 {
-  "name": "t:sections.image-banner.name",
+  "name": "t:sections.hero-banner.name",
   "tag": "section",
   "class": "section",
   "settings": [
     {
       "type": "image_picker",
       "id": "image",
-      "label": "t:sections.image-banner.settings.image.label"
+      "label": "t:sections.hero-banner.settings.image.label"
     },
     {
       "type": "image_picker",
       "id": "image_2",
-      "label": "t:sections.image-banner.settings.image_2.label"
+      "label": "t:sections.hero-banner.settings.image_2.label"
     },
     {
       "type": "select",
@@ -115,19 +117,19 @@
       "options": [
         {
           "value": "left",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+          "label": "t:sections.hero-banner.settings.desktop_content_alignment.options__1.label"
         },
         {
           "value": "center",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+          "label": "t:sections.hero-banner.settings.desktop_content_alignment.options__2.label"
         },
         {
           "value": "right",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+          "label": "t:sections.hero-banner.settings.desktop_content_alignment.options__3.label"
         }
       ],
       "default": "left",
-      "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
+      "label": "t:sections.hero-banner.settings.desktop_content_alignment.label"
     },
     {
       "type": "select",
@@ -135,20 +137,15 @@
       "options": [
         {
           "value": "accent-1",
-          "label": "t:sections.image-banner.settings.color_scheme.options__1.label"
+          "label": "t:sections.hero-banner.settings.color_scheme.options__1.label"
         },
         {
           "value": "accent-2",
-          "label": "t:sections.image-banner.settings.color_scheme.options__2.label"
+          "label": "t:sections.hero-banner.settings.color_scheme.options__2.label"
         },
       ],
       "default": "accent-1",
-      "label": "t:sections.image-banner.settings.color_scheme.label",
-      "info": "t:sections.image-banner.settings.color_scheme.info"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.image-banner.settings.header.content"
+      "label": "t:sections.hero-banner.settings.color_scheme.label",
     },
     {
       "type": "header",
@@ -178,14 +175,14 @@
   "blocks": [
     {
       "type": "heading",
-      "name": "t:sections.image-banner.blocks.heading.name",
+      "name": "t:sections.hero-banner.blocks.heading.name",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "heading",
           "default": "Everything You Need, All in One Place",
-          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+          "label": "t:sections.hero-banner.blocks.heading.settings.heading.label"
         },
         {
           "type": "select",
@@ -193,28 +190,28 @@
           "options": [
             {
               "value": "medium",
-              "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__1.label"
+              "label": "t:sections.hero-banner.blocks.heading.settings.heading_size.options__1.label"
             },
             {
               "value": "large",
-              "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__2.label"
+              "label": "t:sections.hero-banner.blocks.heading.settings.heading_size.options__2.label"
             }
           ],
           "default": "medium",
-          "label": "t:sections.image-banner.blocks.heading.settings.heading_size.label"
+          "label": "t:sections.hero-banner.blocks.heading.settings.heading_size.label"
         }
       ]
     },
     {
       "type": "text",
-      "name": "t:sections.image-banner.blocks.text.name",
+      "name": "t:sections.hero-banner.blocks.text.name",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "text",
           "default": "From fashion to home decor — shop smarter, live better",
-          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+          "label": "t:sections.hero-banner.blocks.text.settings.text.label"
         },
         {
           "type": "select",
@@ -222,41 +219,41 @@
           "options": [
             {
               "value": "body",
-              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+              "label": "t:sections.hero-banner.blocks.text.settings.text_style.options__1.label"
             },
             {
               "value": "subtitle",
-              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+              "label": "t:sections.hero-banner.blocks.text.settings.text_style.options__2.label"
             }
           ],
           "default": "subtitle",
-          "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+          "label": "t:sections.hero-banner.blocks.text.settings.text_style.label"
         }
       ]
     },
     {
       "type": "buttons",
-      "name": "t:sections.image-banner.blocks.buttons.name",
+      "name": "t:sections.hero-banner.blocks.buttons.name",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "button_label_1",
           "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+          "label": "t:sections.hero-banner.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.hero-banner.blocks.buttons.settings.button_label_1.info"
         },
         {
           "type": "url",
           "id": "button_link_1",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+          "label": "t:sections.hero-banner.blocks.buttons.settings.button_link_1.label"
         },
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.image-banner.presets.name",
+      "name": "t:sections.hero-banner.presets.name",
       "blocks": [
         {
           "type": "heading"
