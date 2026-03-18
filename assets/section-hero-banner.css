@@ -1,0 +1,66 @@
+.hero-banner {
+  background-color: #fff6e9;
+}
+
+.hero-banner .banner__media>* {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-banner .banner__inner {
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner .banner__box {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  padding-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.hero-banner .banner__image {
+  width: 50%;
+  text-align: center;
+}
+
+.hero-banner .banner__heading {
+  font-size: clamp(24.034px, 1.502rem + ((1vw - 3.2px) * 0.998), 40px);
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-banner .banner__heading.large {
+  font-size: clamp(33.419px, 2.089rem + ((1vw - 3.2px) * 1.661), 60px);
+}
+
+.hero-banner .banner__text {
+  color: #fff;
+}
+
+.hero-banner .banner__text.subtitle {
+  font-size: clamp(15.747px, 0.984rem + ((1vw - 3.2px) * 0.516), 24px);
+}
+
+.hero-banner .banner__buttons .button {
+  border-radius: 10px;
+  background-color: #faba5b;
+  color: #fff;
+  padding: 16px 30px;
+  font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.25), 18px);
+  line-height: 1;
+}
+
+.hero-banner.accent-2 .banner__heading {
+  color: var(--color-base-accent-2);
+}
+
+.hero-banner.accent-2 .banner__text {
+  color: #3b3b3b;
+}
