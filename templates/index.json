@@ -201,7 +201,7 @@
       "type": "scrolling-bar",
       "name": "Scrolling bar",
       "settings": {
-        "wb_marktext": "Free shipping for all orders over $100\nGet 15% off your first purchase!",
+        "wb_marktext": "Free shipping for all orders over $100",
         "mark_space": 70,
         "mark_speed": 34,
         "marq_diection": "right_left",
@@ -236,7 +236,6 @@
       ],
       "name": "t:sections.newsletter.presets.name",
       "settings": {
-        "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
