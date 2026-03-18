@@ -60,6 +60,38 @@
         "padding_bottom": 0
       }
     },
+    "hero_banner_7GUTaJ": {
+      "type": "hero-banner",
+      "blocks": {
+        "heading_kMWnRM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Everything You Need, All in One Place",
+            "heading_size": "medium"
+          }
+        },
+        "text_dDwnkz": {
+          "type": "text",
+          "settings": {
+            "text": "From fashion to home decor — shop smarter, live better",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kMWnRM",
+        "text_dDwnkz"
+      ],
+      "name": "t:sections.hero-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hero-bg-01.jpg",
+        "image_2": "shopify://shop_images/hero-img-01.png",
+        "desktop_content_alignment": "left",
+        "color_scheme": "accent-1",
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
     "text_with_icons_YBGbQa": {
       "type": "text-with-icons",
       "blocks": {
@@ -301,49 +333,17 @@
         "padding_top": 60,
         "padding_bottom": 0
       }
-    },
-    "hero_banner_7GUTaJ": {
-      "type": "hero-banner",
-      "blocks": {
-        "heading_kMWnRM": {
-          "type": "heading",
-          "settings": {
-            "heading": "Everything You Need, All in One Place",
-            "heading_size": "medium"
-          }
-        },
-        "text_dDwnkz": {
-          "type": "text",
-          "settings": {
-            "text": "From fashion to home decor — shop smarter, live better",
-            "text_style": "subtitle"
-          }
-        }
-      },
-      "block_order": [
-        "heading_kMWnRM",
-        "text_dDwnkz"
-      ],
-      "name": "t:sections.hero-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/hero-bg-01.jpg",
-        "image_2": "shopify://shop_images/hero-img-01.png",
-        "desktop_content_alignment": "left",
-        "color_scheme": "accent-1",
-        "padding_top": 15,
-        "padding_bottom": 15
-      }
     }
   },
   "order": [
     "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628",
+    "hero_banner_7GUTaJ",
     "text_with_icons_YBGbQa",
     "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
     "product_slide_FedGnK",
     "blog_slider_fYgmPp",
     "scrolling_bar_YD7gLi",
     "newsletter_Wkgx9Q",
-    "testimonials_6TmUWX",
-    "hero_banner_7GUTaJ"
+    "testimonials_6TmUWX"
   ]
 }
