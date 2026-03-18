@@ -31,7 +31,6 @@
 }
 
 .newsletter__wrapper .field__input {
-  margin: 0;
   height: 50px;
   background-color: #fff;
   border-color: transparent;
@@ -40,10 +39,6 @@
 }
 
 .newsletter__wrapper .field__button {
-  width: auto;
-  margin: 0;
-  text-transform: lowercase;
-  font-size: 16px;
   font-weight: 400;
   padding: 0 30px;
   line-height: 50px;
@@ -59,4 +54,11 @@
 
 .newsletter .newsletter__wrapper .newsletter-form .newsletter-form__message {
   position: unset;
+}
+
+@media (max-width: 767px) {
+  .newsletter__wrapper .field {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
