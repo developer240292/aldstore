@@ -1,5 +1,6 @@
 .hero-banner {
   background-color: #fff6e9;
+  position: relative;
 }
 
 .hero-banner .banner__media>* {
