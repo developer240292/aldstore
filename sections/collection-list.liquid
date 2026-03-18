@@ -8,8 +8,8 @@
 {%- endstyle -%}
 <div class="vtcolllist section-{{ section.id }}-padding container">
   {%- if section.settings.title != blank -%}
-    <h2 class="heading text-left {{ section.settings.heading_size }}">
-      <span>{{ section.settings.title | escape }}</span>
+    <h2 class="heading {{ section.settings.heading_size }}">
+      {{ section.settings.title | escape }}
     </h2>
   {%- endif -%}
   <div class="vtcolllist-slider">
@@ -60,6 +60,22 @@
       "id": "title",
       "label": "t:sections.collection-list.settings.title.label",
       "default": "Collections"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "medium",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.all.heading_size.label"
     },
     {
       "type": "select",

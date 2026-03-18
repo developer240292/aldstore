@@ -457,9 +457,26 @@ input.field__input::placeholder {
     0% {
         transform: translate3d(0, 0, 0);
     }
+
     100% {
         transform: translate3d(-100%, 0, 0);
     }
+}
+
+.heading.medium {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: clamp(16.834px, 1.052rem + ((1vw - 3.2px) * 0.573), 26px);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.heading.large {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: clamp(22.041px, 1.378rem + ((1vw - 3.2px) * 0.872), 36px);
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 /*  */
