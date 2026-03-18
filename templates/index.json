@@ -243,9 +243,9 @@
       ],
       "name": "t:sections.newsletter.presets.name",
       "settings": {
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "full_width": false,
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     }
   },
