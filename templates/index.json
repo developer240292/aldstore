@@ -60,6 +60,56 @@
         "padding_bottom": 0
       }
     },
+    "text_with_icons_YBGbQa": {
+      "type": "text-with-icons",
+      "blocks": {
+        "image_cb3rcg": {
+          "type": "image",
+          "settings": {
+            "icon1": "shipping",
+            "title": "Free shipping",
+            "text": "For all order over $100"
+          }
+        },
+        "image_XqnDnf": {
+          "type": "image",
+          "settings": {
+            "icon1": "support",
+            "title": "Support 24/7",
+            "text": "Support online 7 days a week"
+          }
+        },
+        "image_PRFUcV": {
+          "type": "image",
+          "settings": {
+            "icon1": "payment",
+            "title": "Payment",
+            "text": "100% payment security"
+          }
+        },
+        "image_krJNNN": {
+          "type": "image",
+          "settings": {
+            "icon1": "offers",
+            "title": "Special offers",
+            "text": "Multiple exclusive deals for you!"
+          }
+        }
+      },
+      "block_order": [
+        "image_cb3rcg",
+        "image_XqnDnf",
+        "image_PRFUcV",
+        "image_krJNNN"
+      ],
+      "name": "Text with icons",
+      "settings": {
+        "iconwidth": 20,
+        "column_alignment": "left",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
     "42f1a624-a92a-4d3b-8bbd-540ccef9e51d": {
       "type": "logo-brand",
       "blocks": {
@@ -106,47 +156,10 @@
         "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-2",
         "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-3",
         "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-4",
-        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-5",
-        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-6",
-        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-7",
-        "1821875b-316f-4fb5-8696-63c75df44f99"
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-5"
       ],
       "settings": {
         "title": "Featured Brands",
-        "padding_top": 60,
-        "padding_bottom": 0
-      }
-    },
-    "text_with_icons_YBGbQa": {
-      "type": "text-with-icons",
-      "blocks": {
-        "image_PRFUcV": {
-          "type": "image",
-          "settings": {
-            "icon1": "shipping",
-            "title": "Title",
-            "text": "<p>Content description</p>"
-          }
-        },
-        "image_krJNNN": {
-          "type": "image",
-          "settings": {
-            "icon1": "shipping",
-            "title": "Title",
-            "text": "<p>Content description</p>"
-          }
-        }
-      },
-      "block_order": [
-        "image_PRFUcV",
-        "image_krJNNN"
-      ],
-      "name": "Text with icons",
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "iconwidth": 65,
-        "column_alignment": "center",
         "padding_top": 60,
         "padding_bottom": 0
       }
@@ -188,8 +201,8 @@
   },
   "order": [
     "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628",
-    "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
     "text_with_icons_YBGbQa",
+    "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
     "product_slide_FedGnK",
     "blog_slider_fYgmPp"
   ]
