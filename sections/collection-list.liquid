@@ -6,46 +6,44 @@
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
-<div class="vtcolllist section-{{ section.id }}-padding">
-  <div class="page-width">
-    {%- if section.settings.title != blank -%}
-      <h2 class="heading text-left {{ section.settings.heading_size }}">
-        <span>{{ section.settings.title | escape }}</span>
-      </h2>
-    {%- endif -%}
-    <swiper-slider
-      class="swiper-slider"
-      data-section-id="{{ section.id }}"
-      data-slider-speed="300"
-      data-slider-navigation="false"
-      data-slider-pagination="false"
-      data-slider-autoplay="0"
-      data-breakpoint-mobile-portrait="2"
-      data-breakpoint-mobile-landscape="3"
-      data-breakpoint-tablet-portrait="4"
-      data-breakpoint-tablet-landscape="6"
-      data-breakpoint-laptop="8"
-      data-breakpoint-widescreen="10"
-    >
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          {%- for block in section.blocks -%}
-            <div class="swiper-slide">
-              <div
-                class="colllist-item"
-                {{ block.shopify_attributes }}
-              >
-                {% render 'card-collectionhome',
-                  card_collection: block.settings.collection,
-                  media_aspect_ratio: section.settings.image_ratio
-                %}
-              </div>
+<div class="vtcolllist section-{{ section.id }}-padding container">
+  {%- if section.settings.title != blank -%}
+    <h2 class="heading text-left {{ section.settings.heading_size }}">
+      <span>{{ section.settings.title | escape }}</span>
+    </h2>
+  {%- endif -%}
+  <swiper-slider
+    class="swiper-slider"
+    data-section-id="{{ section.id }}"
+    data-slider-speed="300"
+    data-slider-navigation="false"
+    data-slider-pagination="false"
+    data-slider-autoplay="0"
+    data-breakpoint-mobile-portrait="2"
+    data-breakpoint-mobile-landscape="3"
+    data-breakpoint-tablet-portrait="4"
+    data-breakpoint-tablet-landscape="6"
+    data-breakpoint-laptop="8"
+    data-breakpoint-widescreen="10"
+  >
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide">
+            <div
+              class="colllist-item"
+              {{ block.shopify_attributes }}
+            >
+              {% render 'card-collectionhome',
+                card_collection: block.settings.collection,
+                media_aspect_ratio: section.settings.image_ratio
+              %}
             </div>
-          {%- endfor -%}
-        </div>
+          </div>
+        {%- endfor -%}
       </div>
-    </swiper-slider>
-  </div>
+    </div>
+  </swiper-slider>
 </div>
 
 {% schema %}
