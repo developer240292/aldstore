@@ -4,10 +4,15 @@
   background-color: var(--color-base-accent-1);
   color: #fff;
   text-align: center;
+  border-radius: 10px;
 }
 
 .newsletter__wrapper .newsletter__heading {
+  margin-top: 0;
   margin-bottom: 15px;
+  color: #fff;
+  font-size: clamp(22.041px, 1.378rem + ((1vw - 3.2px) * 0.872), 36px);
+  font-weight: 600;
 }
 
 .newsletter__wrapper .newsletter__subheading p {
