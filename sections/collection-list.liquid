@@ -1,33 +1,50 @@
+<link rel="stylesheet" href="{{ 'section-collection-list.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
-<div class="wbcolllist section-{{ section.id }}-padding">
+<div class="vtcolllist section-{{ section.id }}-padding">
   <div class="page-width">
-    <div class="clist_right">
-      {%- if section.settings.title != blank -%}
-        <h2 class="heading text-left {{ section.settings.heading_size }}">
-          <span>{{ section.settings.title | escape }}</span>
-        </h2>
-      {%- endif -%}
-      <div class="rless">
-        <div class="wbslickcoll">
+    {%- if section.settings.title != blank -%}
+      <h2 class="heading text-left {{ section.settings.heading_size }}">
+        <span>{{ section.settings.title | escape }}</span>
+      </h2>
+    {%- endif -%}
+    <swiper-slider
+      class="swiper-slider"
+      data-section-id="{{ section.id }}"
+      data-slider-speed="300"
+      data-slider-navigation="false"
+      data-slider-pagination="false"
+      data-slider-autoplay="0"
+      data-breakpoint-mobile-portrait="2"
+      data-breakpoint-mobile-landscape="3"
+      data-breakpoint-tablet-portrait="4"
+      data-breakpoint-tablet-landscape="6"
+      data-breakpoint-laptop="8"
+      data-breakpoint-widescreen="10"
+    >
+      <div class="swiper">
+        <div class="swiper-wrapper">
           {%- for block in section.blocks -%}
-            <div
-              class="cless {% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}"
-              {{ block.shopify_attributes }}
-            >
-              {% render 'card-collectionhome',
-                card_collection: block.settings.collection,
-                media_aspect_ratio: section.settings.image_ratio
-              %}
+            <div class="swiper-slide">
+              <div
+                class="colllist-item"
+                {{ block.shopify_attributes }}
+              >
+                {% render 'card-collectionhome',
+                  card_collection: block.settings.collection,
+                  media_aspect_ratio: section.settings.image_ratio
+                %}
+              </div>
             </div>
           {%- endfor -%}
         </div>
       </div>
-    </div>
+    </swiper-slider>
   </div>
 </div>
 
@@ -43,26 +60,6 @@
       "id": "title",
       "label": "t:sections.collection-list.settings.title.label",
       "default": "Collections"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
     },
     {
       "type": "select",
@@ -128,6 +125,27 @@
     {
       "name": "t:sections.collection-list.presets.name",
       "blocks": [
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
         {
           "type": "featured_collection"
         },

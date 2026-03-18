@@ -420,7 +420,27 @@
         "name": "Collage"
       }
     },
-    
+    "collection-list": {
+      "name": "Collection list",
+      "settings": {
+        "title": {
+          "label": "Heading"
+        }
+      },
+      "blocks": {
+        "featured_collection": {
+          "name": "Collection",
+          "settings": {
+            "collection": {
+              "label": "Collection"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Collection list"
+      }
+    },
     "contact-form": {
       "name": "Contact Form",
       "presets": {
@@ -455,7 +475,7 @@
           "label": "Show featured image",
           "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https:\/\/help.shopify.com\/en\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
         },
-         "show_author": {
+        "show_author": {
           "label": "Show author"
         },
         "show_date": {
