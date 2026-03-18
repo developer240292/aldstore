@@ -174,18 +174,6 @@
         "padding_bottom": 30
       }
     },
-    "scrolling_bar_YD7gLi": {
-      "type": "scrolling-bar",
-      "name": "Scrolling bar",
-      "settings": {
-        "wb_marktext": "Free shipping for all orders over $100",
-        "mark_space": 70,
-        "mark_speed": 34,
-        "marq_diection": "right_left",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "product_slide_FedGnK": {
       "type": "product-slide",
       "name": "Product Slide",
@@ -199,6 +187,18 @@
         "show_rating": false,
         "show_secondary_image": false,
         "show_vendor": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "scrolling_bar_YD7gLi": {
+      "type": "scrolling-bar",
+      "name": "Scrolling bar",
+      "settings": {
+        "wb_marktext": "Free shipping for all orders over $100",
+        "mark_space": 70,
+        "mark_speed": 34,
+        "marq_diection": "right_left",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -263,6 +263,8 @@
       "name": "t:sections.blog_slider.presets.name",
       "settings": {
         "m_title": "latest blog",
+        "heading_size": "medium",
+        "show_view_all": true,
         "blog": "news",
         "show_image": true,
         "image_height": "square",
@@ -270,7 +272,33 @@
         "show_date": true,
         "show_cmment": true,
         "show_desc": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_6yRikV": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "display_product_type": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_variants": true,
+        "picker_type": "button",
+        "show_colorswatch": true,
         "show_view_all": true,
+        "view_all_style": "solid",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 60,
         "padding_bottom": 0
       }
@@ -280,9 +308,10 @@
     "hero_banner_7GUTaJ",
     "text_with_icons_YBGbQa",
     "collection_list_E4GGDD",
-    "scrolling_bar_YD7gLi",
     "product_slide_FedGnK",
+    "scrolling_bar_YD7gLi",
     "testimonials_6TmUWX",
-    "blog_slider_fYgmPp"
+    "blog_slider_fYgmPp",
+    "featured_collection_6yRikV"
   ]
 }
