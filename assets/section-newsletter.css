@@ -35,6 +35,10 @@
   gap: 10px;
 }
 
+.newsletter__wrapper .field__label {
+  margin-top: 4px;
+}
+
 .newsletter__wrapper .field__input {
   height: 50px;
   background-color: #fff;
@@ -50,7 +54,11 @@
   height: 50px;
   border-radius: 10px;
   color: #000;
-  background-color: #FABA5B;
+  background-color: var(--color-base-accent-2);
+}
+
+.newsletter__wrapper .field__button:hover {
+  background-color: #fff;
 }
 
 .newsletter-form__field-wrapper .newsletter-form__message {
