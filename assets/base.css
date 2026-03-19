@@ -1957,10 +1957,6 @@ button#scroll svg {
     font-size: 13px;
 }
 
-.grid .vtproduct-container .product-form .vtbtngrp {
-    transition: unset;
-}
-
 /* product-list */
 .grid.product-list .vtproduct-container .card {
     width: 100%;
@@ -1986,13 +1982,6 @@ button#scroll svg {
 .grid.product-list .product-form .vtquickv,
 .grid.product-list .product-form .wishlist {
     border: 1px solid rgba(0, 0, 0, .08);
-}
-
-.grid.product-list .vtproduct-container .product-form .vtbtngrp {
-    position: unset;
-    opacity: 1;
-    text-align: left;
-    justify-content: left;
 }
 
 /* product-grid */
@@ -2376,23 +2365,6 @@ button#scroll svg {
 }
 
 /* Product Buttons */
-.vtproduct-container .product-form .vtbtngrp {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    left: 2%;
-    right: 2%;
-    top: 0;
-    column-gap: 10px;
-    transition: .3s ease;
-    opacity: 0;
-}
-
-.vtproduct-container:hover .product-form .vtbtngrp,
-.vtproduct-container .product-form .vtbtngrp:focus-within {
-    opacity: 1;
-}
-
 .vtproduct-container .product-form form,
 .vtproduct-container .product-form .vtqvtop {
     position: relative;
@@ -2407,16 +2379,35 @@ button#scroll svg {
     vertical-align: middle;
 }
 
-.product-form .cartb,
+.product-form .cartb {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--color-base-accent-1);
+    color: #fff;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-form .cartb:hover {
+    background-color: var(--color-base-accent-2);
+}
+
 .product-form .vtquickv,
 .product-form .wishlist {
     border: none;
     text-transform: capitalize;
-    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #FFF9 !important;
+    backdrop-filter: blur(10px);
     min-width: 40px;
     min-height: 40px;
     padding: 0;
-    border-radius: var(--buttons-radius);
+    border-radius: 50%;
     color: #000000;
     text-align: center;
     transition: .3s ease;
@@ -2424,12 +2415,44 @@ button#scroll svg {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(60px);
+    -moz-transform: translateX(60px);
+    -ms-transform: translateX(60px);
+    -o-transform: translateX(60px);
+    transform: translateX(60px);
+    position: absolute;
+    right: 20px;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+    top: 20px;
 }
 
-.product-form .cartb:hover,
+.product-form .vtquickv {
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    top: 70px;
+}
+
+.card-wrapper:hover .product-form .vtquickv,
+.card-wrapper:hover .product-form .wishlist {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
 .product-form .vtquickv:hover,
 .product-form .wishlist:hover {
-    color: var(--color-base-accent-1);
+    color: var(--color-base-accent-2);
 }
 
 .product-form .cartb span {
@@ -2437,11 +2460,9 @@ button#scroll svg {
     display: inline-block;
 }
 
-.product-form .cartb svg,
-.product-form .vtquickv svg,
 .product-form .wishlist svg {
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
 }
 
 /*Product Buttons Over */
@@ -2635,10 +2656,6 @@ variant-selects .product-form__input .select {
         font-size: 11px;
     }
 
-    .product-list .vtproduct-container .product-form .vtbtngrp {
-        margin-top: 12px;
-    }
-
     .vtproduct-container .product-form__input input+label {
         padding: 4px 6px;
         font-size: 12px;
@@ -2649,10 +2666,6 @@ variant-selects .product-form__input .select {
     .vtprobnr .vtproduct-container .product-form .vtqvtop,
     .vtprobnr .vtproduct-container .product-form form {
         margin-top: 0;
-    }
-
-    .vtprobnr .vtproduct-container .product-form .vtbtngrp {
-        text-align: center;
     }
 
     .vtproduct-container:hover .vtimgblock img {
@@ -2666,14 +2679,6 @@ variant-selects .product-form__input .select {
     .product-form .cartb span,
     .vtquickv span {
         display: none;
-    }
-
-    .vtproduct-container .product-form .vtbtngrp {
-        position: unset;
-        margin-top: 0;
-        opacity: 1;
-        text-align: left;
-        justify-content: flex-start;
     }
 
     .product-form .cartb,
