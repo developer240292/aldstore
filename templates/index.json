@@ -208,6 +208,28 @@
         "padding_bottom": 0
       }
     },
+    "featured_collection_bAVQRQ": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Our new product",
+        "heading_size": "medium",
+        "collection": "",
+        "products_to_show": 12,
+        "columns_desktop": 6,
+        "image_ratio": "adapt",
+        "display_product_type": false,
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_variants": true,
+        "picker_type": "button",
+        "show_colorswatch": true,
+        "show_view_all": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "testimonials_6TmUWX": {
       "type": "testimonials",
       "blocks": {
@@ -288,6 +310,7 @@
     "collection_list_E4GGDD",
     "featured_collection_6yRikV",
     "scrolling_bar_YD7gLi",
+    "featured_collection_bAVQRQ",
     "testimonials_6TmUWX",
     "blog_slider_fYgmPp"
   ]
