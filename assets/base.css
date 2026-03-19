@@ -425,18 +425,6 @@ input.field__input::placeholder {
     --bs-gutter-x: 30px;
 }
 
-@media (max-width: 1199px) {
-    .row {
-        --bs-gutter-x: 20px;
-    }
-}
-
-@media (max-width: 575px) {
-    .row {
-        --bs-gutter-x: 10px;
-    }
-}
-
 .media-size {
     display: block;
     height: 0;
@@ -2342,7 +2330,6 @@ button#scroll svg {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    color: #3b3b3b;
     font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.25), 18px);
     font-weight: 500;
     line-height: 1.4;

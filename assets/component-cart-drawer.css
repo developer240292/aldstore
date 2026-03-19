@@ -21,13 +21,6 @@
 .cartupsell .card .vtproductdes {
   padding: 0;
 }
-
-.cartupsell .product-name {
-  font-size: calc(var(--font-body-scale) * 16px);
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
 .cartupsell .vtproduct-container .vtimgblock {
   width: 90px;
 }
