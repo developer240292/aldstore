@@ -22,6 +22,7 @@
     padding: 30px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .banner-two-column .banner-media>* {

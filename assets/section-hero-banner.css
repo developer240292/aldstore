@@ -1,6 +1,9 @@
 .hero-banner {
-  background-color: #fff6e9;
   position: relative;
+}
+
+.hero-banner.accent-2 {
+  background-color: #fff6e9;
 }
 
 .hero-banner .banner__media>* {
