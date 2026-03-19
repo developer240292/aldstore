@@ -168,7 +168,7 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "Collections",
+        "title": "Shop by category",
         "heading_size": "medium",
         "padding_top": 30,
         "padding_bottom": 30
