@@ -1,0 +1,144 @@
+<link rel="stylesheet" href="{{ 'section-banner-two-column.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-banner-two-column.css' | asset_url | stylesheet_tag }}</noscript>
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+<div class="banner-two-column container section-{{ section.id }}">
+  <div class="row">
+    <div class="banner-left">
+      <div class="banner-item">
+        <div class="banner-media">
+          {%- if section.settings.image_1 -%}
+            <img
+              class="lazyload"
+              srcset="
+                {%- if section.settings.image_1.width >= 375 -%}{{ section.settings.image_1 | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if section.settings.image_1.width >= 550 -%}{{ section.settings.image_1 | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if section.settings.image_1.width >= 750 -%}{{ section.settings.image_1 | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if section.settings.image_1.width >= 1100 -%}{{ section.settings.image_1 | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if section.settings.image_1.width >= 1500 -%}{{ section.settings.image_1 | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if section.settings.image_1.width >= 1780 -%}{{ section.settings.image_1 | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if section.settings.image_1.width >= 2000 -%}{{ section.settings.image_1 | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if section.settings.image_1.width >= 3000 -%}{{ section.settings.image_1 | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {%- if section.settings.image_1.width >= 3840 -%}{{ section.settings.image_1 | image_url: width: 3840 }} 3840w,{%- endif -%}
+                {{ section.settings.image_1 | image_url }} {{ section.settings.image_1.width }}w
+              "
+              sizes="100vw"
+              src="{{ section.settings.image_1 | image_url: width: 1170 }}"
+              loading="lazy"
+              alt="{{ section.settings.image_1.alt | escape }}"
+              width="{{ section.settings.image_1.width }}"
+              height="{{ section.settings.image_1.width | divided_by: section.settings.image_1.aspect_ratio | round }}"
+            >
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        <div class="banner-content">
+          {% if section.settings.title_1 != blank %}
+            <h2>{{ section.settings.title_1 }}</h2>
+          {% endif %}
+
+          {% if section.settings.text_1 != blank %}
+            <p>{{ section.settings.text_1 }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="banner-right">
+      <div class="banner-item">
+        <div class="banner-media">
+          {%- if section.settings.image_2 -%}
+            <img
+              class="lazyload"
+              srcset="
+                {%- if section.settings.image_2.width >= 375 -%}{{ section.settings.image_2 | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if section.settings.image_2.width >= 550 -%}{{ section.settings.image_2 | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if section.settings.image_2.width >= 750 -%}{{ section.settings.image_2 | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if section.settings.image_2.width >= 1100 -%}{{ section.settings.image_2 | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if section.settings.image_2.width >= 1500 -%}{{ section.settings.image_2 | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if section.settings.image_2.width >= 1780 -%}{{ section.settings.image_2 | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if section.settings.image_2.width >= 2000 -%}{{ section.settings.image_2 | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if section.settings.image_2.width >= 3000 -%}{{ section.settings.image_2 | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {%- if section.settings.image_2.width >= 3840 -%}{{ section.settings.image_2 | image_url: width: 3840 }} 3840w,{%- endif -%}
+                {{ section.settings.image_2 | image_url }} {{ section.settings.image_2.width }}w
+              "
+              sizes="100vw"
+              src="{{ section.settings.image_2 | image_url: width: 1170 }}"
+              loading="lazy"
+              alt="{{ section.settings.image_2.alt | escape }}"
+              width="{{ section.settings.image_2.width }}"
+              height="{{ section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio | round }}"
+            >
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner Two Column",
+  "tag": "section",
+  "class": "section-banner-two-column",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Banner 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Banner 1 Title",
+      "default": "Trendy Finds at Unbeatable Prices"
+    },
+    {
+      "type": "textarea",
+      "id": "text_1",
+      "label": "Banner 1 Text",
+      "default": "Shine with the season’s most stylish looks"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Banner 2 Image"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Two Column"
+    }
+  ]
+}
+{% endschema %}
