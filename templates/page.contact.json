@@ -22,7 +22,7 @@
         "enable_contact_address": true,
         "contact_address": true,
         "address_title": "Location",
-        "address": "1234 Maple Street, Suite 500, Springfield, CA 90210, USA",
+        "address": "1234 Maple Street, CA 90210, USA",
         "contact_phone": true,
         "mobile_title": "Call us",
         "mobile": "+1 (555) 123-4567",
