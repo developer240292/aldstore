@@ -208,18 +208,6 @@
         "padding_bottom": 0
       }
     },
-    "scrolling_bar_qGp3bh": {
-      "type": "scrolling-bar",
-      "name": "Scrolling bar",
-      "settings": {
-        "wb_marktext": "Free shipping for all orders over $100",
-        "mark_space": 70,
-        "mark_speed": 34,
-        "marq_diection": "right_left",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "featured_collection_bAVQRQ": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -322,7 +310,6 @@
     "collection_list_E4GGDD",
     "featured_collection_6yRikV",
     "scrolling_bar_YD7gLi",
-    "scrolling_bar_qGp3bh",
     "featured_collection_bAVQRQ",
     "testimonials_6TmUWX",
     "blog_slider_fYgmPp"
