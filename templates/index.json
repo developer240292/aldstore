@@ -215,7 +215,7 @@
         "title": "Our new product",
         "heading_size": "medium",
         "collection": "",
-        "products_to_show": 12,
+        "products_to_show": 6,
         "columns_desktop": 6,
         "image_ratio": "adapt",
         "display_product_type": false,
