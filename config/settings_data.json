@@ -140,7 +140,7 @@
           "bnts1": "Support 24/7",
           "mobile": "+1 (555) 123-4567",
           "primary_menu": "main-menu",
-          "vertical_menu": "",
+          "vertical_menu": "vertical-menu",
           "vertical_menu_always_open_on_home": false,
           "enable_sticky_header": false,
           "enable_sticky_header_mobile": false,
@@ -260,6 +260,7 @@
         "type": "blog-slider",
         "settings": {
           "m_title": "latest blog",
+          "show_view_all": false,
           "blog": "news",
           "show_image": true,
           "image_height": "adapt",
@@ -267,7 +268,6 @@
           "show_date": false,
           "show_cmment": false,
           "show_desc": true,
-          "show_view_all": false,
           "padding_top": 60,
           "padding_bottom": 4
         }
