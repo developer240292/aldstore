@@ -2021,11 +2021,10 @@ button#scroll svg {
 
 /* .product-card*/
 .price {
-    color: #ff0000;
-}
-
-.price .price-item--regular {
-    color: #000;
+    color: #dd2831;
+    border--radius: 20px;
+    background-color: #f5f5f5;
+    padding-left: 10px;
 }
 
 .price.price--unavailable {
@@ -2171,7 +2170,9 @@ button#scroll svg {
 }
 
 .vthomevendor {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    color: #848484;
+    line-height: 1.25;
 }
 
 .card {
@@ -2185,33 +2186,8 @@ button#scroll svg {
     padding-bottom: var(--ratio-percent);
 }
 
-.card .card__inner .card__media {
-    overflow: hidden;
-    z-index: 0;
-}
-
 .card-information {
     text-align: var(--card-text-alignment);
-}
-
-.card__media,
-.card .media {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    width: 100%;
-    left: 0;
-}
-
-.card__media .media img {
-    object-fit: cover;
-    object-position: center center;
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .card__heading a::after {
@@ -2325,18 +2301,6 @@ button#scroll svg {
     color: #848484;
 }
 
-.product-name {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.25), 18px);
-    font-weight: 500;
-    line-height: 1.4;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-
 .product-title {
     font-size: calc(var(--font-body-scale) * 18px);
     text-transform: capitalize;
@@ -2348,10 +2312,6 @@ button#scroll svg {
     padding: 0 0 10px 0;
     font-weight: var(--font-body-weight);
     margin-bottom: 0;
-}
-
-.vthprice {
-    margin-bottom: 10px;
 }
 
 .vtproduct-container .quantity__input {
@@ -2721,10 +2681,6 @@ variant-selects .product-form__input .select {
         height: 28px;
     }
 
-    .vthprice {
-        margin-bottom: 3px;
-    }
-
     .product-title {
         font-size: calc(var(--font-body-scale) * 14px);
         padding: 0 0 6px 0;
@@ -2738,19 +2694,6 @@ variant-selects .product-form__input .select {
     .template-search .card-article__info {
         font-size: calc(var(--font-body-scale) * 12px);
     }
-
-    .vthprice {
-        margin-bottom: 5px;
-    }
-
-    .vtprotype {
-        font-size: 12px;
-        margin-bottom: 4px;
-    }
-
-    .vthrating {
-        margin-bottom: 5px;
-    }
 }
 
 .rating {
@@ -2759,10 +2702,11 @@ variant-selects .product-form__input .select {
 
 .rating-star {
     --letter-spacing: 0.01;
-    --font-size: 1.1;
+    --font-size: 1.4;
     --percent: calc((var(--rating) / var(--rating-max) + var(--rating-decimal) * var(--font-size) / (var(--rating-max) * (var(--letter-spacing) + var(--font-size)))) * 100%);
     letter-spacing: calc(var(--letter-spacing) * 1rem);
     font-size: calc(var(--font-size) * 1rem);
+    line-height: 1;
 }
 
 .rating-star::before {

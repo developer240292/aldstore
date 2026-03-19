@@ -208,6 +208,12 @@
       <div id="ProductInfo-{{ section.id }}-{{ card_product.id }}">
         {%- assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: card_product.id -%}
 
+        {%- if card_product.title -%}
+          <h3 class="product-title">
+            <a href="{{ card_product.url | default: '#' }}">{{ card_product.title | escape }}</a>
+          </h3>
+        {%- endif -%}
+
         {%- if show_rating -%}
           {%- if card_product.metafields.reviews.rating.value != blank -%}
             <div class="vthrating">
@@ -257,12 +263,6 @@
               <span class="rating-count"><span aria-hidden="true">(0)</span></span>
             </div>
           {%- endif -%}
-        {%- endif -%}
-
-        {%- if card_product.featured_media -%}
-          <h3 class="product-title">
-            <a href="{{ card_product.url | default: '#' }}">{{ card_product.title | escape }}</a>
-          </h3>
         {%- endif -%}
 
         <div
