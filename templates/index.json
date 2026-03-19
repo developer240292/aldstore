@@ -302,6 +302,18 @@
         "padding_top": 60,
         "padding_bottom": 0
       }
+    },
+    "banner_two_column_daxkiY": {
+      "type": "banner-two-column",
+      "name": "Banner Two Column",
+      "settings": {
+        "image_1": "shopify://shop_images/banner-01-1.jpg",
+        "title_1": "Trendy Finds at Unbeatable Prices",
+        "text_1": "Shine with the season’s most stylish looks",
+        "image_2": "shopify://shop_images/banner-01-2.jpg",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
     }
   },
   "order": [
@@ -312,6 +324,7 @@
     "scrolling_bar_YD7gLi",
     "featured_collection_bAVQRQ",
     "testimonials_6TmUWX",
-    "blog_slider_fYgmPp"
+    "blog_slider_fYgmPp",
+    "banner_two_column_daxkiY"
   ]
 }
