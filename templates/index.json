@@ -191,7 +191,7 @@
         "show_variants": true,
         "picker_type": "button",
         "show_colorswatch": true,
-        "show_view_all": true,
+        "show_view_all": false,
         "padding_top": 0,
         "padding_bottom": 50
       }
@@ -225,7 +225,7 @@
         "show_variants": true,
         "picker_type": "button",
         "show_colorswatch": true,
-        "show_view_all": true,
+        "show_view_all": false,
         "padding_top": 0,
         "padding_bottom": 0
       }
