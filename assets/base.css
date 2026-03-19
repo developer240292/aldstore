@@ -1820,6 +1820,14 @@ button#scroll svg {
     gap: 14px;
 }
 
+.social-link a {
+    transition: transform .1s ease;
+}
+
+.social-link a:hover {
+    transform: scale(1.1);
+}
+
 /* .social-sharing */
 .social-sharing {
     padding: 0;

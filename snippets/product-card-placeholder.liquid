@@ -1,20 +1,28 @@
 {% comment %}
-    Renders a product card placeholder
+  Renders a product card placeholder
 
-    Usage:
-    {% render 'product-card-placeholder' %}
+  Usage:
+  {% render 'product-card-placeholder' %}
 {% endcomment %}
 
 <div class="card-wrapper vtproduct-container collagebg">
-    <div class="card card--{{ settings.card_style }}">
-        <div class="vtimgblock">
-            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-            <div class="dummysvg">{{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
-        </div>
-        <div class="vtproductdes">
-            <p class="vtprotype">{{ 'products.product.vendor' | t }}</p>
-            <h3 class="product-title">{{ 'onboarding.product_title' | t }}</h3>
-            {% render 'price' %}
-        </div>
+  <div class="card card--{{ settings.card_style }}">
+    <div class="vtimgblock">
+      {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+      <div class="dummysvg">{{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
     </div>
+    <div class="vtproductdes">
+      <p class="vtprotype">{{ 'products.product.vendor' | t }}</p>
+      <h3 class="product-title">{{ 'onboarding.product_title' | t }}</h3>
+      <div class="vthrating">
+        <div class="rating">
+          <span class="rating-star vtnorating"></span>
+        </div>
+        <p class="rating-count caption">
+          <span aria-hidden="true">(0)</span>
+        </p>
+      </div>
+      {% render 'price' %}
+    </div>
+  </div>
 </div>

@@ -6,7 +6,7 @@
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
-<div class="newsletter {% if section.settings.full_width == false %} container{% endif %}">
+<div class="newsletter container">
   <div class="newsletter__wrapper section-{{ section.id }}-padding">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -87,12 +87,6 @@
   "tag": "section",
   "class": "section",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "default": false,
-      "label": "t:sections.newsletter.settings.full_width.label"
-    },
     {
       "type": "paragraph",
       "content": "t:sections.newsletter.settings.paragraph.content"
