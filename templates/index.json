@@ -171,7 +171,7 @@
         "title": "Shop by category",
         "heading_size": "medium",
         "padding_top": 30,
-        "padding_bottom": 30
+        "padding_bottom": 0
       }
     },
     "featured_collection_6yRikV": {
@@ -192,7 +192,7 @@
         "picker_type": "button",
         "show_colorswatch": true,
         "show_view_all": false,
-        "padding_top": 0,
+        "padding_top": 30,
         "padding_bottom": 50
       }
     },
@@ -226,7 +226,7 @@
         "picker_type": "button",
         "show_colorswatch": true,
         "show_view_all": false,
-        "padding_top": 0,
+        "padding_top": 30,
         "padding_bottom": 0
       }
     },
