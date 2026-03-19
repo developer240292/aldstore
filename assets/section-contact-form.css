@@ -2,11 +2,46 @@
     display: flex;
     gap: 30px 0;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .contform-iconbox .contform-box {
     background-color: #fff;
     padding: 25px 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contform-iconbox .contform-box svg {
+    width: 40px;
+    height: auto;
+}
+
+.contform-iconbox .contform-box p {
+    margin: 0;
+}
+
+.contform-bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contform-bottom .contact {
+    width: 580px;
+}
+
+.contform-bottom .contform-map {
+    width: calc(100% - 580px);
+    padding-left: 20px;
+}
+
+.contact .contact-form {
+    border-radius: 10px;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 86px;
+    padding-left: 25px;
+    background-color: #FFF;
 }
 
 .contact img {

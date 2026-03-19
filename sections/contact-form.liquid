@@ -10,7 +10,7 @@
   <div class="row contform-iconbox">
     {% if section.settings.enable_contact_address %}
       {% if section.settings.contact_address %}
-        <div class="col-md-3 col-sm-6 col-12 text-center">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="contform-box">
             {% render 'icon-footer-address' %}
             <h4>{{ section.settings.address_title }}</h4>
@@ -19,7 +19,7 @@
         </div>
       {% endif %}
       {% if section.settings.contact_phone %}
-        <div class="col-md-3 col-sm-6 col-12 text-center">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="contform-box">
             {% render 'icon-footer-phone' %}
             <h4>{{ section.settings.mobile_title }}</h4>
@@ -47,8 +47,8 @@
       {% endif %}
     {% endif %}
   </div>
-  <div class="row">
-    <div class="contact col-lg-6 col-12">
+  <div class="contform-bottom">
+    <div class="contact">
       {%- form 'contact', id: 'ContactForm' -%}
         {%- if form.posted_successfully? -%}
           <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
@@ -149,7 +149,7 @@
         </div>
       {%- endform -%}
     </div>
-    <div class="col-lg-6 col-12">
+    <div class="contform-map">
       {% if section.settings.enable_gmap %}
         <div id="map">{{ section.settings.contact_iframe_code }}</div>
       {% endif %}
