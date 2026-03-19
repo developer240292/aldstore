@@ -2,40 +2,48 @@
 <noscript>{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
   .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
 <div class="container vtcontform section-{{ section.id }}-padding">
-  <div class="row">
+  <div class="row contform-iconbox">
     {% if section.settings.enable_contact_address %}
-      {% if section.settings.contact_phone %}
-        <ul class="cless col-sm-4 col-12 list-unstyled text-center">
-          <li>{% render 'icon-contactform', icon: section.settings.icon1 %}</li>
-          <li>
-            <h4>{{ section.settings.mobile_title }}</h4>
-            <p>{{ section.settings.mobile }}</p>
-          </li>
-        </ul>
-      {% endif %}
-
       {% if section.settings.contact_address %}
-        <ul class="cless col-sm-4 col-12 list-unstyled text-center">
-          <li>{% render 'icon-contactform', icon: section.settings.icon2 %}</li>
-          <li>
+        <div class="col-md-3 col-sm-6 col-12 text-center">
+          <div class="contform-box">
+            {% render 'icon-footer-address' %}
             <h4>{{ section.settings.address_title }}</h4>
             <p>{{ section.settings.address }}</p>
-          </li>
-        </ul>
+          </div>
+        </div>
+      {% endif %}
+      {% if section.settings.contact_phone %}
+        <div class="col-md-3 col-sm-6 col-12 text-center">
+          <div class="contform-box">
+            {% render 'icon-footer-phone' %}
+            <h4>{{ section.settings.mobile_title }}</h4>
+            <p>{{ section.settings.mobile }}</p>
+          </div>
+        </div>
       {% endif %}
       {% if section.settings.contact_email %}
-        <ul class="cless col-sm-4 col-12 list-unstyled text-center">
-          <li>{% render 'icon-contactform', icon: section.settings.icon3 %}</li>
-          <li>
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="contform-box">
+            {% render 'icon-footer-mail' %}
             <h4>{{ section.settings.email_title }}</h4>
             <p>{{ section.settings.email }}</p>
-          </li>
-        </ul>
+          </div>
+        </div>
+      {% endif %}
+      {% if section.settings.contact_website %}
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="contform-box">
+            {% render 'icon-footer-website' %}
+            <h4>{{ section.settings.website_title }}</h4>
+            <p>{{ section.settings.website }}</p>
+          </div>
+        </div>
       {% endif %}
     {% endif %}
   </div>
