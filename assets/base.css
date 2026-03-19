@@ -480,10 +480,6 @@ input.field__input::placeholder {
     text-align: center;
 }
 
-.header-middle {
-    padding: 25px 0;
-}
-
 .header-middle .header-middle-inner {
     position: relative;
     display: flex;
