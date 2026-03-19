@@ -16,11 +16,9 @@
       <h3 class="product-title">{{ 'onboarding.product_title' | t }}</h3>
       <div class="vthrating">
         <div class="rating">
-          <span class="rating-star vtnorating"></span>
+          <span class="rating-star" style="--rating: 0; --rating-max: 5; --rating-decimal: 0;"></span>
         </div>
-        <p class="rating-count caption">
-          <span aria-hidden="true">(0)</span>
-        </p>
+        <span class="rating-count"><span aria-hidden="true">(0)</span></span>
       </div>
       {% render 'price' %}
     </div>
