@@ -1,20 +1,13 @@
-{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
-
+<link rel="stylesheet" href="{{ 'section-contact-form.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
   .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
   }
-  @media screen and (max-width: 991px) {
-      .section-{{ section.id }}-padding {
-          padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-          padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
-      }
-  }
 {%- endstyle -%}
-
 <div class="container vtcontform section-{{ section.id }}-padding">
-  <div class="row vtcontforminner rless">
+  <div class="row">
     {% if section.settings.enable_contact_address %}
       {% if section.settings.contact_phone %}
         <ul class="cless col-sm-4 col-12 list-unstyled text-center">
@@ -163,270 +156,19 @@
   "settings": [
     {
       "type": "header",
-      "content": "Mobile/Address/Email Details"
+      "content": "Mobile/Address/Email/website Details"
     },
     {
       "type": "checkbox",
       "id": "enable_contact_address",
-      "label": "Enable mobile/address/email details",
+      "label": "Enable mobile/address/email/website details",
       "default": true
     },
-    {
-      "type": "checkbox",
-      "id": "contact_phone",
-      "label": "Show phone field",
-      "default": true
-    },
-    {
-      "type": "select",
-      "id": "icon1",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
-        },
-        {
-          "value": "box",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
-        },
-        {
-          "value": "chat_bubble",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
-        },
-        {
-          "value": "check_mark",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
-        },
-        {
-          "value": "dryer",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
-        },
-        {
-          "value": "eye",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
-        },
-        {
-          "value": "heart",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
-        },
-        {
-          "value": "iron",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
-        },
-        {
-          "value": "leaf",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
-        },
-        {
-          "value": "leather",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
-        },
-        {
-          "value": "lock",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
-        },
-        {
-          "value": "map_pin",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
-        },
-        {
-          "value": "pants",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
-        },
-        {
-          "value": "plane",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
-        },
-        {
-          "value": "price_tag",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
-        },
-        {
-          "value": "question_mark",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
-        },
-        {
-          "value": "return",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
-        },
-        {
-          "value": "ruler",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
-        },
-        {
-          "value": "shirt",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
-        },
-        {
-          "value": "shoe",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
-        },
-        {
-          "value": "silhouette",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
-        },
-        {
-          "value": "star",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
-        },
-        {
-          "value": "truck",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
-        },
-        {
-          "value": "washing",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
-        },
-        {
-          "value": "callus",
-          "label": "Call"
-        },
-        {
-          "value": "location",
-          "label": "Location"
-        },
-        {
-          "value": "email",
-          "label": "Email"
-        }
-      ],
-      "default": "callus",
-      "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
-    },
-    {
-      "type": "text",
-      "id": "mobile_title",
-      "label": "Title",
-      "default": "Call us"
-    },
-    {
-      "type": "text",
-      "id": "mobile",
-      "label": "Phone",
-      "default": "0123-456-789"
-    },
-
     {
       "type": "checkbox",
       "id": "contact_address",
       "label": "Show address field",
       "default": true
-    },
-    {
-      "type": "select",
-      "id": "icon2",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
-        },
-        {
-          "value": "box",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
-        },
-        {
-          "value": "chat_bubble",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
-        },
-        {
-          "value": "check_mark",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
-        },
-        {
-          "value": "dryer",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
-        },
-        {
-          "value": "eye",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
-        },
-        {
-          "value": "heart",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
-        },
-        {
-          "value": "iron",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
-        },
-        {
-          "value": "leaf",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
-        },
-        {
-          "value": "leather",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
-        },
-        {
-          "value": "lock",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
-        },
-        {
-          "value": "map_pin",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
-        },
-        {
-          "value": "pants",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
-        },
-        {
-          "value": "plane",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
-        },
-        {
-          "value": "price_tag",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
-        },
-        {
-          "value": "question_mark",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
-        },
-        {
-          "value": "return",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
-        },
-        {
-          "value": "ruler",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
-        },
-        {
-          "value": "shirt",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
-        },
-        {
-          "value": "shoe",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
-        },
-        {
-          "value": "silhouette",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
-        },
-        {
-          "value": "star",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
-        },
-        {
-          "value": "truck",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
-        },
-        {
-          "value": "washing",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
-        },
-        {
-          "value": "callus",
-          "label": "Call"
-        },
-        {
-          "value": "location",
-          "label": "Location"
-        },
-        {
-          "value": "email",
-          "label": "Email"
-        }
-      ],
-      "default": "location",
-      "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
     },
     {
       "type": "text",
@@ -438,130 +180,31 @@
       "type": "textarea",
       "id": "address",
       "label": "Address",
-      "default": "1093 marigold lane, way Miami, Florida USA"
+      "default": "1234 Maple Street, Suite 500, Springfield, CA 90210, USA"
     },
-
+    {
+      "type": "checkbox",
+      "id": "contact_phone",
+      "label": "Show phone field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "mobile_title",
+      "label": "Title",
+      "default": "Call us"
+    },
+    {
+      "type": "text",
+      "id": "mobile",
+      "label": "Phone",
+      "default": "+1 (555) 123-4567"
+    },
     {
       "type": "checkbox",
       "id": "contact_email",
       "label": "Show email field",
       "default": true
-    },
-    {
-      "type": "select",
-      "id": "icon3",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
-        },
-        {
-          "value": "box",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
-        },
-        {
-          "value": "chat_bubble",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
-        },
-        {
-          "value": "check_mark",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
-        },
-        {
-          "value": "dryer",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
-        },
-        {
-          "value": "eye",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
-        },
-        {
-          "value": "heart",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
-        },
-        {
-          "value": "iron",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
-        },
-        {
-          "value": "leaf",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
-        },
-        {
-          "value": "leather",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
-        },
-        {
-          "value": "lock",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
-        },
-        {
-          "value": "map_pin",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
-        },
-        {
-          "value": "pants",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
-        },
-        {
-          "value": "plane",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
-        },
-        {
-          "value": "price_tag",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
-        },
-        {
-          "value": "question_mark",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
-        },
-        {
-          "value": "return",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
-        },
-        {
-          "value": "ruler",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
-        },
-        {
-          "value": "shirt",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
-        },
-        {
-          "value": "shoe",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
-        },
-        {
-          "value": "silhouette",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
-        },
-        {
-          "value": "star",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
-        },
-        {
-          "value": "truck",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
-        },
-        {
-          "value": "washing",
-          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
-        },
-        {
-          "value": "callus",
-          "label": "Call"
-        },
-        {
-          "value": "location",
-          "label": "Location"
-        },
-        {
-          "value": "email",
-          "label": "Email"
-        }
-      ],
-      "default": "email",
-      "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
     },
     {
       "type": "text",
@@ -572,10 +215,27 @@
     {
       "type": "text",
       "id": "email",
-      "label": "Phone",
-      "default": "demo@demo.com"
+      "label": "Email",
+      "default": "support@villatheme.com"
     },
-
+    {
+      "type": "checkbox",
+      "id": "contact_website",
+      "label": "Show website field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "website_title",
+      "label": "Title",
+      "default": "Website"
+    },
+    {
+      "type": "text",
+      "id": "website",
+      "label": "Website",
+      "default": "villatheme.com"
+    },
     {
       "type": "header",
       "content": "Contact Map"
@@ -600,20 +260,20 @@
       "id": "padding_top",
       "min": 0,
       "max": 100,
-      "step": 4,
+      "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "default": 30
     },
     {
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
       "max": 100,
-      "step": 4,
+      "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "default": 0
     }
   ],
   "presets": [
