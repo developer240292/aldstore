@@ -191,6 +191,7 @@
           "link_list_qyRKB9"
         ],
         "settings": {
+          "logo": "shopify://shop_images/logo.svg",
           "logo_width": 204,
           "contsubtext": "<p>Everything You Need, All in One Place</p>",
           "show_social": true,
