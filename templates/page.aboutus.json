@@ -12,22 +12,77 @@
     "main": {
       "type": "main-aboutus",
       "blocks": {
-        "title": {
-          "type": "text-block",
+        "image_with_text_6JmnAW": {
+          "type": "image-with-text",
           "settings": {
-            "textsub": "<p>Share information about your brand with your customers. Describe a  product, make announcements, or welcome customers to your store.<\/p>",
-            "title": "Main heading",
-            "text": "<p>Share information about your brand with your customers. Describe a  product, make announcements, or welcome customers to your store.<\/p>"
+            "title2": "Our mission",
+            "text2": "<p>Our Mission is to introduce a superior shopping experience combining technology with expert designer assistance. Get a wardrobe that is 100% you and with your lifestyle and preferences.This Design is your personal designer, letting you discover and define your own style. We are here to help you, save time and your day!</p>"
           }
         }
       },
       "block_order": [
-        "title"
+        "image_with_text_6JmnAW"
       ],
       "settings": {}
+    },
+    "testimonials_t7GD8V": {
+      "type": "testimonials",
+      "blocks": {
+        "column_hDmmc8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/testimonial-01.jpg",
+            "title": "Emily Johnson",
+            "subtitle": "Customer",
+            "text": "<p>“Love this shop! So many great products in one place. Fast delivery and everything comes just as described”</p>"
+          }
+        },
+        "column_BPeVFq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/testimonial-02.jpg",
+            "title": "Daniel Smith",
+            "subtitle": "Customer",
+            "text": "<p><br/>“Great prices and smooth shopping experience. I’ve bought several items here and all arrived on time”<br/><br/></p>"
+          }
+        },
+        "column_3QNzaC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/testimonial-03.jpg",
+            "title": "Jessica Lee",
+            "subtitle": "Customer",
+            "text": "<p><br/>“The website is super easy to use. I like how they have almost everything, from clothes to home stuff”<br/><br/></p>"
+          }
+        },
+        "column_pnPrdr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/testimonial-04.jpg",
+            "title": "Michael Brown",
+            "subtitle": "Customer",
+            "text": "<p><br/>“Reliable store with good quality products, fast shipping, and responsive customer service.”<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_hDmmc8",
+        "column_BPeVFq",
+        "column_3QNzaC",
+        "column_pnPrdr"
+      ],
+      "name": "t:sections.testimonials.presets.name",
+      "settings": {
+        "title": "What our customers says!",
+        "heading_size": "medium",
+        "image_ratio": "adapt",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "testimonials_t7GD8V"
   ]
 }
