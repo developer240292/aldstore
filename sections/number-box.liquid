@@ -8,33 +8,29 @@
 {%- endstyle -%}
 <div class="container section-{{ section.id }}-padding">
   <div class="number-box">
-    <div class="number-box-bg">
-      {%- if section.settings.image_1 -%}
-        <img
-          class="lazyload"
-          srcset="
-            {%- if section.settings.image_1.width >= 375 -%}{{ section.settings.image_1 | image_url: width: 375 }} 375w,{%- endif -%}
-            {%- if section.settings.image_1.width >= 550 -%}{{ section.settings.image_1 | image_url: width: 550 }} 550w,{%- endif -%}
-            {%- if section.settings.image_1.width >= 750 -%}{{ section.settings.image_1 | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if section.settings.image_1.width >= 1100 -%}{{ section.settings.image_1 | image_url: width: 1100 }} 1100w,{%- endif -%}
-            {%- if section.settings.image_1.width >= 1500 -%}{{ section.settings.image_1 | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {%- if section.settings.image_1.width >= 1780 -%}{{ section.settings.image_1 | image_url: width: 1780 }} 1780w,{%- endif -%}
-            {%- if section.settings.image_1.width >= 2000 -%}{{ section.settings.image_1 | image_url: width: 2000 }} 2000w,{%- endif -%}
-            {%- if section.settings.image_1.width >= 3000 -%}{{ section.settings.image_1 | image_url: width: 3000 }} 3000w,{%- endif -%}
-            {%- if section.settings.image_1.width >= 3840 -%}{{ section.settings.image_1 | image_url: width: 3840 }} 3840w,{%- endif -%}
-            {{ section.settings.image_1 | image_url }} {{ section.settings.image_1.width }}w
-          "
-          sizes="100vw"
-          src="{{ section.settings.image_1 | image_url: width: 1170 }}"
-          loading="lazy"
-          alt="{{ section.settings.image_1.alt | escape }}"
-          width="{{ section.settings.image_1.width }}"
-          height="{{ section.settings.image_1.width | divided_by: section.settings.image_1.aspect_ratio | round }}"
-        >
-      {%- else -%}
-        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-    </div>
+    {%- if section.settings.image_1 -%}
+      <img
+        class="lazyload"
+        srcset="
+          {%- if section.settings.image_1.width >= 375 -%}{{ section.settings.image_1 | image_url: width: 375 }} 375w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 550 -%}{{ section.settings.image_1 | image_url: width: 550 }} 550w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 750 -%}{{ section.settings.image_1 | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 1100 -%}{{ section.settings.image_1 | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 1500 -%}{{ section.settings.image_1 | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 1780 -%}{{ section.settings.image_1 | image_url: width: 1780 }} 1780w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 2000 -%}{{ section.settings.image_1 | image_url: width: 2000 }} 2000w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 3000 -%}{{ section.settings.image_1 | image_url: width: 3000 }} 3000w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 3840 -%}{{ section.settings.image_1 | image_url: width: 3840 }} 3840w,{%- endif -%}
+          {{ section.settings.image_1 | image_url }} {{ section.settings.image_1.width }}w
+        "
+        sizes="100vw"
+        src="{{ section.settings.image_1 | image_url: width: 1170 }}"
+        loading="lazy"
+        alt="{{ section.settings.image_1.alt | escape }}"
+        width="{{ section.settings.image_1.width }}"
+        height="{{ section.settings.image_1.width | divided_by: section.settings.image_1.aspect_ratio | round }}"
+      >
+    {%- endif -%}
     <div class="number-box-inner">
       {% for block in section.blocks %}
         <div class="number-box-item">
@@ -64,7 +60,7 @@
     {
       "type": "text",
       "id": "title",
-      "default": "Our Team",
+      "default": "Why Choose Us?",
       "label": "Title"
     },
     {
