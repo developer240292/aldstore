@@ -43,7 +43,7 @@
             "image": "shopify://shop_images/testimonial-02.jpg",
             "title": "Daniel Smith",
             "subtitle": "Customer",
-            "text": "<p><br/>“Great prices and smooth shopping experience. I’ve bought several items here and all arrived on time”<br/><br/></p>"
+            "text": "<p>“Great prices and smooth shopping experience. I’ve bought several items here and all arrived on time”<br/></p>"
           }
         },
         "column_3QNzaC": {
@@ -52,7 +52,7 @@
             "image": "shopify://shop_images/testimonial-03.jpg",
             "title": "Jessica Lee",
             "subtitle": "Customer",
-            "text": "<p><br/>“The website is super easy to use. I like how they have almost everything, from clothes to home stuff”<br/><br/></p>"
+            "text": "<p>“The website is super easy to use. I like how they have almost everything, from clothes to home stuff”<br/></p>"
           }
         },
         "column_pnPrdr": {
@@ -61,7 +61,7 @@
             "image": "shopify://shop_images/testimonial-04.jpg",
             "title": "Michael Brown",
             "subtitle": "Customer",
-            "text": "<p><br/>“Reliable store with good quality products, fast shipping, and responsive customer service.”<br/><br/></p>"
+            "text": "<p>“Reliable store with good quality products, fast shipping, and responsive customer service.”<br/></p>"
           }
         }
       },
