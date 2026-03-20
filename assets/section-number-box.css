@@ -5,7 +5,7 @@
     padding-bottom: 35px;
     line-height: 1.25;
     overflow: hidden;
-    color: #000;
+    color: #fff;
 }
 
 .number-box img {
@@ -22,6 +22,7 @@
     container-type: inline-size;
     display: grid;
     gap: 30px;
+    position: relative;
 }
 
 .number-box .number-box-item .number-box-title {

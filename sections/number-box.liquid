@@ -7,6 +7,11 @@
   }
 {%- endstyle -%}
 <div class="container section-{{ section.id }}-padding">
+  {% unless section.settings.title == blank %}
+    <h2 class="heading {{ section.settings.heading_size }} {{ section.settings.heading_align }}">
+      {{ section.settings.title | escape }}
+    </h2>
+  {% endunless %}
   <div class="number-box">
     {%- if section.settings.image_1 -%}
       <img
