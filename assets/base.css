@@ -1671,6 +1671,13 @@ button#scroll svg {
     flex-wrap: wrap;
     align-items: center;
     gap: 30px;
+    color: #000;
+}
+
+.post-single .post-meta svg {
+    position: relative;
+    top: -2px;
+    margin-right: 2px;
 }
 
 @media (max-width: 767px) {
