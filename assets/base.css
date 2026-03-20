@@ -451,6 +451,14 @@ input.field__input::placeholder {
     }
 }
 
+.heading.center {
+    text-align: center;
+}
+
+.heading.right {
+    text-align: right;
+}
+
 .heading.medium {
     margin-top: 0;
     margin-bottom: 30px;
