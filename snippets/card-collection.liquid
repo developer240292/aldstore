@@ -35,7 +35,7 @@
     {% endif %}
   >
     {%- if card_collection.featured_image -%}
-      <figure class="collection-media">
+      <figure class="media-size collection-media">
         <img
           srcset="
             {%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -67,7 +67,6 @@
       {%- else -%}
         {{ 'onboarding.collection_title' | t }}
       {%- endif -%}
-      {% render 'icon-arrow' %}
     </span>
   </a>
 </div>

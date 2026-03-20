@@ -866,7 +866,7 @@ input.field__input::placeholder {
 /* VERTICAL MENU */
 .vertical-wrapper.block-nav-category {
     position: relative;
-    width: 253px;
+    width: 265px;
 }
 
 .vertical-wrapper.block-nav-category .block-title {
@@ -1872,6 +1872,28 @@ button#scroll svg {
 
 .template-404-wrap>.button~* {
     margin-top: 20px;
+}
+
+/*  */
+.collection-item .collection-inner {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.collection-item .collection-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 10px;
+    background: #FFFFFF66;
+    backdrop-filter: blur(10px);
+    line-height: 20px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
 }
 
 /*  */
