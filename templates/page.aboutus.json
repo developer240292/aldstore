@@ -182,12 +182,76 @@
         "padding_top": 40,
         "padding_bottom": 0
       }
+    },
+    "number_box_Bdi8AE": {
+      "type": "number-box",
+      "blocks": {
+        "column_xP6TGy": {
+          "type": "column",
+          "settings": {
+            "number": "1000+",
+            "desc": "Quality Products"
+          }
+        },
+        "column_Ryg7m4": {
+          "type": "column",
+          "settings": {
+            "number": "20+",
+            "desc": "Industry"
+          }
+        },
+        "column_7UzWHT": {
+          "type": "column",
+          "settings": {
+            "number": "5000+",
+            "desc": "Orders Shipped Monthly"
+          }
+        },
+        "column_mTePRA": {
+          "type": "column",
+          "settings": {
+            "number": "320K+",
+            "desc": "Happy Customers"
+          }
+        },
+        "column_YpQmKH": {
+          "type": "column",
+          "settings": {
+            "number": "98%",
+            "desc": "Satisfaction Rate"
+          }
+        },
+        "column_UP7riN": {
+          "type": "column",
+          "settings": {
+            "number": "50+",
+            "desc": "Global Partners"
+          }
+        }
+      },
+      "block_order": [
+        "column_xP6TGy",
+        "column_Ryg7m4",
+        "column_7UzWHT",
+        "column_mTePRA",
+        "column_YpQmKH",
+        "column_UP7riN"
+      ],
+      "name": "Number Box",
+      "settings": {
+        "title": "Our Team",
+        "heading_size": "medium",
+        "heading_align": "left",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "text_box_R4FiNf",
     "team_yaPFCR",
-    "testimonials_t7GD8V"
+    "testimonials_t7GD8V",
+    "number_box_Bdi8AE"
   ]
 }
