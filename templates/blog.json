@@ -19,7 +19,7 @@
         "show_author": true,
         "show_desc": true,
         "show_cmment": false,
-        "show_tags": false,
+        "show_tags": true,
         "padding_top": 0,
         "padding_bottom": 0
       }
