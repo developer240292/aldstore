@@ -1,0 +1,148 @@
+<link rel="stylesheet" href="{{ 'section-number-box.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-number-box.css' | asset_url | stylesheet_tag }}</noscript>
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+<div class="container section-{{ section.id }}-padding">
+  <div class="number-box">
+    {%- if section.settings.image_1 -%}
+      <img
+        class="lazyload"
+        srcset="
+          {%- if section.settings.image_1.width >= 375 -%}{{ section.settings.image_1 | image_url: width: 375 }} 375w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 550 -%}{{ section.settings.image_1 | image_url: width: 550 }} 550w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 750 -%}{{ section.settings.image_1 | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 1100 -%}{{ section.settings.image_1 | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 1500 -%}{{ section.settings.image_1 | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 1780 -%}{{ section.settings.image_1 | image_url: width: 1780 }} 1780w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 2000 -%}{{ section.settings.image_1 | image_url: width: 2000 }} 2000w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 3000 -%}{{ section.settings.image_1 | image_url: width: 3000 }} 3000w,{%- endif -%}
+          {%- if section.settings.image_1.width >= 3840 -%}{{ section.settings.image_1 | image_url: width: 3840 }} 3840w,{%- endif -%}
+          {{ section.settings.image_1 | image_url }} {{ section.settings.image_1.width }}w
+        "
+        sizes="100vw"
+        src="{{ section.settings.image_1 | image_url: width: 1170 }}"
+        loading="lazy"
+        alt="{{ section.settings.image_1.alt | escape }}"
+        width="{{ section.settings.image_1.width }}"
+        height="{{ section.settings.image_1.width | divided_by: section.settings.image_1.aspect_ratio | round }}"
+      >
+    {%- else -%}
+      {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+    <div class="number-box">
+      {% for block in section.blocks %}
+        <div class="number-box-item">
+          <h4 class="number-box-title">
+            {{ block.settings.number }}
+          </h4>
+          <div class="number-box-desc">
+            {{ block.settings.desc }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Number Box",
+  "tag": "section",
+  "class": "section number-box-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Our Team",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "medium",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "heading_align",
+      "label": "Heading align",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "default": "1000+",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "default": "Quality Products",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Number Box",
+      "blocks": [
+        { "type": "column" },
+        { "type": "column" },
+        { "type": "column" },
+        { "type": "column" },
+        { "type": "column" },
+        { "type": "column" }
+      ]
+    }
+  ]
+}
+{% endschema %}

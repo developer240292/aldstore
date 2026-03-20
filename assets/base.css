@@ -3021,41 +3021,6 @@ button.loading .loading-overlay__spinner svg .path {
     margin-bottom: 30px;
 }
 
-
-/* Our Story */
-.vtaboutimgblock {
-    position: relative;
-}
-
-.vtaboutimgblock h2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    font-size: calc(var(--font-body-scale) * 46px);
-}
-
-.vtaboutimgblock h2 span {
-    margin: 0 auto;
-    display: block;
-}
-
-.vtaboutimgblock,
-.vtabttxt,
-.vtabtimgtxt {
-    margin-bottom: 30px;
-}
-
-.vtabttxt h2,
-.vtabtimgtxt h2 {
-    font-size: calc(var(--font-body-scale) * 24px);
-    margin-bottom: 8px;
-}
-
 .faqhead.toggle.collapsed::after {
     content: "+";
     font-size: 18px;
