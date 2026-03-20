@@ -114,43 +114,43 @@
         "featured_collection_mW49kt": {
           "type": "featured_collection",
           "settings": {
-            "collection": "books-stationery"
+            "collection": "baby-kids-copy"
           }
         },
         "featured_collection_AdHBt6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "electronics-gadgets"
+            "collection": "electronics-gadgets-copy"
           }
         },
         "featured_collection_EeGFjq": {
           "type": "featured_collection",
           "settings": {
-            "collection": "fashion-accessories"
+            "collection": "fashion-accessories-copy"
           }
         },
         "featured_collection_cYqniW": {
           "type": "featured_collection",
           "settings": {
-            "collection": "home-living"
+            "collection": "beauty-personal-care-copy"
           }
         },
         "featured_collection_Cdxppq": {
           "type": "featured_collection",
           "settings": {
-            "collection": "pets-supplies"
+            "collection": "automotive-tools-copy"
           }
         },
         "featured_collection_MmNtgQ": {
           "type": "featured_collection",
           "settings": {
-            "collection": "sports-outdoors"
+            "collection": "sports-outdoors-copy"
           }
         },
         "featured_collection_9tj7a3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "toys-hobbies"
+            "collection": "toys-hobbies-copy"
           }
         }
       },
