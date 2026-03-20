@@ -342,7 +342,7 @@ textarea.field__input:-webkit-autofill~.field__label,
 input.field__input:focus~.field__label,
 input.field__input:not(:placeholder-shown)~.field__label,
 input.field__input:-webkit-autofill~.field__label {
-    font-size: 12px;
+    font-size: 10px;
     top: 2px;
 }
 
