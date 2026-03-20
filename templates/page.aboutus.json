@@ -17,6 +17,8 @@
           "settings": {
             "title2": "From A Small Idea To A MarketplaceFor Everyone",
             "text2": "<p>It all started with a simple goal to make shopping easier and more enjoyable for everyone. What began as a small online store soon grew into a marketplace offering products from every category you can  imagine. From fashion to gadgets, from home essentials to unique finds, we’re here to bring everything you love into one place.</p><p>Today, our mission stays the same: to connect people with great products, fair <br/>prices, and a shopping experience they can truly trust.</p>",
+            "number2": "320.000+",
+            "desc2": "Customer worldwide",
             "image": "shopify://shop_images/about-info.png"
           }
         }
@@ -25,6 +27,104 @@
         "image_with_text_6JmnAW"
       ],
       "settings": {}
+    },
+    "text_box_R4FiNf": {
+      "type": "text-box",
+      "blocks": {
+        "column_8hczMx": {
+          "type": "column",
+          "settings": {
+            "title": "Who We Are",
+            "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium mollis ex, vel interdum augue faucibus sit amet. Proin tempor purus ac suscipit sagittis. Nunc finibus euismod enim, eu finibus nunc ullamcorper</p>"
+          }
+        },
+        "column_ppz8KK": {
+          "type": "column",
+          "settings": {
+            "title": "Our History",
+            "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium mollis ex, vel interdum augue faucibus sit amet. Proin tempor purus ac suscipit sagittis. Nunc finibus euismod enim, eu finibus nunc ullamcorper</p>"
+          }
+        },
+        "column_fVerGF": {
+          "type": "column",
+          "settings": {
+            "title": "Our Mission",
+            "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium mollis ex, vel interdum augue faucibus sit amet. Proin tempor purus ac suscipit sagittis. Nunc finibus euismod enim, eu finibus nunc ullamcorper</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_8hczMx",
+        "column_ppz8KK",
+        "column_fVerGF"
+      ],
+      "name": "text-box",
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "team_yaPFCR": {
+      "type": "team",
+      "blocks": {
+        "member_N7hENi": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/team-01.jpg",
+            "name": "Alexis Jensen",
+            "position": "CEO",
+            "facebook": "#",
+            "instagram": "#",
+            "twitter": "#"
+          }
+        },
+        "member_acNRif": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/team-02.jpg",
+            "name": "Zane Sorell",
+            "position": "Founder",
+            "facebook": "#",
+            "instagram": "#",
+            "twitter": "#"
+          }
+        },
+        "member_Mx64Ge": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/team-03.jpg",
+            "name": "Keira Battye",
+            "position": "Manager",
+            "facebook": "#",
+            "instagram": "#",
+            "twitter": "#"
+          }
+        },
+        "member_M3dXda": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/team-04.jpg",
+            "name": "Maya Mathy",
+            "position": "Designer",
+            "facebook": "#",
+            "instagram": "#",
+            "twitter": "#"
+          }
+        }
+      },
+      "block_order": [
+        "member_N7hENi",
+        "member_acNRif",
+        "member_Mx64Ge",
+        "member_M3dXda"
+      ],
+      "name": "Team",
+      "settings": {
+        "title": "Meet Our Team Members",
+        "heading_size": "medium",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
     },
     "testimonials_t7GD8V": {
       "type": "testimonials",
@@ -84,6 +184,8 @@
   },
   "order": [
     "main",
+    "text_box_R4FiNf",
+    "team_yaPFCR",
     "testimonials_t7GD8V"
   ]
 }
