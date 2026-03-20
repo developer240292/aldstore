@@ -1582,6 +1582,13 @@ button#scroll svg {
 }
 
 /* BLOG */
+.post-thumb {
+    border-radius: 10px;
+    background-color: #f7931e;
+    overflow: hidden;
+    position: relative;
+}
+
 .post-title {
     margin-top: 0;
 }
@@ -1590,10 +1597,20 @@ button#scroll svg {
     color: inherit !important;
 }
 
-.post-meta {
+.post-thumb .post-meta {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 10px;
+    padding: 10px 15px;
+    backdrop-filter: blur(10px);
+}
+
+.post-thumb a~.post-meta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 /* .post-grid */
@@ -1629,10 +1646,6 @@ button#scroll svg {
 .post-list .post-info {
     padding: 20px 20px 10px 30px;
     width: calc(100% - 360px);
-}
-
-.post-list .post-meta {
-    margin-bottom: 10px;
 }
 
 /* post-single */
