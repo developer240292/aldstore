@@ -151,7 +151,7 @@
     </div>
     <div class="contform-map">
       {% if section.settings.enable_gmap %}
-        <div id="map">{{ section.settings.contact_iframe_code }}</div>
+        {{ section.settings.contact_iframe_code }}
       {% endif %}
     </div>
   </div>
@@ -164,7 +164,7 @@
   "settings": [
     {
       "type": "header",
-      "content": "Mobile/Address/Email/website Details"
+      "content": "Mobile/Address/Email/Website Details"
     },
     {
       "type": "checkbox",
