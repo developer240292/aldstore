@@ -23,7 +23,7 @@
         "columns_desktop": 3,
         "image_ratio": "adapt",
         "display_product_type": true,
-        "show_secondary_image": true,
+        "show_secondary_image": true, 
         "show_vendor": true,
         "show_rating": true,
         "show_variants": true,
