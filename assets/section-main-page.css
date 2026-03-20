@@ -21,3 +21,33 @@
   width: 52.5rem;
   height: 52.5rem;
 }
+
+.vtabtimgtxt .col-sm-6 h2 {
+  font-size: clamp(26.465px, 1.654rem + ((1vw - 3.2px) * 1.158), 45px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.18;
+  margin: 0 0 30px;
+}
+
+.vtabtimgtxt-box {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 60px;
+  background-color: var(--color-base-accent-2);
+  padding-top: 15px;
+  padding-right: 40px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.25), 18px);
+  line-height: 1.11;
+  color: #fff;
+}
+
+.vtabtimgtxt-box .vtabtimgtxt-number {
+  font-size: clamp(17.905px, 1.119rem + ((1vw - 3.2px) * 0.631), 28px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3;
+}
