@@ -188,7 +188,7 @@
         "show_secondary_image": false,
         "show_vendor": true,
         "show_rating": true,
-        "show_variants": true,
+        "show_variants": false,
         "picker_type": "button",
         "show_colorswatch": true,
         "show_view_all": false,
