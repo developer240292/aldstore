@@ -177,7 +177,7 @@
         "title": "What our customers says!",
         "heading_size": "medium",
         "image_ratio": "adapt",
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     }
