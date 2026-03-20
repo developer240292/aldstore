@@ -1628,10 +1628,6 @@ button#scroll svg {
     margin-bottom: 15px;
 }
 
-.post-grid .post-meta {
-    margin-bottom: 10px;
-}
-
 /* .post-list */
 .post-list {
     display: flex;
@@ -1667,13 +1663,6 @@ button#scroll svg {
 .post-single .post-meta {
     margin-bottom: 25px;
     justify-content: center;
-}
-
-.post-single .post-meta svg {
-    margin-right: 3px;
-    position: relative;
-    top: 4px;
-    vertical-align: top;
 }
 
 @media (max-width: 767px) {

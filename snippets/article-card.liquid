@@ -17,7 +17,7 @@
 {% endcomment %}
 <article class="article-card {% if layout == 'collage' %}post-list{% else %}post-grid{% endif %}">
   <div class="post-thumb">
-    {%- if show_image == true and article.image -%}
+    {%- if show_image == true and article.image -%} 
       {%- liquid
         assign ratio = 1
         if image_height == 'portrait'
