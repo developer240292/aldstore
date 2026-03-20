@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "layout": "collage",
-        "image_height": "portrait",
+        "layout": "grid",
+        "image_height": "square",
         "show_image": true,
         "show_date": true,
         "show_author": true,
