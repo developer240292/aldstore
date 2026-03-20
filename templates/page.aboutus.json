@@ -123,7 +123,7 @@
         "image_1": "shopify://shop_images/stats.jpg",
         "title": "Why Choose Us?",
         "heading_size": "medium",
-        "heading_align": "left",
+        "heading_align": "center",
         "padding_top": 40,
         "padding_bottom": 0
       }
