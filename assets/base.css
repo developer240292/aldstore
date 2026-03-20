@@ -1604,6 +1604,7 @@ button#scroll svg {
     gap: 10px;
     padding: 10px 15px;
     backdrop-filter: blur(10px);
+    color: #000;
 }
 
 .post-thumb a~.post-meta {
@@ -1614,9 +1615,16 @@ button#scroll svg {
     z-index: 1;
 }
 
+.post-content {
+    margin-bottom: 0;
+}
+
 /* .post-grid */
 .post-grid {
     margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 .post-grid .post-thumb {
@@ -1624,8 +1632,10 @@ button#scroll svg {
 }
 
 .post-grid .post-title {
-    font-size: calc(var(--font-body-scale) * 24px);
-    margin-bottom: 15px;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.25), 18px);
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
 /* .post-list */
