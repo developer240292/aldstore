@@ -861,7 +861,7 @@ input.field__input::placeholder {
     width: 253px;
 }
 
-.vertical-wrapper.block-nav-category.has-open .block-title {
+.vertical-wrapper.block-nav-category .block-title {
     padding: 0 20px;
     cursor: pointer;
     background-color: #fff;
@@ -875,7 +875,7 @@ input.field__input::placeholder {
     border-radius: 20px;
 }
 
-.vertical-wrapper.block-nav-category .block-title {
+.vertical-wrapper.block-nav-category.has-open .block-title {
     border-radius: 20px 20px 0 0;
 }
 
