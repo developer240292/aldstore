@@ -15,8 +15,9 @@
         "image_with_text_6JmnAW": {
           "type": "image-with-text",
           "settings": {
-            "title2": "Our mission",
-            "text2": "<p>Our Mission is to introduce a superior shopping experience combining technology with expert designer assistance. Get a wardrobe that is 100% you and with your lifestyle and preferences.This Design is your personal designer, letting you discover and define your own style. We are here to help you, save time and your day!</p>"
+            "title2": "From A Small Idea To A MarketplaceFor Everyone",
+            "text2": "<p>It all started with a simple goal to make shopping easier and more enjoyable for everyone. What began as a small online store soon grew into a marketplace offering products from every category you can  imagine. From fashion to gadgets, from home essentials to unique finds, we’re here to bring everything you love into one place.</p><p>Today, our mission stays the same: to connect people with great products, fair <br/>prices, and a shopping experience they can truly trust.</p>",
+            "image": "shopify://shop_images/about-info.png"
           }
         }
       },
