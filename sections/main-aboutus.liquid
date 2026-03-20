@@ -1,99 +1,105 @@
 <link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
-<div class="">
-  {% comment %} <h1 class="heading text-left"><span>{{ page_title }}</span></h1> {% endcomment %}
-  <div class="container page_content">
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'banner' %}
-          <div class="vtaboutimgblock">
-            <div>
-              {% if block.settings.banner != blank %}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+<div class="container page_content section-{{ section.id }}-padding">
+  <h1 class="heading medium">
+    <span>{{ page_title }}</span>
+  </h1>
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'banner' %}
+        <div class="vtaboutimgblock">
+          <div>
+            {% if block.settings.banner != blank %}
+              <img
+                loading="lazy"
+                srcset="
+                  {%- if block.settings.banner.width >= 375 -%}{{ block.settings.banner | image_url: width: 375 }} 375w,{%- endif -%}
+                  {%- if block.settings.banner.width >= 550 -%}{{ block.settings.banner | image_url: width: 550 }} 550w,{%- endif -%}
+                  {%- if block.settings.banner.width >= 750 -%}{{ block.settings.banner | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if block.settings.banner.width >= 1100 -%}{{ block.settings.banner | image_url: width: 1100 }} 1100w,{%- endif -%}
+                  {%- if block.settings.banner.width >= 1500 -%}{{ block.settings.banner | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if block.settings.banner.width >= 1780 -%}{{ block.settings.banner | image_url: width: 1780 }} 1780w,{%- endif -%}
+                  {%- if block.settings.banner.width >= 2000 -%}{{ block.settings.banner | image_url: width: 2000 }} 2000w,{%- endif -%}
+                  {%- if block.settings.banner.width >= 3000 -%}{{ block.settings.banner | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {%- if block.settings.banner.width >= 3840 -%}{{ block.settings.banner | image_url: width: 3840 }} 3840w,{%- endif -%}
+                  {{ block.settings.banner | image_url }} {{ block.settings.banner.width }}w
+                "
+                src="{{ block.settings.banner | image_url }}"
+                alt="{{ block.settings.banner.alt }}"
+                class="mx-auto lazyload"
+                width="{{ block.settings.banner.width }}"
+                height="{{ block.settings.banner.height }}"
+              >
+            {% else %}
+              <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+            {% endif %}
+          </div>
+          <h2 style="color: {{ block.settings.color_head }};">
+            <span>{{ page_title }}</span>
+          </h2>
+        </div>
+
+      {% when 'text-block' %}
+        <div class="vtabttxt container">
+          {% if block.settings.textsub != blank %}
+            <div>{{ block.settings.textsub }}</div>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <h2>
+              <span>{{ block.settings.title }}</span>
+            </h2>
+          {% endif %}
+
+          {% if block.settings.text != blank %}
+            <div>{{ block.settings.text }}</div>
+          {% endif %}
+        </div>
+
+      {% when 'image-with-text' %}
+        <div class="vtabtimgtxt">
+          <div class="row align-items-center">
+            <div class="col-sm-6">
+              {% if block.settings.image != blank %}
                 <img
                   loading="lazy"
-                  srcset="
-                    {%- if block.settings.banner.width >= 375 -%}{{ block.settings.banner | image_url: width: 375 }} 375w,{%- endif -%}
-                    {%- if block.settings.banner.width >= 550 -%}{{ block.settings.banner | image_url: width: 550 }} 550w,{%- endif -%}
-                    {%- if block.settings.banner.width >= 750 -%}{{ block.settings.banner | image_url: width: 750 }} 750w,{%- endif -%}
-                    {%- if block.settings.banner.width >= 1100 -%}{{ block.settings.banner | image_url: width: 1100 }} 1100w,{%- endif -%}
-                    {%- if block.settings.banner.width >= 1500 -%}{{ block.settings.banner | image_url: width: 1500 }} 1500w,{%- endif -%}
-                    {%- if block.settings.banner.width >= 1780 -%}{{ block.settings.banner | image_url: width: 1780 }} 1780w,{%- endif -%}
-                    {%- if block.settings.banner.width >= 2000 -%}{{ block.settings.banner | image_url: width: 2000 }} 2000w,{%- endif -%}
-                    {%- if block.settings.banner.width >= 3000 -%}{{ block.settings.banner | image_url: width: 3000 }} 3000w,{%- endif -%}
-                    {%- if block.settings.banner.width >= 3840 -%}{{ block.settings.banner | image_url: width: 3840 }} 3840w,{%- endif -%}
-                    {{ block.settings.banner | image_url }} {{ block.settings.banner.width }}w
-                  "
-                  src="{{ block.settings.banner | image_url }}"
-                  alt="{{ block.settings.banner.alt }}"
+                  src="{{ block.settings.image | image_url }}"
+                  alt="{{ block.settings.image.alt }}"
                   class="mx-auto lazyload"
-                  width="{{ block.settings.banner.width }}"
-                  height="{{ block.settings.banner.height }}"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
                 >
               {% else %}
                 <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
               {% endif %}
             </div>
-            <h2 style="color: {{ block.settings.color_head }};">
-              <span>{{ page_title }}</span>
-            </h2>
-          </div>
-
-        {% when 'text-block' %}
-          <div class="vtabttxt container">
-            {% if block.settings.textsub != blank %}
-              <div>{{ block.settings.textsub }}</div>
-            {% endif %}
-            {% if block.settings.title != blank %}
-              <h2>
-                <span>{{ block.settings.title }}</span>
-              </h2>
-            {% endif %}
-
-            {% if block.settings.text != blank %}
-              <div>{{ block.settings.text }}</div>
-            {% endif %}
-          </div>
-
-        {% when 'image-with-text' %}
-          <div class="vtabtimgtxt">
-            <div class="row align-items-center">
-              <div class="col-sm-6">
-                {% if block.settings.image != blank %}
-                  <img
-                    loading="lazy"
-                    src="{{ block.settings.image | image_url }}"
-                    alt="{{ block.settings.image.alt }}"
-                    class="mx-auto lazyload"
-                    width="{{ block.settings.image.width }}"
-                    height="{{ block.settings.image.height }}"
-                  >
-                {% else %}
-                  <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                {% endif %}
-              </div>
-              <div class="col-sm-6">
-                {% if block.settings.title2 != blank %}
-                  <h2>{{ block.settings.title2 }}</h2>
-                {% endif %}
-                {% if block.settings.text2 != blank %}
-                  <div>{{ block.settings.text2 }}</div>
-                {% endif %}
-                {% if block.settings.number2 != blank and block.settings.desc2 != blank %}
-                  <div class="vtabtimgtxt-box">
-                    <div class="vtabtimgtxt-number">
-                      {{ block.settings.number2 }}
-                    </div>
-                    <div>
-                      {{ block.settings.desc2 }}
-                    </div>
+            <div class="col-sm-6">
+              {% if block.settings.title2 != blank %}
+                <h2>{{ block.settings.title2 }}</h2>
+              {% endif %}
+              {% if block.settings.text2 != blank %}
+                <div>{{ block.settings.text2 }}</div>
+              {% endif %}
+              {% if block.settings.number2 != blank and block.settings.desc2 != blank %}
+                <div class="vtabtimgtxt-box">
+                  <div class="vtabtimgtxt-number">
+                    {{ block.settings.number2 }}
                   </div>
-                {% endif %}
-              </div>
+                  <div>
+                    {{ block.settings.desc2 }}
+                  </div>
+                </div>
+              {% endif %}
             </div>
           </div>
-      {% endcase %}
-    {% endfor %}
-  </div>
+        </div>
+    {% endcase %}
+  {% endfor %}
 </div>
 
 {% schema %}
@@ -101,7 +107,32 @@
   "name": "About us",
   "class": "section",
   "max_blocks": 8,
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    }
+  ],
   "blocks": [
     {
       "type": "banner",

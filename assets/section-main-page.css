@@ -43,6 +43,7 @@
   font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.25), 18px);
   line-height: 1.11;
   color: #fff;
+  display: table;
 }
 
 .vtabtimgtxt-box .vtabtimgtxt-number {
@@ -50,4 +51,5 @@
   font-style: normal;
   font-weight: 500;
   line-height: 1.3;
+  margin: 0 0 5px;
 }
