@@ -14,8 +14,8 @@
       "settings": {
         "title": "Collections",
         "sort": "alphabetical",
-        "image_ratio": "portrait",
-        "columns_desktop": 4,
+        "image_ratio": "square",
+        "columns_desktop": 6
       }
     }
   },
