@@ -1960,6 +1960,9 @@ button#scroll svg {
 /* .product-card*/
 .price {
     color: #dd2831;
+}
+
+.card--standard .price {
     border-radius: 20px;
     background-color: #f5f5f5;
     padding-left: 10px;
