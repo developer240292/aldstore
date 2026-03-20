@@ -6,6 +6,7 @@
     line-height: 1.25;
     overflow: hidden;
     color: #fff;
+    text-align: center;
 }
 
 .number-box img {
@@ -26,7 +27,7 @@
 }
 
 .number-box .number-box-item .number-box-title {
-    color: var(--color-base-accent-1);
+    color: var(--color-base-accent-2);
     font-size: clamp(25.984px, 1.624rem + ((1vw - 3.2px) * 1.126), 44px);
     font-style: normal;
     font-weight: 700;
