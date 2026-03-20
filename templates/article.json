@@ -18,11 +18,15 @@
             "image_height": "adapt"
           }
         },
+        "blogtag_L3tfz4": {
+          "type": "blogtag",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {
             "blog_show_date": true,
-            "blog_show_author": false
+            "blog_show_author": true
           }
         },
         "content": {
@@ -40,6 +44,7 @@
       },
       "block_order": [
         "featured_image",
+        "blogtag_L3tfz4",
         "title",
         "content",
         "share_button_HrDJRR"
