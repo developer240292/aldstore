@@ -1,0 +1,23 @@
+.text-box .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 0;
+}
+
+.text-box-item {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.text-box-item .text-box-title {
+  margin-top: 0;
+  font-size: clamp(14.642px, 0.915rem + ((1vw - 3.2px) * 0.46), 22px);
+  font-weight: 500;
+  letter-spacing: -4%;
+  margin-bottom: 15px;
+}
+
+.text-box-item .text-box-desc {
+  line-height: 1.25;
+}

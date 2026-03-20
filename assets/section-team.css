@@ -1,0 +1,25 @@
+.team .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 0;
+}
+
+.team-item {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.team-item .team-name {
+  margin-top: 15px;
+  font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.125), 16px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.team-item .team-position {
+  color: #000;
+  margin-bottom: 10px;
+}

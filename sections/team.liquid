@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="{{ 'section-team.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-team.css' | asset_url | stylesheet_tag }}</noscript>
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+<div class="team container section-{{ section.id }}-padding">
+  {% unless section.settings.title == blank %}
+    <h2 class="heading {{ section.settings.heading_size }}">
+      {{ section.settings.title | escape }}
+    </h2>
+  {% endunless %}
+  <div class="row">
+    {% for block in section.blocks %}
+      <div class="col-md-6 col-lg-3">
+        <div class="team-item">
+          <div class="team-image">
+            {% if block.settings.image != blank %}
+              <img
+                loading="lazy"
+                src="{{ block.settings.image | image_url: width: 375 }}"
+                alt="{{ block.settings.name }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+              >
+            {% else %}
+              {{ 'image' | placeholder_svg_tag }}
+            {% endif %}
+          </div>
+          <div class="team-info">
+            <h4 class="team-name">{{ block.settings.name }}</h4>
+            <div class="team-position">{{ block.settings.position }}</div>
+            <div class="social-link">
+              {% if block.settings.facebook != blank %}
+                <a href="{{ block.settings.facebook }}" target="_blank">
+                  {%- render 'icon-social-facebook' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                </a>
+              {% endif %}
+              {% if block.settings.instagram != blank %}
+                <a href="{{ block.settings.instagram }}" target="_blank">
+                  {%- render 'icon-social-instagram' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                </a>
+              {% endif %}
+              {% if block.settings.twitter != blank %}
+                <a href="{{ block.settings.twitter }}" target="_blank">
+                  {%- render 'icon-social-twitter' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Team",
+  "tag": "section",
+  "class": "section team-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Our Team",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "medium",
+      "label": "Heading size"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "member",
+      "name": "Member",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Avatar"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "default": "John Doe",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "id": "position",
+          "default": "Developer",
+          "label": "Position"
+        },
+        {
+          "type": "url",
+          "id": "facebook",
+          "label": "Facebook"
+        },
+        {
+          "type": "url",
+          "id": "instagram",
+          "label": "Instagram"
+        },
+        {
+          "type": "url",
+          "id": "twitter",
+          "label": "Twitter"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team",
+      "blocks": [{ "type": "member" }, { "type": "member" }, { "type": "member" }, { "type": "member" }]
+    }
+  ]
+}
+{% endschema %}
