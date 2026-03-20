@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": true
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -16,7 +23,7 @@
         "columns_desktop": 3,
         "image_ratio": "adapt",
         "display_product_type": true,
-        "show_secondary_image": true, 
+        "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": true,
         "show_variants": true,
@@ -32,6 +39,7 @@
     }
   },
   "order": [
+    "banner",
     "product-grid"
   ]
 }
