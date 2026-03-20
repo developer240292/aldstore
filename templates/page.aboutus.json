@@ -28,24 +28,24 @@
       ],
       "settings": {}
     },
-    "text_box_R4FiNf": {
+    "text_box_k4URVC": {
       "type": "text-box",
       "blocks": {
-        "column_8hczMx": {
+        "column_JM4NR6": {
           "type": "column",
           "settings": {
             "title": "Who We Are",
             "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium mollis ex, vel interdum augue faucibus sit amet. Proin tempor purus ac suscipit sagittis. Nunc finibus euismod enim, eu finibus nunc ullamcorper</p>"
           }
         },
-        "column_ppz8KK": {
+        "column_tDR8br": {
           "type": "column",
           "settings": {
             "title": "Our History",
             "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium mollis ex, vel interdum augue faucibus sit amet. Proin tempor purus ac suscipit sagittis. Nunc finibus euismod enim, eu finibus nunc ullamcorper</p>"
           }
         },
-        "column_fVerGF": {
+        "column_8UXhxQ": {
           "type": "column",
           "settings": {
             "title": "Our Mission",
@@ -54,11 +54,11 @@
         }
       },
       "block_order": [
-        "column_8hczMx",
-        "column_ppz8KK",
-        "column_fVerGF"
+        "column_JM4NR6",
+        "column_tDR8br",
+        "column_8UXhxQ"
       ],
-      "name": "text-box",
+      "name": "Text Box",
       "settings": {
         "padding_top": 40,
         "padding_bottom": 0
@@ -249,7 +249,7 @@
   },
   "order": [
     "main",
-    "text_box_R4FiNf",
+    "text_box_k4URVC",
     "number_box_Bdi8AE",
     "team_yaPFCR",
     "testimonials_t7GD8V"
