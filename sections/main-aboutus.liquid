@@ -59,20 +59,18 @@
           <div class="vtabtimgtxt">
             <div class="row align-items-center">
               <div class="col-sm-6">
-                <div class="vtabtimglazy">
-                  {% if block.settings.image != blank %}
-                    <img
-                      loading="lazy"
-                      src="{{ block.settings.image | image_url }}"
-                      alt="{{ block.settings.image.alt }}"
-                      class="mx-auto lazyload"
-                      width="{{ block.settings.image.width }}"
-                      height="{{ block.settings.image.height }}"
-                    >
-                  {% else %}
-                    <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                  {% endif %}
-                </div>
+                {% if block.settings.image != blank %}
+                  <img
+                    loading="lazy"
+                    src="{{ block.settings.image | image_url }}"
+                    alt="{{ block.settings.image.alt }}"
+                    class="mx-auto lazyload"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                  >
+                {% else %}
+                  <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+                {% endif %}
               </div>
               <div class="col-sm-6">
                 {% if block.settings.title2 != blank %}
