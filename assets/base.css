@@ -1085,7 +1085,7 @@ form.search .search__button {
 }
 
 .header-mobile .header-block.block-minicart .block-link {
-    padding: 5px;
+    padding: 0;
     border-radius: 0;
     background-color: transparent;
 }
@@ -1100,6 +1100,11 @@ form.search .search__button {
 .header-mobile .header-block.block-minicart .block-link .block-icon svg {
     width: 26px;
     height: auto;
+}
+
+.header-mobile .header-block .block-link .block-icon .count {
+    top: -10px;
+    right: -10px;
 }
 
 .header-mobile .block-menu-bar {
