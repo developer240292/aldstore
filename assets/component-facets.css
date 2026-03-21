@@ -81,14 +81,11 @@
   color: #fff;
   padding: 10px 15px 9px;
   border-radius: 10px;
-}
-
-.vtsortbar .shop-filter-button svg {
-  margin-right: 5px;
+  gap: 5px;
 }
 
 .aldstore-filter-drawer .vtsortbar .shop-filter-button {
-  display: block;
+  display: flex;
 }
 
 .aldstore-filter-drawer .sidebar {
@@ -114,7 +111,7 @@
 
 @media (max-width: 991px) {
   .vtsortbar .shop-filter-button {
-    display: block;
+    display: flex;
     position: fixed;
     right: 20px;
     bottom: 70px;
@@ -125,6 +122,7 @@
     width: 40px;
     height: 40px;
     line-height: 40px;
+    padding: 0;
     border-radius: 50%;
     text-align: center;
   }

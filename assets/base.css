@@ -1827,15 +1827,15 @@ button#scroll svg {
 }
 
 .pagination__item {
-    background: rgba(0, 0, 0, .03);
-    border-radius: 5px;
+    background: #fff;
+    border-radius: 10px;
     min-width: 40px;
-    min-height: 40px;
+    height: 40px;
+    line-height: 40px;
     display: inline-block;
     vertical-align: middle;
-    font-size: calc(var(--font-body-scale) * 16px);
-    padding-top: 8px;
     color: #000;
+    border: 1px solid #E5E5E5;
 }
 
 .pagination__item svg {
@@ -1848,12 +1848,14 @@ button#scroll svg {
 .pagination__item:hover {
     background: #000;
     color: #fff;
+    border-color: #000;
 }
 
 .pagination__list>li {
     display: inline-block;
     vertical-align: middle;
     margin: 0 5px;
+    text-align: center;
 }
 
 /* 404 */
