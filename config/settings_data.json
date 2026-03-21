@@ -95,6 +95,15 @@
       "header": {
         "type": "header",
         "blocks": {
+          "megamenu_product_RpzcwW": {
+            "type": "megamenu-product",
+            "settings": {
+              "menuname": "Shop",
+              "showsubmenu": true,
+              "collection": "bestseller",
+              "products_to_show": 6
+            }
+          },
           "megamenu_blog_fcVfQh": {
             "type": "megamenu-blog",
             "settings": {
@@ -103,20 +112,11 @@
               "blog": "news",
               "blog_to_show": 4
             }
-          },
-          "megamenu_product_RpzcwW": {
-            "type": "megamenu-product",
-            "settings": {
-              "menuname": "Shop",
-              "showsubmenu": true,
-              "collection": "frontpage",
-              "products_to_show": 6
-            }
           }
         },
         "block_order": [
-          "megamenu_blog_fcVfQh",
-          "megamenu_product_RpzcwW"
+          "megamenu_product_RpzcwW",
+          "megamenu_blog_fcVfQh"
         ],
         "settings": {
           "logo_width": 204,
