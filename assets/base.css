@@ -497,6 +497,7 @@ input.field__input::placeholder {
 
 .header-logo span {
     margin: 0;
+    font-size: clamp(1.125rem, 1.125rem + ((1vw - 0.2rem) * 0.225), 1.35rem);
 }
 
 .header-block {
@@ -1063,26 +1064,15 @@ form.search .search__button {
 }
 
 .header-mobile {
-    display: table;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 0 14px;
 }
 
-.header-mobile>* {
-    display: table-cell;
-    vertical-align: middle;
-    width: 33.333%;
-}
-
 .header-mobile .header-mobile-right {
-    text-align: right;
-}
-
-.header-mobile .header-meta {
-    padding-left: 0;
-    justify-content: end;
-    display: inline-flex;
-    gap: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .header-mobile .header-block .block-link .block-text {
