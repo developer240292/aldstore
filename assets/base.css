@@ -3336,3 +3336,7 @@ noscript .cart__update-button {
     align-items: center;
     gap: 20px;
 }
+
+.collection-hero img {
+    border-radius: 10px;
+}
