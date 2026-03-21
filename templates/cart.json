@@ -40,6 +40,10 @@
       "type": "main-ship-return",
       "disabled": true,
       "settings": {
+        "vtshiphead": "Shipping",
+        "vtship": "<p>Free shipping on all orders over</p>",
+        "vtrtnhead": "Return",
+        "vtrtn": "<p>To return an item to us, follow the directions listed on the return exchange form included with your order.</p>",
         "padding_top": 20,
         "padding_bottom": 0
       }
