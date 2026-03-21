@@ -1,9 +1,9 @@
 <div class="vtmain_bnr container">
     <h1 class="heading medium"><span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span><span>{{- collection.title | escape -}}</span></h1>
     {%- if collection.image and collection.description -%}
-        <div class="row collection-hero">
+        <div class="collection-hero">
             {%- if section.settings.show_collection_image and collection.image -%}
-                <div class="{% if section.settings.show_collection_description and section.settings.show_collection_image %}col-xl-3 col-md-4 col-sm-12 col-12 {% else %}col-12 {% endif %} collection-hero__image-container">
+                <div class="collection-hero__image-container">
                     <div class="collimglazy">
                         <img class="img-fluid mx-auto lazyload"
                         srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -21,11 +21,9 @@
                     </div>
                 </div>
             {%- endif -%}
-            <div class="{% if section.settings.show_collection_description and section.settings.show_collection_image %}col-xl-9 col-md-8 col-sm-12 col-12 {% else %}col-12 {% endif %} collection-hero__text-wrapper">
-                {%- if section.settings.show_collection_description -%}
-                    <div class="collection-hero__description rte">{{ collection.description }}</div>
-                {%- endif -%}
-            </div>
+            {%- if section.settings.show_collection_description -%}
+                <div class="collection-hero__description rte">{{ collection.description }}</div>
+            {%- endif -%}
         </div>
     {%- endif -%}
 </div>

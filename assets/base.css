@@ -3331,4 +3331,8 @@ noscript .cart__update-button {
 
 .collection-hero {
     margin-bottom: 30px;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
