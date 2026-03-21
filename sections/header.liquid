@@ -92,15 +92,15 @@
     <div class="header-position">
       <div class="container">
         <div class="header-mobile">
-          <div class="header-mobile-left">
-            {% render 'header-logo', is_mobile: true %}
-          </div>
+          {% render 'header-logo', is_mobile: true %}
           <div class="header-mobile-right">
             <div class="header-search aldstore-dropdown">
               <a class="block-link link-dropdown" data-aldstore="aldstore-dropdown" href="#">
                 {% render 'icon-header-search' %}
               </a>
-              {% render 'predictive-search' %}
+              <div class="header-search-popup">
+                {% render 'predictive-search' %}
+              </div>
             </div>
             {% render 'header-user' %}
             {% render 'header-minicart' %}

@@ -1054,7 +1054,6 @@ form.search .search__button {
     position: relative;
     border-bottom: 1px solid #f1f1f1;
     display: none;
-    max-height: 60px;
 }
 
 @media(max-width: 1024px) {
@@ -1082,6 +1081,34 @@ form.search .search__button {
 .header-mobile .block-menu-bar {
     display: inline-block;
     cursor: pointer;
+}
+
+.header-mobile .header-search .block-link svg {
+    width: 26px;
+    height: auto;
+}
+
+.header-mobile .header-search .header-search-popup {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+    margin-top: 20px;
+}
+
+.header-mobile .header-search.open .header-search-popup {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
 }
 
 /*MENU MOBILE*/
