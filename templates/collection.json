@@ -30,7 +30,7 @@
         "picker_type": "button",
         "show_colorswatch": false,
         "enable_filtering": true,
-        "filter_type": "sidebar",
+        "filter_type": "drawer",
         "enable_sorting": true,
         "enable_listdesc": true,
         "padding_top": 0,
