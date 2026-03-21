@@ -61,38 +61,6 @@
                 </div>
               {%- endfor -%}
             {% endfor %}
-          {% when 'megamenu-gallery' %}
-            {% for i in (1..4) %}
-              {% capture galleryimg %}vt{{ i }}_img{% endcapture %}
-              {% capture gallerylink %}vt{{ i }}_link{% endcapture %}
-              {% capture gallerytext %}vt{{ i }}_text{% endcapture %}
-              {% if galleryimg or block.settings[gallerylink].size > 0 %}
-                <div class="col-12 col-md-3">
-                  {% if block.settings[gallerylink] -%}
-                    <a
-                      href="{{ block.settings[gallerylink] }}"
-                      title="{{ block.settings[gallerytext] }}"
-                    >
-                  {%- endif %}
-                  <div class="vtmenugllazy">
-                    {% if block.settings[galleryimg] %}
-                      <img
-                        src="{{ block.settings[galleryimg] | image_url: width: 350 }}"
-                        alt="{{ block.settings[galleryimg].alt }}"
-                        class="lazyload"
-                      >
-                    {% else %}
-                      <div class="dummysvg">{{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                    {% endif %}
-                  </div>
-                  {% if block.settings[gallerytext].size > 0 %}
-                    <p>{{ block.settings[gallerytext] }}</p>
-                  {% endif %}
-                  {% if block.settings[gallerylink] %}</a>{% endif %}
-                </div>
-              {% endif %}
-            {%- endfor -%}
-
           {% when 'megamenu-blog' %}
             {%- if block.settings.blog != blank -%}
               {% for article in blogs[block.settings.blog].articles limit: block.settings.blog_to_show %}
