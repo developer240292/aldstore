@@ -83,6 +83,10 @@
   border-radius: 10px;
 }
 
+.vtsortbar .shop-filter-button svg {
+  margin-right: 5px;
+}
+
 .aldstore-filter-drawer .vtsortbar .shop-filter-button {
   display: block;
 }
@@ -100,6 +104,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   background: #f6f5f7;
+  padding-top: 20px;
 }
 
 .aldstore-dropdown.open .sidebar {
@@ -137,6 +142,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     background: #f6f5f7;
+    padding-top: 20px;
   }
 }
 

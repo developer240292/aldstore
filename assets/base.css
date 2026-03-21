@@ -3285,3 +3285,7 @@ a.go-to-wishlist {
 noscript .cart__update-button {
     margin-bottom: 5px;
 }
+
+.collection-hero {
+    margin-bottom: 30px;
+}
