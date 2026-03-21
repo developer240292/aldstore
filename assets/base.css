@@ -2150,12 +2150,6 @@ button#scroll svg {
     margin-bottom: 8px;
 }
 
-.vtproduct-container .vtvariantbadges {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-}
-
 .allslideprt {
     flex-wrap: inherit;
     overflow-x: auto;
@@ -2186,6 +2180,12 @@ button#scroll svg {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+}
+
+.card--standard .vtvariantbadges {
+    position: absolute;
+    top: 10px;
+    left: 15px;
 }
 
 .card--standard .card__media img {
