@@ -98,8 +98,9 @@
           <div class="header-mobile-right">
             <div class="header-search aldstore-dropdown">
               <a class="block-link link-dropdown" data-aldstore="aldstore-dropdown" href="#">
-                {%- render 'icon-header-search' -%}
+                {% render 'icon-header-search' %}
               </a>
+              {% render 'predictive-search' %}
             </div>
             {% render 'header-user' %}
             {% render 'header-minicart' %}
