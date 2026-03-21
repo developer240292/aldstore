@@ -95,21 +95,6 @@
       "header": {
         "type": "header",
         "blocks": {
-          "megamenu_gallery_RqY7im": {
-            "type": "megamenu-gallery",
-            "settings": {
-              "menuname": "Shop",
-              "showsubmenu": true,
-              "vt1_link": "shopify://blogs/news",
-              "vt1_text": "test",
-              "vt2_link": "",
-              "vt2_text": "",
-              "vt3_link": "",
-              "vt3_text": "",
-              "vt4_link": "",
-              "vt4_text": ""
-            }
-          },
           "megamenu_blog_fcVfQh": {
             "type": "megamenu-blog",
             "settings": {

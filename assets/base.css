@@ -679,6 +679,12 @@ input.field__input::placeholder {
     border-radius: var(--popup-corner-radius);
     box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(0, 0, 0, var(--popup-shadow-opacity));
     z-index: 999;
+    position: absolute;
+    min-width: 210px;
+    background-color: #f6f5f7;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 20px;
 }
 
 .box-header-nav .main-menu .menu-item .sub-menu .menu-item a {
@@ -758,15 +764,6 @@ input.field__input::placeholder {
 
 .box-header-nav .main-menu>.menu-item.parent:hover::before {
     display: block;
-}
-
-.box-header-nav .main-menu .menu-item .sub-menu {
-    position: absolute;
-    min-width: 210px;
-    background-color: #ffffff;
-    opacity: 0;
-    visibility: hidden;
-    margin-top: 20px;
 }
 
 .box-header-nav .main-menu .menu-item:hover>.sub-menu {
