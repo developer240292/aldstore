@@ -820,6 +820,12 @@ input.field__input::placeholder {
     }
 }
 
+/*  */
+.megamenu .megamenu-blog .article-card {
+    width: 100%;
+}
+
+/*  */
 .header-position {
     transition: background-color 0.5s ease 0s, padding 0.5s linear;
     -o-transition: background-color 0.5s ease 0s, padding 0.5s linear;
@@ -1118,7 +1124,7 @@ form.search .search__button {
     transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     overflow-x: hidden;
     overflow-y: auto;
-    background: #fff;
+    background: #f6f5f7;
 }
 
 .header-mobile-menu .sidebar-content {
@@ -1132,7 +1138,7 @@ form.search .search__button {
     display: flex;
     flex-flow: row wrap;
     padding: 0;
-    background: #F6F6F6;
+    background: #ededed;
 }
 
 .header-mobile-menu .tab-mobile-menu li {
@@ -1229,16 +1235,17 @@ form.search .search__button {
     justify-content: end;
     cursor: pointer;
     background: none;
+    color: #000;
 }
 
 .header-mobile-menu .aldstore-nav .menu-item .caret svg {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
 }
 
 .header-mobile-menu .aldstore-nav .menu-item .caret.active {
     position: fixed;
-    top: 75px;
+    top: 80px;
     justify-content: start;
 }
 
@@ -1263,11 +1270,20 @@ form.search .search__button {
 }
 
 .header-mobile-menu .aldstore-nav .menu-item.show-sub-menu .caret.active svg {
-    transform: rotate(0);
+    transform: rotate(180deg);
 }
 
 .header-mobile-menu .aldstore-nav .menu-item.show-sub-menu>.sub-menu {
     display: block;
+}
+
+.aldstore-nav .menu-item .sub-menu.megamenu .d-flex {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header-mobile-menu .aldstore-nav .menu-item .sub-menu.megamenu .d-flex {
+    flex-direction: column;
 }
 
 .header-mobile-menu .block-search {
@@ -1681,16 +1697,25 @@ button#scroll svg {
 .post-single .post-title {
     font-size: clamp(15.747px, 0.984rem + ((1vw - 3.2px) * 0.516), 24px);
     font-weight: 600;
-    margin: 30px 0 30px 0;
+    margin: 25px 0;
 }
 
 .post-single .post-meta {
     margin-bottom: 25px;
+    margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 30px;
     color: #000;
+}
+
+.post-single .tags a {
+    color: #fff;
+    background-color: #000000;
+    padding: 6px 15px;
+    border-radius: 10px;
+    margin-bottom: 4px;
 }
 
 @media (max-width: 767px) {

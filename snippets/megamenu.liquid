@@ -96,21 +96,21 @@
           {% when 'megamenu-blog' %}
             {%- if block.settings.blog != blank -%}
               {% for article in blogs[block.settings.blog].articles limit: block.settings.blog_to_show %}
-                {%- render 'article-card', article: article, show_image: true, show_date: true -%}
+                {%- render 'article-card', article: article, image_height: adapt, show_image: true, show_date: true -%}
               {% endfor %}
             {%- else -%}
               {% for i in (1..5) %}
                 <article class="article-card post-grid">
                   <div class="post-thumb">
                     {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
-                  </div>
-                  <div class="post-info">
                     <div class="post-meta">
                       <div class="date">
                         {%- render 'icon-blog-date' %}
                         {{ 'now' | date: '%b %d, %Y' -}}
                       </div>
                     </div>
+                  </div>
+                  <div class="post-info">
                     <div class="post-title">Example blog post {{ i }}</div>
                   </div>
                 </article>

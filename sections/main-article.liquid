@@ -5,7 +5,6 @@
         {%- when '@app' -%}
           {% render block %}
         {%- when 'title' -%}
-          <h1 class="post-title" itemprop="headline">{{ article.title | escape }}</h1>
           <div class="post-meta">
             {%- if block.settings.blog_show_author -%}
               <div
@@ -26,6 +25,7 @@
               </div>
             {%- endif -%}
           </div>
+          <h1 class="post-title" itemprop="headline">{{ article.title | escape }}</h1>
         {%- when 'featured_image' -%}
           {%- if article.image -%}
             <div class="post-thumb" {{ block.shopify_attributes }}>
@@ -84,15 +84,6 @@
           %}
       {%- endcase -%}
     {%- endfor -%}
-
-    <div class="backtoblog">
-      <a
-        href="{{ blog.url }}"
-      >
-        <span class="icon-wrap">{% render 'icon-arrow-left' %}</span>
-        {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
-      </a>
-    </div>
 
     {%- if blog.comments_enabled? -%}
       <div id="comments" class="comments-area">
