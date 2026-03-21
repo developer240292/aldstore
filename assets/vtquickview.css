@@ -69,8 +69,3 @@
     margin-right: auto;
     position: relative;
 }
-@media (min-width: 768px){
-    #vtquickview .product__info-wrapper {
-        padding-left: 30px;
-    }
-}
