@@ -54,9 +54,11 @@
 .facets-form .facet-filters__label label {
   margin-bottom: 0;
 }
+
 .facets-form .facet-facet-filters__sort {
   border-radius: 10px;
 }
+
 .facets-form .product-count-vertical {
   position: relative;
 }
@@ -111,6 +113,26 @@
 .aldstore-dropdown.open .sidebar {
   transform: translate(0);
   box-shadow: -3px 0 21px #3f3f3f26;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  content: "";
+  background: #00000080;
+  z-index: 99991;
+  cursor: pointer;
+}
+
+.aldstore-dropdown.open .sidebar-overlay {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
 }
 
 @media (max-width: 991px) {
