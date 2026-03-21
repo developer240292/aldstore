@@ -1278,7 +1278,6 @@ form.search .search__button {
 }
 
 .aldstore-nav .menu-item .sub-menu.megamenu .d-flex {
-    flex-direction: column;
     gap: 30px;
 }
 
