@@ -15,21 +15,18 @@
         "id": "colors_text",
         "default": "#121212",
         "label": "t:settings_schema.colors.settings.colors_text.label",
-        "info": "t:settings_schema.colors.settings.colors_text.info"
       },
       {
         "type": "color",
         "id": "colors_heading",
         "default": "#000000",
         "label": "t:settings_schema.colors.settings.colors_heading.label",
-        "info": "t:settings_schema.colors.settings.colors_heading.info"
       },
       {
         "type": "color",
         "id": "colors_accent_1",
         "default": "#121212",
         "label": "t:settings_schema.colors.settings.colors_accent_1.label",
-        "info": "t:settings_schema.colors.settings.colors_accent_1.info"
       },
       {
         "type": "color",
