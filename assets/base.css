@@ -2049,7 +2049,18 @@ button#scroll svg {
 .price--sold-out .price__badge-sold-out,
 .price--on-sale .price__badge-sale {
     display: inline-flex;
-    background-color: var(--color-base-accent-2);
+}
+
+.price .badge {
+    border-radius: var(--badge-corner-radius);
+}
+
+.price .price__badge-sale {
+    background-color: var(--color-sale-badge);
+}
+
+.price .price__badge-sold-out {
+    background-color: var(--color-sold-out-badge);
 }
 
 .price--on-sale .price__sale {
@@ -2633,16 +2644,9 @@ variant-selects .product-form__input .select {
         margin-bottom: 8px;
     }
 
-
     .vtproduct-container .vtswatchclr input+label {
         min-width: 14px;
         min-height: 14px;
-    }
-
-    .card__badge span,
-    .badge {
-        font-size: 11px;
-        padding: 1px 6px;
     }
 
     .product_badge.new {

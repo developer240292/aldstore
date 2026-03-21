@@ -21,6 +21,7 @@
 .cartupsell .card .vtproductdes {
   padding: 0;
 }
+
 .cartupsell .vtproduct-container .vtimgblock {
   width: 90px;
 }
@@ -66,8 +67,8 @@
   font-weight: 600;
   line-height: 40px;
   padding: 0 20px;
-  background-color: var(--color-base-accent-2);
-  color: var(--color-base-accent-1);
+  background-color: var(--color-base-accent-1);
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
@@ -75,7 +76,7 @@
 
 .cartdravttn .button:hover {
   color: #fff;
-  background-color: var(--color-base-accent-1);
+  background-color: var(--color-base-accent-2);
   border-color: transparent;
 }
 
