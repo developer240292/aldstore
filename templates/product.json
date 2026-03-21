@@ -85,9 +85,9 @@
           "settings": {
             "pay_title": "Payment & Security",
             "payment_enable": true,
-            "pay1_title": "Payment methods",
-            "pay_desc": "Show details about payment methods",
-            "pay2_title": "Security",
+            "pay1_title": "",
+            "pay_desc": "",
+            "pay2_title": "",
             "payment_width": 100
           }
         },
@@ -151,18 +151,17 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "products_to_show": 5,
+        "heading": "May be you like",
+        "products_to_show": 6,
         "image_ratio": "adapt",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": true,
-        "display_product_type": false,
+        "display_product_type": true,
         "show_variants": false,
         "picker_type": "button",
-        "show_colorswatch": true,
-        "padding_top": 60,
+        "show_colorswatch": false,
+        "padding_top": 32,
         "padding_bottom": 0
       }
     }
