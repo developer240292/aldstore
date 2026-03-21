@@ -85,9 +85,9 @@
           "settings": {
             "pay_title": "Payment & Security",
             "payment_enable": true,
-            "pay1_title": "Payment methods",
-            "pay_desc": "Show details about payment methods",
-            "pay2_title": "Security",
+            "pay1_title": "",
+            "pay_desc": "",
+            "pay2_title": "",
             "payment_width": 100
           }
         },
@@ -152,8 +152,7 @@
       "type": "product-recommendations",
       "settings": {
         "heading": "You may also like",
-        "heading_size": "h2",
-        "products_to_show": 5,
+        "products_to_show": 6,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
