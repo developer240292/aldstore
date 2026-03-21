@@ -585,6 +585,7 @@ input.field__input::placeholder {
     padding: 7px;
     border-radius: 50%;
     font-size: 0;
+    color: #fff;
 }
 
 .header-contact {
@@ -1093,6 +1094,7 @@ form.search .search__button {
     background-color: transparent;
     padding: 0;
     border-radius: 0;
+    color: #000;
 }
 
 .header-mobile .header-block.block-minicart .block-link .block-icon svg {
