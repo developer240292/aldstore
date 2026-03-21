@@ -1072,10 +1072,32 @@ form.search .search__button {
 .header-mobile .header-mobile-right {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .header-mobile .header-block .block-link .block-text {
     display: none;
+}
+
+.header-mobile .header-block .block-link .block-icon {
+    margin: 0;
+}
+
+.header-mobile .header-block.block-minicart .block-link {
+    padding: 5px;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.header-mobile .header-block.block-minicart .block-link .block-icon {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.header-mobile .header-block.block-minicart .block-link .block-icon svg {
+    width: 26px;
+    height: auto;
 }
 
 .header-mobile .block-menu-bar {
