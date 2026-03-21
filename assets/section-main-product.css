@@ -1109,6 +1109,10 @@ fieldset.product-form__input .form__label {
     padding-top: 20px;
 }
 
+#vtquickview .grid {
+    margin: 0;
+}
+
 @media (min-width: 1200px) {
     .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
         width: calc(20% - 0.8rem);
