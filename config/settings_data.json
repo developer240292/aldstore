@@ -107,7 +107,7 @@
           "megamenu_product_RpzcwW": {
             "type": "megamenu-product",
             "settings": {
-              "menuname": "Home",
+              "menuname": "Shop",
               "showsubmenu": true,
               "collection": "frontpage",
               "products_to_show": 6
@@ -115,7 +115,6 @@
           }
         },
         "block_order": [
-          "megamenu_gallery_RqY7im",
           "megamenu_blog_fcVfQh",
           "megamenu_product_RpzcwW"
         ],
