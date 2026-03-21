@@ -17,6 +17,25 @@
 -%}
 <facet-filters-form class="facets facets-sort no-js-hidden">
   <form class="facets-form" id="FacetSortForm">
+    <div class="product-count-vertical" role="status">
+      <h2 class="product-count__text">
+        <span id="ProductCountDesktop">
+          {%- if results.results_count -%}
+            {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
+          {%- elsif results.products_count == results.all_products_count -%}
+            {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+          {%- else -%}
+            {{
+              'products.facets.product_count'
+              | t: product_count: results.products_count, count: results.all_products_count
+            }}
+          {%- endif -%}
+        </span>
+      </h2>
+      <div class="loading-overlay__spinner">
+        {%- render 'icon-spinner' -%}
+      </div>
+    </div>
     <div class="facet-filters sorting">
       <div class="facet-filters__field">
         <h2 class="facet-filters__label">
@@ -48,25 +67,6 @@
           {{ 'products.facets.sort_button' | t }}
         </button>
       </noscript>
-    </div>
-    <div class="product-count-vertical" role="status">
-      <h2 class="product-count__text">
-        <span id="ProductCountDesktop">
-          {%- if results.results_count -%}
-            {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
-          {%- elsif results.products_count == results.all_products_count -%}
-            {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
-          {%- else -%}
-            {{
-              'products.facets.product_count'
-              | t: product_count: results.products_count, count: results.all_products_count
-            }}
-          {%- endif -%}
-        </span>
-      </h2>
-      <div class="loading-overlay__spinner">
-        {%- render 'icon-spinner' -%}
-      </div>
     </div>
   </form>
 </facet-filters-form>

@@ -45,7 +45,7 @@
       {%- liquid
         if section.settings.filter_type == 'drawer' or search.filters == empty
           assign main_content = 'main-content col-12'
-          assign sidebar = 'sidebar sidebar-drawer'
+          assign sidebar = 'sidebar'
         else
           assign main_content = 'main-content col-12 col-xl-9 col-lg-8'
           assign sidebar = 'sidebar col-xl-3 col-lg-4 col-12'
@@ -57,6 +57,7 @@
             {%- if section.settings.enable_filtering -%}
               <a class="shop-filter-button" href="#" data-aldstore="aldstore-dropdown">
                 {% render 'icon-shop-filter' %}
+                Filter products
               </a>
             {%- endif -%}
             {%- if section.settings.enable_sorting and search.filters != empty -%}
