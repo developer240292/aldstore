@@ -110,7 +110,7 @@
                   name="previous"
                   aria-label="{{ 'general.slider.previous_slide' | t }}"
                 >
-                  {%- render 'icon-caret' -%}
+                  {%- render 'icon-arrow-left' -%}
                 </button>
                 <div class="slider-counter caption">
                   <span class="slider-counter--current">1</span>
@@ -124,7 +124,7 @@
                   name="next"
                   aria-label="{{ 'general.slider.next_slide' | t }}"
                 >
-                  {%- render 'icon-caret' -%}
+                  {%- render 'icon-arrow-right' -%}
                 </button>
               </div>
             </slider-component>
@@ -158,7 +158,7 @@
                   aria-controls="GalleryThumbnails-{{ section.id }}"
                   data-step="3"
                 >
-                  {%- render 'icon-caret' -%}
+                  {%- render 'icon-arrow-left' -%}
                 </button>
                 <ul
                   id="Slider-Thumbnails-{{ section.id }}"
@@ -253,7 +253,7 @@
                   aria-controls="GalleryThumbnails-{{ section.id }}"
                   data-step="3"
                 >
-                  {%- render 'icon-caret' -%}
+                  {%- render 'icon-arrow-right' -%}
                 </button>
               </slider-component>
             {%- endif -%}

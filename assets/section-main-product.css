@@ -1105,6 +1105,9 @@ fieldset.product-form__input .form__label {
     vertical-align: unset;
 }
 
+.product--thumbnail_slider .thumbnail-slider {
+    padding-top: 20px;
+}
 
 @media (min-width: 1200px) {
     .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
@@ -1308,6 +1311,10 @@ fieldset.product-form__input .form__label {
 }
 
 @media screen and (max-width: 767px) {
+    .product--thumbnail_slider .thumbnail-slider {
+        display: none;
+    }
+
     .vtmeta_main li span {
         min-width: 140px;
     }
@@ -1457,7 +1464,7 @@ fieldset.product-form__input .form__label {
 
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
     .product--thumbnail_slider.grid--2-col-tablet .grid__item {
         width: 100%;
     }

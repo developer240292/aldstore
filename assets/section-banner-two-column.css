@@ -1,6 +1,5 @@
 .banner-two-column .row {
-    display: flex;
-    flex-wrap: wrap;
+    gap: 30px 0;
 }
 
 .banner-two-column .banner-left {
@@ -52,4 +51,12 @@
     font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.375), 20px);
     line-height: 1.78;
     color: #000;
+}
+
+@media(max-width: 767px) {
+
+    .banner-two-column .banner-left,
+    .banner-two-column .banner-right {
+        width: 100%;
+    }
 }
