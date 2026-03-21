@@ -54,7 +54,9 @@
 .facets-form .facet-filters__label label {
   margin-bottom: 0;
 }
-
+.facets-form .facet-facet-filters__sort {
+  border-radius: 10px;
+}
 .facets-form .product-count-vertical {
   position: relative;
 }
@@ -82,6 +84,8 @@
   padding: 10px 15px 9px;
   border-radius: 10px;
   gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
 .aldstore-filter-drawer .vtsortbar .shop-filter-button {
@@ -125,6 +129,8 @@
     padding: 0;
     border-radius: 50%;
     text-align: center;
+    font-size: 0;
+    gap: 0;
   }
 
   .aldstore-dropdown .sidebar {

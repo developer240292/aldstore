@@ -253,7 +253,7 @@ input[type="url"],
 textarea,
 select {
     border: 1px solid #E5E5E5;
-    padding: 0 25px;
+    padding: 0 20px;
     max-width: 100%;
     font-size: calc(var(--font-body-scale) * 14px);
     border-radius: var(--inputs-radius);
@@ -1593,6 +1593,10 @@ button#scroll svg {
 }
 
 /* BLOG */
+.blog-wrap {
+    gap: 30px 0;
+}
+
 .post-thumb {
     border-radius: 10px;
     background-color: #f7931e;
@@ -1651,7 +1655,6 @@ button#scroll svg {
 
 /* .post-grid */
 .post-grid {
-    margin-bottom: 30px;
     padding: 10px;
     border-radius: 10px;
     background-color: #fff;
@@ -2674,14 +2677,6 @@ variant-selects .product-form__input .select {
     .product-form .cartb span,
     .vtquickv span {
         display: none;
-    }
-
-    .product-form .cartb,
-    .product-form .vtquickv,
-    .product-form .wishlist {
-        min-width: 36px;
-        min-height: 36px;
-        border: 1px solid #000000;
     }
 
     .vtproduct-container .quantity__input,
