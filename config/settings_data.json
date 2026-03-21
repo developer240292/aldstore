@@ -27,7 +27,7 @@
     "popup_shadow_vertical_offset": 6,
     "popup_shadow_blur": 15,
     "drawer_overlay_opacity": 80,
-    "badge_corner_radius": 5,
+    "badge_corner_radius": 40,
     "color_sale_badge": "#faba5b",
     "color_sold_out_badge": "#060e30",
     "social_facebook_link": "#",
