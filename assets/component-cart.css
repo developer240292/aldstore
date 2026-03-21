@@ -85,10 +85,6 @@ cart-items {
   margin-bottom: 1rem;
 }
 
-.cart__note .field__input {
-  padding: 1rem;
-}
-
 @media screen and (min-width: 768px) {
   .cart__items {
     grid-column-start: 1;
