@@ -218,12 +218,6 @@ cart-drawer-items .cart-item__name~.product-option {
   justify-content: center;
 }
 
-cart-drawer.is-empty .drawer__inner {
-  display: grid;
-  grid-template-rows: 1fr;
-  align-items: center;
-}
-
 cart-drawer.is-empty .drawer__header {
   display: none;
 }
